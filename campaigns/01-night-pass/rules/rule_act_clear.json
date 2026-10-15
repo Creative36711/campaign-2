@@ -2,6 +2,7 @@
   "id": "rule_act_clear",
   "label": "Начать расчистку пути",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "need_ge",

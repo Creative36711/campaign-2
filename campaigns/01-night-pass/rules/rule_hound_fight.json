@@ -2,6 +2,7 @@
   "id": "rule_hound_fight",
   "label": "Встреча с гончей",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_set",

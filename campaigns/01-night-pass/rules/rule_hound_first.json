@@ -48,6 +48,10 @@
           "type": "set_flag",
           "flag": "bleeding_in_snow",
           "value": 1
+        },
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_fight"
         }
       ]
     },

@@ -6,6 +6,10 @@
     {
       "type": "weather_is",
       "weather": "weather_blizzard"
+    },
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
     }
   ],
   "effects": [

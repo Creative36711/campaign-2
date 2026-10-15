@@ -1,7 +1,7 @@
 {
   "id": "rule_deadline_signal",
   "label": "Дедлайн: сигнала нет",
-  "once": false,
+  "once": true,
   "conditions": [
     {
       "type": "elapsed_ge",

@@ -6,6 +6,10 @@
     {
       "type": "has_item",
       "item": "item_ration"
+    },
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
     }
   ],
   "effects": [

@@ -2,6 +2,7 @@
   "id": "rule_cornice_break",
   "label": "Карниз под весом",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_not_set",

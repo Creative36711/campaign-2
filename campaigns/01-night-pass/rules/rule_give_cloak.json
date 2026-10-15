@@ -2,6 +2,7 @@
   "id": "rule_give_cloak",
   "label": "Бурка отдана",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "has_item",

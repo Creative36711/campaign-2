@@ -2,6 +2,7 @@
   "id": "rule_rest_short",
   "label": "Короткий привал",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "need_ge",

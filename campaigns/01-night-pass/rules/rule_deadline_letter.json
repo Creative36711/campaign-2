@@ -1,7 +1,7 @@
 {
   "id": "rule_deadline_letter",
   "label": "Дедлайн: приказ не дошёл",
-  "once": false,
+  "once": true,
   "conditions": [
     {
       "type": "elapsed_ge",

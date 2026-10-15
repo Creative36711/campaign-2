@@ -1,7 +1,7 @@
 {
   "id": "rule_signal_lit",
   "label": "Свет над перевалом",
-  "once": false,
+  "once": true,
   "conditions": [
     {
       "type": "flag_set",

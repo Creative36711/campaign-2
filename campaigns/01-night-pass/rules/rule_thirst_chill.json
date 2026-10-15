@@ -2,6 +2,7 @@
   "id": "rule_thirst_chill",
   "label": "Жажда на морозе",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "need_le",

@@ -2,6 +2,7 @@
   "id": "rule_camp_hound",
   "label": "Гончая у укрытия",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_not_set",
@@ -37,6 +38,10 @@
         {
           "type": "show_message",
           "text": "Зверь успел схватить раньше, чем ты закрыл проход."
+        },
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_fight"
         }
       ]
     }

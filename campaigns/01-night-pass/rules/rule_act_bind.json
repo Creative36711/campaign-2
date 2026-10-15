@@ -2,6 +2,7 @@
   "id": "rule_act_bind",
   "label": "Начать перевязку",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_not_set",

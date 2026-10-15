@@ -1,7 +1,7 @@
 {
   "id": "rule_hound_bridge",
   "label": "На мосту: распоряжение под давлением",
-  "once": false,
+  "once": true,
   "conditions": [
     {
       "type": "player_enters_scene",

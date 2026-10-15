@@ -2,6 +2,7 @@
   "id": "rule_act_melt",
   "label": "Начать топить снег",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_set",
