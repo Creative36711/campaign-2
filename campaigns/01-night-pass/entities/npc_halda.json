@@ -4,7 +4,8 @@
   "label": "Хальда, стряпуха дозора",
   "description": "Варит на всю смену и знает, кто не вернулся. Ставит миску молча и требует то же молчание обратно.",
   "portrait": {
-    "neutral": "assets/img/npc/halda.jpg"
+    "neutral": "assets/img/npc/halda.jpg",
+    "kind": "assets/img/npc/halda_kind.jpg"
   },
   "stats": {
     "STR": 10,

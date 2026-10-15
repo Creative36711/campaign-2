@@ -4,7 +4,8 @@
   "label": "Бранн, лекарь заставы",
   "description": "Сушит рукавицы у чужого огня и считает вслух, кому сколько осталось до утра. Деловит, упрям, не утешает.",
   "portrait": {
-    "neutral": "assets/img/npc/brann.jpg"
+    "neutral": "assets/img/npc/brann.jpg",
+    "angry": "assets/img/npc/brann_angry.jpg"
   },
   "stats": {
     "STR": 10,
