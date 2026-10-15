@@ -976,7 +976,17 @@
     ],
     "choose_name": true,
     "choose_age": false,
-    "choose_bio": true
+    "choose_bio": true,
+    "portraits": [
+      {
+        "id": "hero_postman",
+        "label": "Кассиан Вэйр",
+        "image": "assets/img/ui/hero_postman.png",
+        "combat_figure": "assets/img/figure/fig_player_postman.png",
+        "combat_figure_mode": "topdown",
+        "combat_facing_offset": 0
+      }
+    ]
   },
   "attribution": {
     "note": "Графика: все изображения (фоны, портреты, иконки, спрайты сцен, боевые фигурки) сгенерированы автором кампании TGD-1 в песочнице Arena 15–16.10.2026, лицензия CC BY 4.0; вырезка хромакея — __chronicle_ai__/cutout-chromakey.py. Аудио: реально скачанные CC0-файлы, синтеза в пакете нет. Музыка (5 лупов) — github.com/meme2-cmd2/CC0-Music, LICENCE = CC0 1.0 Universal (Komiku «The Wind», «Home», «Tension»; TRG Banks «Snowfall» — оцифровка патефонных записей US Marine Band; Loyalty Freak Music «Hope and Love»). Обработка: фрагмент 63–93 с, бесшовная луп-сшивка кроссфейдом 3 с, выравнивание по EBU R128 (−17 LUFS), Ogg Vorbis q2. Эмбиент (ветер, метель, огонь) — github.com/mateusfg7/Noisekun, .github/assets/sounds; лицензия каждой записи подтверждена таблицей в README: wind — Felix Blume (freesound 217506, CC0), storm — Borys Kozielski (freesound 316831, CC0), fire — SFX Producer (CC0); метель = ветер + слой грозы (−13 дБ). Код Noisekun под MIT, к записям это не относится. Записи Train (CC Sampling+), White/Pink Noise (CC BY-SA), Waterfall (CC BY), Washing Machine (Standard License) в пакет НЕ брались. Короткие сигналы (19 файлов) — github.com/Cy4nWare/sfx-api (паки Kenney: Interface/Impact/RPG Audio), License.txt в каждом паке = CC0 1.0, взяты без изменений. Заметка по звукам: CC0-записи лая/рычания собаки ни в одном из одобренных источников не найдено, поэтому гончая озвучена тяжёлым ударом по снегу (Kenney Impact), запрос на фонотеку отправлен мастеру. Голос (9 реплик) — синтез речи, записанный автором для конкретных строк, CC BY 4.0. Гончая (3 файла) — github.com/arianne/stendhal, data/sounds/: dog-snarl-1.ogg и dog-angry-low-1.ogg (Lisa Redfern, public domain, soundbible.com/2034-Growling-Snarling-Dogs.html), dog-small-bark-1.ogg (nfrae, CC0 1.0, freesound.org/people/nfrae/sounds/100032); лицензия каждой строки подтверждена doc/sources/audio-sfx.txt того же репозитория; скачано без изменений (без перекодирования и нормализации). Временная подмена (два удара Kenney Impact) удалена из пакета после закрытия запроса на фонотеку.",

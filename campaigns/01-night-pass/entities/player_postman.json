@@ -3,7 +3,9 @@
   "type": "npc",
   "label": "Кассиан Вэйр",
   "description": "Почтальон северной трактовой дороги. Шесть часов назад его сани сорвались в снежный мешок; теперь при нём только запечатанный приказ да то, что удержит тепло.",
-  "portrait": {},
+  "portrait": {
+    "neutral": "assets/img/ui/hero_postman.png"
+  },
   "stats": {
     "STR": 12,
     "CON": 13,
@@ -41,5 +43,12 @@
       "quantity": 3
     }
   ],
-  "equipment": {}
+  "equipment": {},
+  "combat_figure": "assets/img/figure/fig_player_postman.png",
+  "combat_figure_states": {
+    "down": "assets/img/figure/fig_player_postman_down.png",
+    "dead": "assets/img/figure/fig_player_postman_dead.png"
+  },
+  "figure_mode": "topdown",
+  "facing_offset": 0
 }
