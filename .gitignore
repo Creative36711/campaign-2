@@ -1,0 +1,36 @@
+# JavaScript dependencies and caches
+node_modules/
+**/node_modules/
+.npm/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated builds and release archives
+build/
+**/build/
+dist/
+**/dist/
+coverage/
+*.chronicle
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
