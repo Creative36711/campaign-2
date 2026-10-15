@@ -57,6 +57,10 @@
       "preset": "шёпот",
       "seconds": 5,
       "position": "центр"
+    },
+    {
+      "type": "unlock_codex",
+      "entry": "codex_hound"
     }
   ]
 }
