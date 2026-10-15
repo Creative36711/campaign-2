@@ -79,7 +79,8 @@
       "w": 170,
       "h": 330,
       "condition": null,
-      "default_entity": "npc_senni"
+      "default_entity": "npc_senni",
+      "sprite_state": "wary"
     },
     {
       "id": "slot_window",

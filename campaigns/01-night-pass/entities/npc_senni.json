@@ -29,5 +29,9 @@
   "breathe": true,
   "dialogue": "dialogues/senni.ink",
   "equipment": {},
-  "scene_sprite": "assets/img/sprite/npc_senni.png"
+  "scene_sprite": "assets/img/sprite/npc_senni.png",
+  "scene_sprite_states": {
+    "wary": "assets/img/sprite/npc_senni_wary.png",
+    "kind": "assets/img/sprite/npc_senni_kind.png"
+  }
 }

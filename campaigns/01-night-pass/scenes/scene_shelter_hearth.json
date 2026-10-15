@@ -185,7 +185,8 @@
       "w": 180,
       "h": 340,
       "condition": null,
-      "default_entity": "npc_senni"
+      "default_entity": "npc_senni",
+      "sprite_state": "kind"
     },
     {
       "id": "slot_cot",
