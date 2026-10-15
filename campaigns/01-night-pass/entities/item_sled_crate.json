@@ -6,7 +6,6 @@
   "description": "Вёрнутый ящик с упряжью и запасом. Тяжёлый, но внутри — то, что держит человека на склоне.",
   "weight": 8,
   "stackable": false,
-  "image": "assets/img/item/crate.png",
   "interact_options": [
     {
       "label": "Вскрыть ящик",

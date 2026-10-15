@@ -24,7 +24,6 @@
     "skill_silent": 45,
     "skill_notice": 50
   },
-  "scene_sprite": "assets/img/npc/kalev_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/kalev.ink",
   "equipment": {}

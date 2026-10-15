@@ -1,0 +1,225 @@
+{
+  "id": "scene_tower_lamp",
+  "label": "Сигнальный очаг наверху",
+  "location": "loc_tower",
+  "chapter": "ch_tower",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_broken",
+      "label": "Чаша разбита, жир промёрз",
+      "condition": null,
+      "image": "assets/img/bg/tower.jpg",
+      "art": {
+        "background": "#0e1822",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 420,
+            "y": 140,
+            "w": 440,
+            "h": 260,
+            "fill": "#1c2b3a"
+          },
+          {
+            "type": "rect",
+            "x": 520,
+            "y": 300,
+            "w": 240,
+            "h": 90,
+            "fill": "#2b3c4d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_repaired",
+      "label": "Чаша собрана и заправлена",
+      "condition": {
+        "flag": "signal_repaired"
+      },
+      "image": "assets/img/bg/tower.jpg",
+      "art": {
+        "background": "#1a2129",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_lit",
+      "label": "Огонь над перевалом",
+      "condition": {
+        "flag": "signal_lit"
+      },
+      "image": "assets/img/bg/tower.jpg",
+      "art": {
+        "background": "#2c2013",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 540,
+            "y": 240,
+            "w": 220,
+            "h": 140,
+            "fill": "#f0a83a",
+            "opacity": 0.85
+          }
+        ]
+      },
+      "sound": "sfx_fire",
+      "camera": {
+        "zoom": 1.14,
+        "pan_x": 0,
+        "pan_y": -0.04,
+        "duration": 8
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_chalk",
+      "label": "Чаша сигнального очага",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 460,
+      "y": 280,
+      "w": 360,
+      "h": 180,
+      "condition": null,
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_tinder",
+          "consume": false,
+          "message": "Пробуешь зажечь чашу на ветру.",
+          "effects": [
+            {
+              "type": "start_duration_action",
+              "action": "act_fix_signal"
+            }
+          ]
+        },
+        {
+          "item": "item_lantern",
+          "consume": false,
+          "message": "Светишь в чашу, собирая осколки и фитиль.",
+          "effects": [
+            {
+              "type": "start_duration_action",
+              "action": "act_fix_signal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slot_oil_tower",
+      "label": "Ниша для бочонка",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 920,
+      "y": 360,
+      "w": 220,
+      "h": 140,
+      "condition": null,
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_signal_oil",
+          "consume": true,
+          "message": "Ворвань уходит в чашу сигнального очага.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "signal_oil_ready",
+              "value": true
+            },
+            {
+              "type": "journal_update",
+              "quest": "quest_signal",
+              "text_key": "j_repaired"
+            },
+            {
+              "type": "show_message",
+              "text": "Чаша заправлена. Теперь нужен огонь — и руки, которые смогут его удержать на ветру."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slot_tower_view",
+      "label": "Зубец, откуда видно юг",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 100,
+      "y": 300,
+      "w": 260,
+      "h": 200,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Спуститься на лестницу",
+      "area": {
+        "type": "rect",
+        "x": 120,
+        "y": 540,
+        "w": 300,
+        "h": 150
+      },
+      "go_to_scene": "scene_tower_stairs"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 880,
+        "y": 540,
+        "w": 320,
+        "h": 140
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": []
+}

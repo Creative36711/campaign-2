@@ -49,7 +49,6 @@
       "id": "state_fire",
       "label": "Огонь под плитой",
       "condition": {
-        "type": "flag_set",
         "flag": "fire_lit"
       },
       "image": "assets/img/bg/gully.jpg",

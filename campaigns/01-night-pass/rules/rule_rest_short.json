@@ -1,0 +1,18 @@
+{
+  "id": "rule_rest_short",
+  "label": "Короткий привал",
+  "once": false,
+  "conditions": [
+    {
+      "type": "need_ge",
+      "need": "need_energy",
+      "threshold": 5
+    }
+  ],
+  "effects": [
+    {
+      "type": "sleep",
+      "ticks": 1
+    }
+  ]
+}

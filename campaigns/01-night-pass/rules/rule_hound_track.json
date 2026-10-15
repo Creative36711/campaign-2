@@ -1,0 +1,39 @@
+{
+  "id": "rule_hound_track",
+  "label": "След сбит в метель",
+  "once": false,
+  "conditions": [
+    {
+      "type": "weather_is",
+      "weather": "weather_blizzard"
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_flag",
+      "flag": "hound_shaken",
+      "value": true
+    },
+    {
+      "type": "clear_flag",
+      "flag": "hound_close"
+    },
+    {
+      "type": "stop_pursuit"
+    },
+    {
+      "type": "change_need",
+      "need": "need_energy",
+      "delta": -8
+    },
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -6
+    },
+    {
+      "type": "show_message",
+      "text": "Ты меешь след поперёк, по камням, пока метель не сравнивает всё в белый шум. Погоня потеряла тебя; тепло и силы — нет."
+    }
+  ]
+}

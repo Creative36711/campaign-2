@@ -24,10 +24,7 @@
     "skill_athletics": 55,
     "skill_survival": 50
   },
-  "scene_sprite": "assets/img/npc/ruur_sprite.png",
   "breathe": true,
-  "combat_figure": "assets/img/npc/ruur_figure.png",
-  "figure_mode": "topdown",
   "dialogue": "dialogues/ruur.ink",
   "equipment": {}
 }

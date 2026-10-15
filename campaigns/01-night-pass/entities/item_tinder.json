@@ -6,7 +6,6 @@
   "description": "Сталь, кремень и сухая береста в рожке. Одна удача из трёх, если руки одеревенели.",
   "weight": 0.4,
   "stackable": false,
-  "image": "assets/img/item/tinder.png",
   "interact_options": [
     {
       "label": "Развести огонь",

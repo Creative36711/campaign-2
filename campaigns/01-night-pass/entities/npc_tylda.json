@@ -23,7 +23,6 @@
     "skill_survival": 45,
     "skill_medicine": 30
   },
-  "scene_sprite": "assets/img/npc/tylda_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/tylda.ink",
   "equipment": {}

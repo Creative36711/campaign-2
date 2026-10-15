@@ -1,0 +1,18 @@
+{
+  "id": "rule_act_clear",
+  "label": "Начать расчистку пути",
+  "once": false,
+  "conditions": [
+    {
+      "type": "need_ge",
+      "need": "need_energy",
+      "threshold": 10
+    }
+  ],
+  "effects": [
+    {
+      "type": "start_duration_action",
+      "action": "act_clear_path"
+    }
+  ]
+}

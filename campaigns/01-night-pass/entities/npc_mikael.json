@@ -23,7 +23,6 @@
     "skill_athletics": 30,
     "skill_orient": 15
   },
-  "scene_sprite": "assets/img/npc/mikael_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/mikael.ink",
   "equipment": {}

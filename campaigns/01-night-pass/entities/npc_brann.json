@@ -23,7 +23,6 @@
     "skill_persuade": 35,
     "skill_survival": 40
   },
-  "scene_sprite": "assets/img/npc/brann_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/brann.ink",
   "equipment": {}

@@ -1,0 +1,62 @@
+{
+  "id": "rule_hound_fight",
+  "label": "Встреча с гончей",
+  "once": false,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
+    }
+  ],
+  "effects": [
+    {
+      "type": "start_combat",
+      "enemies": [
+        {
+          "entity": "npc_hound",
+          "count": 1
+        }
+      ],
+      "arena": "arena_pass",
+      "intro": "Ты выходишь навстречу, потому что убегать дальше нечем.",
+      "on_victory": [
+        {
+          "type": "set_flag",
+          "flag": "hound_dead",
+          "value": true
+        },
+        {
+          "type": "clear_flag",
+          "flag": "hound_close"
+        },
+        {
+          "type": "stop_pursuit"
+        },
+        {
+          "type": "change_hp",
+          "delta": -4
+        },
+        {
+          "type": "show_message",
+          "text": "Гончая мертва. Склон стал тише и злее одновременно: звено, которое она держала у перевала, теперь пойдёт за кем-то другим."
+        }
+      ],
+      "on_defeat": [
+        {
+          "type": "change_hp",
+          "delta": -8
+        },
+        {
+          "type": "apply_status",
+          "target": "player",
+          "status": "status_frostbite",
+          "duration": 8
+        },
+        {
+          "type": "show_message",
+          "text": "Зверь сорвался и вернётся. Кровь на снегу теперь читается лучше, чем след."
+        }
+      ]
+    }
+  ]
+}

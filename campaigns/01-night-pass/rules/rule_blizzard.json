@@ -1,0 +1,34 @@
+{
+  "id": "rule_blizzard",
+  "label": "Метель к полуночи",
+  "once": true,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 1
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_weather",
+      "weather": "weather_blizzard"
+    },
+    {
+      "type": "banner",
+      "text": "Метель: видно на два шага, тропа читается хуже.",
+      "preset": "шёпот",
+      "seconds": 6,
+      "position": "центр"
+    },
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -6
+    },
+    {
+      "type": "set_flag",
+      "flag": "blizzard_on",
+      "value": 1
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rule_deadline_signal",
+  "label": "Дедлайн: сигнала нет",
+  "once": false,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 7
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "signal_lit"
+    }
+  ],
+  "effects": [
+    {
+      "type": "fail_quest",
+      "quest": "quest_signal"
+    },
+    {
+      "type": "journal_update",
+      "quest": "quest_signal",
+      "text_key": "j_late"
+    }
+  ]
+}

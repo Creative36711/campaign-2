@@ -6,7 +6,6 @@
   "description": "Тонкие ломти, которые надо долго жевать. Спасает от голода и не спасает от холода.",
   "weight": 0.4,
   "stackable": true,
-  "image": "assets/img/item/ration.png",
   "on_use": {
     "effects": [
       {

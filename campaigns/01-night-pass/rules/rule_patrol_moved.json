@@ -1,0 +1,23 @@
+{
+  "id": "rule_patrol_moved",
+  "label": "Дозор поднят",
+  "once": false,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "patrol_ready"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_variable",
+      "var": "var_travelers_saved",
+      "delta": 2
+    },
+    {
+      "type": "journal_update",
+      "quest": "quest_people",
+      "text_key": "j_patrol"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "rule_hound_block",
+  "label": "Проход закрыт",
+  "once": false,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "path_cleared"
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_flag",
+      "flag": "hound_shaken",
+      "value": true
+    },
+    {
+      "type": "clear_flag",
+      "flag": "hound_close"
+    },
+    {
+      "type": "stop_pursuit"
+    },
+    {
+      "type": "show_message",
+      "text": "Расчищенная осыпь ложится поперёк узкого места: зверь пойдёт в обход, а это ему час. Ты платишь за это тем же."
+    }
+  ]
+}

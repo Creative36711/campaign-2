@@ -1,0 +1,18 @@
+{
+  "id": "rule_act_gather",
+  "label": "Начать собирать топливо",
+  "once": false,
+  "conditions": [
+    {
+      "type": "need_ge",
+      "need": "need_energy",
+      "threshold": 10
+    }
+  ],
+  "effects": [
+    {
+      "type": "start_duration_action",
+      "action": "act_gather_fuel"
+    }
+  ]
+}

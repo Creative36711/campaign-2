@@ -21,7 +21,6 @@
     "skill_notice": 20,
     "skill_athletics": 25
   },
-  "scene_sprite": "assets/img/npc/talvis_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/talvis.ink",
   "equipment": {}

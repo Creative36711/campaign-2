@@ -72,7 +72,25 @@
       "w": 180,
       "h": 160,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_rope",
+          "consume": false,
+          "message": "Крепишь верёвку за столб схода и проверяешь узел дважды.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "rope_tied",
+              "value": true
+            },
+            {
+              "type": "show_message",
+              "text": "Верёвка держит. Переправа и карниз перестают быть задачей одного человека и становятся задачей времени."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "slot_ruur",

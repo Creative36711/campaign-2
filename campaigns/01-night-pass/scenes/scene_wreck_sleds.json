@@ -89,7 +89,25 @@
       "h": 300,
       "condition": null,
       "default_entity": "npc_vyaz",
-      "sprite_scale": 0.9
+      "sprite_scale": 0.9,
+      "use_with": [
+        {
+          "item": "item_ration",
+          "consume": true,
+          "message": "Ты отдаёшь коню последний паёк, чтобы он держался на ногах.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "horse_fed",
+              "value": true
+            },
+            {
+              "type": "show_message",
+              "text": "Конь поел и перестал оседать. Дальше он пойдёт сам — или не пойдёт никто."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "slot_slope",

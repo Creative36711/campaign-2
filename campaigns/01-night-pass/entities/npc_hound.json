@@ -23,10 +23,7 @@
     "skill_athletics": 65,
     "skill_silent": 50
   },
-  "scene_sprite": "assets/img/npc/hound_sprite.png",
   "breathe": true,
-  "combat_figure": "assets/img/npc/hound_figure.png",
-  "figure_mode": "topdown",
   "natural_weapon": {
     "skill": "skill_athletics",
     "damage": "1d8",

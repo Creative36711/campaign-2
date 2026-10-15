@@ -6,7 +6,6 @@
   "description": "Сухие прутья под вощёной оболочкой. Хватает на час огня.",
   "weight": 2.5,
   "stackable": true,
-  "image": "assets/img/item/fuel.png",
   "interact_hint": "Положить в очаг",
   "interact_options": [
     {

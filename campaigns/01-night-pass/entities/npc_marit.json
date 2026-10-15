@@ -21,7 +21,6 @@
     "skill_notice": 35,
     "skill_silent": 40
   },
-  "scene_sprite": "assets/img/npc/marit_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/marit.ink",
   "equipment": {}

@@ -24,10 +24,7 @@
     "skill_orient": 45,
     "skill_athletics": 45
   },
-  "scene_sprite": "assets/img/npc/ivonne_sprite.png",
   "breathe": true,
-  "combat_figure": "assets/img/npc/ivonne_figure.png",
-  "figure_mode": "topdown",
   "dialogue": "dialogues/ivonne.ink",
   "equipment": {}
 }

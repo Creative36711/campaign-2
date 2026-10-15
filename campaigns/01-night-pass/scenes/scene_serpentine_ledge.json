@@ -49,7 +49,6 @@
       "id": "state_crossed",
       "label": "Карниз пройден",
       "condition": {
-        "type": "flag_set",
         "flag": "cornice_crossed"
       },
       "image": "assets/img/bg/serpentine.jpg",

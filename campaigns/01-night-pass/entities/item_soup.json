@@ -6,7 +6,6 @@
   "description": "Густая, с салом и луком. Одна миска возвращает человеку решение.",
   "weight": 0.7,
   "stackable": false,
-  "image": "assets/img/item/bowl.png",
   "on_use": {
     "effects": [
       {

@@ -1,0 +1,138 @@
+{
+  "id": "scene_south_gate",
+  "label": "Ворота южной сторожки",
+  "location": "loc_southpost",
+  "chapter": "ch_tower",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Забор из вешал и теплее",
+      "condition": null,
+      "image": "assets/img/bg/southpost.jpg",
+      "art": {
+        "background": "#0f1a24",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 140,
+            "fill": "#1c2a37"
+          },
+          {
+            "type": "rect",
+            "x": 500,
+            "y": 300,
+            "w": 280,
+            "h": 220,
+            "fill": "#243343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_dawn",
+      "label": "Рассвет над сторожкой",
+      "condition": {
+        "time_of_day": "morning"
+      },
+      "image": "assets/img/bg/southpost.jpg",
+      "art": {
+        "background": "#33404d",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          }
+        ]
+      },
+      "camera": {
+        "zoom": 1.08,
+        "pan_x": 0,
+        "pan_y": 0.02,
+        "duration": 10
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_gate",
+      "label": "Ворота",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 540,
+      "y": 320,
+      "w": 240,
+      "h": 220,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_smoke",
+      "label": "Тепея у ворот",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 420,
+      "w": 240,
+      "h": 160,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Войти в зал дозора",
+      "area": {
+        "type": "rect",
+        "x": 560,
+        "y": 520,
+        "w": 300,
+        "h": 150
+      },
+      "go_to_scene": "scene_south_hall"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 960,
+        "y": 520,
+        "w": 280,
+        "h": 150
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "low",
+    "speed": "slow",
+    "wind": "none"
+  }
+}

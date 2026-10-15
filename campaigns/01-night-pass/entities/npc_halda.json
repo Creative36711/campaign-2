@@ -22,7 +22,6 @@
     "skill_medicine": 35,
     "skill_notice": 40
   },
-  "scene_sprite": "assets/img/npc/halda_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/halda.ink",
   "equipment": {}

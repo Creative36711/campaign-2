@@ -26,7 +26,6 @@
     "skill_persuade": 40,
     "skill_orient": 50
   },
-  "scene_sprite": "assets/img/npc/senni_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/senni.ink",
   "equipment": {}

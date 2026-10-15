@@ -1,0 +1,50 @@
+{
+  "id": "rule_prologue",
+  "label": "Пролог: 23:00, сани в снегу",
+  "once": true,
+  "conditions": [
+    {
+      "type": "tick_elapsed",
+      "min_tick": 23
+    }
+  ],
+  "effects": [
+    {
+      "type": "play_cutscene",
+      "cutscene": "cutscene_prologue"
+    },
+    {
+      "type": "set_variable",
+      "var": "var_travelers_saved",
+      "value": 0
+    },
+    {
+      "type": "set_variable",
+      "var": "var_hound_pressure",
+      "value": 0
+    },
+    {
+      "type": "set_weather",
+      "weather": "weather_snowfall"
+    },
+    {
+      "type": "start_quest",
+      "quest": "quest_order"
+    },
+    {
+      "type": "start_quest",
+      "quest": "quest_people"
+    },
+    {
+      "type": "start_quest",
+      "quest": "quest_signal"
+    },
+    {
+      "type": "banner",
+      "text": "До рассвета семь часов. Приказ при тебе.",
+      "preset": "шёпот",
+      "seconds": 6,
+      "position": "центр"
+    }
+  ]
+}

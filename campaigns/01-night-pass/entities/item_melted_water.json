@@ -6,7 +6,6 @@
   "description": "Растопленный снег, доведённый до тепла. Возвращает и жажду, и немного жара.",
   "weight": 0.9,
   "stackable": false,
-  "image": "assets/img/item/flask.png",
   "on_use": {
     "effects": [
       {

@@ -48,7 +48,6 @@
       "id": "state_fire",
       "label": "Печь снова тянет",
       "condition": {
-        "type": "flag_set",
         "flag": "fire_lit"
       },
       "image": "assets/img/bg/oldpost.jpg",

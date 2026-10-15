@@ -1,0 +1,31 @@
+{
+  "id": "cutscene_prologue",
+  "label": "Сани в снежном мешке",
+  "music": "music_night",
+  "slides": [
+    {
+      "image": "assets/img/bg/wreck.jpg",
+      "text": "23:00. Почтовые сани срываются в снежный мешок на верхнем перевале.",
+      "voice": "assets/voice/prologue_1.ogg",
+      "transition": "fade",
+      "camera": {
+        "zoom": 1.14,
+        "pan_x": -0.03,
+        "pan_y": 0.02,
+        "duration": 9
+      }
+    },
+    {
+      "image": "assets/img/bg/tower.jpg",
+      "text": "Дозор выйдет с юга к 06:00. В метель он не найдёт людей без сигнала со старой башни.",
+      "voice": "assets/voice/prologue_2.ogg",
+      "transition": "panzoom",
+      "camera": {
+        "zoom": 1.1,
+        "pan_x": 0.03,
+        "pan_y": -0.02,
+        "duration": 9
+      }
+    }
+  ]
+}

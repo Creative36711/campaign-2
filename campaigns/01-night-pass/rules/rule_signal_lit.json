@@ -1,0 +1,34 @@
+{
+  "id": "rule_signal_lit",
+  "label": "Свет над перевалом",
+  "once": false,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "signal_lit"
+    }
+  ],
+  "effects": [
+    {
+      "type": "banner",
+      "text": "Огонь на башне виден с южного поста.",
+      "preset": "заголовок",
+      "seconds": 6,
+      "position": "верх"
+    },
+    {
+      "type": "unlock_codex",
+      "entry": "codex_tower"
+    },
+    {
+      "type": "advance_quest",
+      "quest": "quest_signal",
+      "stage": "stage_lit"
+    },
+    {
+      "type": "journal_update",
+      "quest": "quest_signal",
+      "text_key": "j_lit"
+    }
+  ]
+}

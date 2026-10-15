@@ -1,0 +1,79 @@
+{
+  "id": "arena_pass",
+  "label": "Перевал у карниза",
+  "image": "",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "hex_grid": {
+    "cols": 9,
+    "rows": 6,
+    "hex_size": 44,
+    "offset": "odd-r",
+    "blocked_hexes": [
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "difficult_terrain": [
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        1
+      ]
+    ]
+  },
+  "spawn_zones": {
+    "player": {
+      "hexes": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "enemy": {
+      "hexes": [
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ]
+    }
+  },
+  "ambient_audio": "snd_wind",
+  "music": "music_pursuit"
+}

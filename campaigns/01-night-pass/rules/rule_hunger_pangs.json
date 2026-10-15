@@ -1,0 +1,22 @@
+{
+  "id": "rule_hunger_pangs",
+  "label": "Голод",
+  "once": false,
+  "conditions": [
+    {
+      "type": "need_le",
+      "need": "need_hunger",
+      "threshold": 0
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_fatigue",
+      "delta": 6
+    },
+    {
+      "type": "show_message",
+      "text": "Желудок сводит, и силы уходят быстрее. В сторожке похлёбка, в санном ящике паёк."
+    }
+  ]
+}

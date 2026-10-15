@@ -40,7 +40,6 @@
       "id": "state_fire",
       "label": "Огонь в очаге",
       "condition": {
-        "type": "flag_set",
         "flag": "fire_lit"
       },
       "image": "assets/img/bg/shelter.jpg",
@@ -83,7 +82,74 @@
       "w": 240,
       "h": 180,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_tinder",
+          "consume": false,
+          "message": "Пробуешь высечь огонь в очаге сторожки.",
+          "effects": [
+            {
+              "type": "skill_check_gate",
+              "skill": "skill_survival",
+              "difficulty": "easy",
+              "success_effects": [
+                {
+                  "type": "set_flag",
+                  "flag": "fire_lit",
+                  "value": true
+                },
+                {
+                  "type": "change_scene_state",
+                  "scene": "scene_shelter_hearth",
+                  "state": "state_fire"
+                },
+                {
+                  "type": "show_message",
+                  "text": "Огонь занялся. Стены сторожки начинают работать: теперь можно топить снег, сушить рукавицы и позвать Сенни к свету."
+                }
+              ],
+              "fail_effects": [
+                {
+                  "type": "change_need",
+                  "need": "need_energy",
+                  "delta": -5
+                },
+                {
+                  "type": "show_message",
+                  "text": "Кремень даёт искры в пустоту: трут отсырел. Нужна сухая наструга или чужой огонь."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": "item_fuel_bundle",
+          "consume": true,
+          "message": "Вязанка уходит в очаг.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "fire_lit",
+              "value": true
+            },
+            {
+              "type": "change_need",
+              "need": "need_heat",
+              "delta": 22
+            },
+            {
+              "type": "change_scene_state",
+              "scene": "scene_shelter_hearth",
+              "state": "state_fire"
+            },
+            {
+              "type": "show_message",
+              "text": "Хворост вспыхивает ровно, как ему и положено. Тепло возвращается; вязанка была последняя у тебя в руках."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "slot_pot",

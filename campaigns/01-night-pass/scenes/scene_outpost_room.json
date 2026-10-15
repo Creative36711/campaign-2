@@ -48,7 +48,6 @@
       "id": "state_fire",
       "label": "Печка растоплена",
       "condition": {
-        "type": "flag_set",
         "flag": "fire_lit"
       },
       "image": "assets/img/bg/outpost.jpg",
@@ -96,7 +95,43 @@
       "w": 200,
       "h": 160,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_tinder",
+          "consume": false,
+          "message": "Печка заставы сложена так, что разжигают её дважды в год.",
+          "effects": [
+            {
+              "type": "skill_check_gate",
+              "skill": "skill_survival",
+              "difficulty": "normal",
+              "success_effects": [
+                {
+                  "type": "set_flag",
+                  "flag": "fire_lit",
+                  "value": true
+                },
+                {
+                  "type": "change_scene_state",
+                  "scene": "scene_outpost_room",
+                  "state": "state_fire"
+                },
+                {
+                  "type": "show_message",
+                  "text": "Печка взяла тягу. Бранн перестал считать вслух и начал работать."
+                }
+              ],
+              "fail_effects": [
+                {
+                  "type": "show_message",
+                  "text": "Тяги нет: трубуело закрыто чужим снегом. Огонь здесь не бесплатен."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "slot_bench",

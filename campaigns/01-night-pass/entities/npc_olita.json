@@ -24,7 +24,6 @@
     "skill_orient": 50,
     "skill_persuade": 30
   },
-  "scene_sprite": "assets/img/npc/olita_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/olita.ink",
   "equipment": {}

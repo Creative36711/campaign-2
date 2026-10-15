@@ -24,7 +24,6 @@
     "skill_silent": 35,
     "skill_persuade": 30
   },
-  "scene_sprite": "assets/img/npc/saara_sprite.png",
   "breathe": true,
   "dialogue": "dialogues/saara.ink",
   "equipment": {}

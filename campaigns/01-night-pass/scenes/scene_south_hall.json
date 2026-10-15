@@ -1,0 +1,143 @@
+{
+  "id": "scene_south_hall",
+  "label": "Зал дозора",
+  "location": "loc_southpost",
+  "chapter": "ch_tower",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Дым, миски и незанятые места",
+      "condition": null,
+      "image": "assets/img/bg/southpost.jpg",
+      "art": {
+        "background": "#151e27",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 1280,
+            "h": 420,
+            "fill": "#1a242f"
+          },
+          {
+            "type": "rect",
+            "x": 300,
+            "y": 420,
+            "w": 680,
+            "h": 140,
+            "fill": "#241c14"
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_patrol",
+      "label": "Дозор построен",
+      "condition": {
+        "flag": "patrol_ready"
+      },
+      "image": "assets/img/bg/southpost.jpg",
+      "art": {
+        "background": "#1d2836",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_ivonne",
+      "label": "Капитан Ивонн у стола",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 520,
+      "y": 300,
+      "w": 180,
+      "h": 340,
+      "condition": null,
+      "default_entity": "npc_ivonne"
+    },
+    {
+      "id": "slot_halda",
+      "label": "Хальда у котла",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 940,
+      "y": 330,
+      "w": 170,
+      "h": 320,
+      "condition": null,
+      "default_entity": "npc_halda"
+    },
+    {
+      "id": "slot_empty_benches",
+      "label": "Пустые лавки",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 440,
+      "w": 280,
+      "h": 150,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_hall_hearth",
+      "label": "Печь",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 240,
+      "y": 260,
+      "w": 200,
+      "h": 150,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "К воротам",
+      "area": {
+        "type": "rect",
+        "x": 900,
+        "y": 540,
+        "w": 300,
+        "h": 140
+      },
+      "go_to_scene": "scene_south_gate"
+    }
+  ],
+  "lighting": "indoor",
+  "ambient": []
+}

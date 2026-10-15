@@ -44,30 +44,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "state_tire",
-      "label": "Присел передышку",
-      "condition": {
-        "type": "need_le",
-        "need": "need_energy",
-        "threshold": 25
-      },
-      "image": "assets/img/bg/tower.jpg",
-      "art": {
-        "background": "#15202b",
-        "layers": [
-          {
-            "type": "rect",
-            "x": 0,
-            "y": 470,
-            "w": 1280,
-            "h": 250,
-            "fill": "#1b2632",
-            "opacity": 0.9
-          }
-        ]
-      }
     }
   ],
   "slots": [

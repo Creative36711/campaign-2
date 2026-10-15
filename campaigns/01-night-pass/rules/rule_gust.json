@@ -1,0 +1,31 @@
+{
+  "id": "rule_gust",
+  "label": "Порыв ветра перед рассветом",
+  "once": true,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 4
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_weather",
+      "weather": "weather_gust"
+    },
+    {
+      "type": "show_message",
+      "text": "Ветер срывает наст с карниза и выбивает дыхание на пролётах. Опасные участки стали опаснее; на мосту хорошо бы быть на верёвке."
+    },
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -4
+    },
+    {
+      "type": "set_flag",
+      "flag": "gust_on",
+      "value": 1
+    }
+  ]
+}

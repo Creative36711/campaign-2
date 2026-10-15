@@ -20,7 +20,6 @@
   "skills": {
     "skill_athletics": 30
   },
-  "scene_sprite": "assets/img/npc/vyaz_sprite.png",
   "breathe": true,
   "equipment": {}
 }
