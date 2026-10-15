@@ -4,7 +4,8 @@
   "label": "Тильда, вдова почтового дома",
   "description": "Дом её, печка её и всё, что в сарае, тоже её. Пустит к огню, но спросит, за кем ты пришёл.",
   "portrait": {
-    "neutral": "assets/img/npc/tylda.jpg"
+    "neutral": "assets/img/npc/tylda.jpg",
+    "kind": "assets/img/npc/tylda_kind.jpg"
   },
   "stats": {
     "STR": 10,

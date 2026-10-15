@@ -4,7 +4,8 @@
   "label": "Марит, потерявшаяся девочка",
   "description": "Восемь лет, платок не по размеру, ни слова о себе. Всё время спрашивает, где старшая сестра.",
   "portrait": {
-    "neutral": "assets/img/npc/marit.jpg"
+    "neutral": "assets/img/npc/marit.jpg",
+    "wary": "assets/img/npc/marit_wary.jpg"
   },
   "stats": {
     "STR": 6,
