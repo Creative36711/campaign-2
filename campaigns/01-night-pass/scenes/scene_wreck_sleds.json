@@ -95,7 +95,7 @@
       "h": 300,
       "condition": null,
       "default_entity": "npc_vyaz",
-      "sprite_scale": 0.9,
+      "sprite_scale": 0.55,
       "use_with": [
         {
           "item": "item_ration",

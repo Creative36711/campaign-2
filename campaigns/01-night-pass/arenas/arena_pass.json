@@ -1,7 +1,7 @@
 {
   "id": "arena_pass",
   "label": "Перевал у карниза",
-  "image": "",
+  "image": "assets/img/arena/arena_pass.jpg",
   "canvas": {
     "w": 1280,
     "h": 720

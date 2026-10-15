@@ -36,5 +36,7 @@
       "consume": true,
       "message": "Огонь поднялся. Тепло возвращается, но не надолго."
     }
-  ]
+  ],
+  "image": "assets/img/item/fuel_bundle.png",
+  "scene_sprite": "assets/img/item/fuel_bundle.png"
 }

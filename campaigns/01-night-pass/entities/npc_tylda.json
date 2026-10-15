@@ -25,5 +25,6 @@
   },
   "breathe": true,
   "dialogue": "dialogues/tylda.ink",
-  "equipment": {}
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_tylda.png"
 }

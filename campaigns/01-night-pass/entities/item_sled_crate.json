@@ -63,5 +63,6 @@
       "once": true,
       "message": "Ящик уйдёт в снег и не вернётся: внутри паёк, хворост и верёвка."
     }
-  ]
+  ],
+  "image": "assets/img/item/sled_crate.png"
 }

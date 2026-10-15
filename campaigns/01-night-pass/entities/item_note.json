@@ -19,5 +19,7 @@
     ],
     "consume": false,
     "message": "Ты перечитываешь свою же записку."
-  }
+  },
+  "image": "assets/img/item/note.png",
+  "scene_sprite": "assets/img/item/note.png"
 }

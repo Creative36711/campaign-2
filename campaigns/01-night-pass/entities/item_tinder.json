@@ -52,5 +52,7 @@
       "once": false,
       "message": "Пробуешь высечь огонь: сырые руки и семь попыток."
     }
-  ]
+  ],
+  "image": "assets/img/item/tinder.png",
+  "scene_sprite": "assets/img/item/tinder.png"
 }

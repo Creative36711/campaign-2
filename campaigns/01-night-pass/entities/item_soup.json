@@ -31,5 +31,7 @@
     ],
     "consume": true,
     "message": "Съел похлёбку. Тело снова требует идти."
-  }
+  },
+  "image": "assets/img/item/soup.png",
+  "scene_sprite": "assets/img/item/soup.png"
 }
