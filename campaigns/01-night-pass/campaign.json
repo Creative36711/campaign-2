@@ -701,7 +701,7 @@
     "combat_start": "sfx_hound",
     "death": "sfx_wind_fall",
     "victory": "sfx_bell",
-    "heal": "sfx_warmth_back",
+    "heal": "snd_warmth_back",
     "craft": "sfx_axe"
   },
   "music_tracks": [

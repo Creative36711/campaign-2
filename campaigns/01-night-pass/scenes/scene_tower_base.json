@@ -1,0 +1,124 @@
+{
+  "id": "scene_tower_base",
+  "label": "Подножие башни",
+  "location": "loc_tower",
+  "chapter": "ch_tower",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Дверь в граните",
+      "condition": null,
+      "image": "assets/img/bg/tower.jpg",
+      "art": {
+        "background": "#0f1722",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 420,
+            "y": 120,
+            "w": 440,
+            "h": 500,
+            "fill": "#1d2b3a"
+          },
+          {
+            "type": "rect",
+            "x": 560,
+            "y": 420,
+            "w": 180,
+            "h": 200,
+            "fill": "#0b1219"
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_door_tower",
+      "label": "Дверь башни",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 520,
+      "y": 400,
+      "w": 260,
+      "h": 220,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_wood_heap",
+      "label": "Погребенный склад дров",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 140,
+      "y": 430,
+      "w": 280,
+      "h": 160,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_hole",
+      "label": "Пробитая лестница",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 960,
+      "y": 380,
+      "w": 220,
+      "h": 180,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Подняться по лестнице",
+      "area": {
+        "type": "rect",
+        "x": 880,
+        "y": 520,
+        "w": 320,
+        "h": 150
+      },
+      "go_to_scene": "scene_tower_stairs"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 120,
+        "y": 540,
+        "w": 280,
+        "h": 140
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  }
+}

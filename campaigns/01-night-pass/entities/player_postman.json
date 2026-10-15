@@ -1,0 +1,45 @@
+{
+  "id": "player_postman",
+  "type": "npc",
+  "label": "Кассиан Вэйр",
+  "description": "Почтальон северной трактовой дороги. Шесть часов назад его сани сорвались в снежный мешок; теперь при нём только запечатанный приказ да то, что удержит тепло.",
+  "portrait": {},
+  "stats": {
+    "STR": 12,
+    "CON": 13,
+    "SIZ": 11,
+    "DEX": 12,
+    "INT": 11,
+    "POW": 9,
+    "CHA": 10,
+    "HP": 13,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 45,
+    "skill_athletics": 50,
+    "skill_climb": 40,
+    "skill_silent": 35,
+    "skill_orient": 45,
+    "skill_medicine": 25,
+    "skill_persuade": 35,
+    "skill_intimidate": 25,
+    "skill_survival": 45,
+    "skill_track": 25
+  },
+  "inventory": [
+    {
+      "item": "item_order",
+      "quantity": 1
+    },
+    {
+      "item": "item_cloak",
+      "quantity": 1
+    },
+    {
+      "item": "item_grosch",
+      "quantity": 3
+    }
+  ],
+  "equipment": {}
+}

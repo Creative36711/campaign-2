@@ -1,0 +1,31 @@
+{
+  "id": "npc_olita",
+  "type": "npc",
+  "label": "Олита, возница",
+  "description": "Гонщик почтовой службы с раскроенным виском и обмороженной щёкой. Кричала, пока не села голос; теперь говорит коротко и зло.",
+  "portrait": {
+    "neutral": "assets/img/npc/olita.jpg",
+    "afraid": "assets/img/npc/olita_afraid.jpg"
+  },
+  "stats": {
+    "STR": 11,
+    "CON": 12,
+    "SIZ": 10,
+    "DEX": 12,
+    "INT": 10,
+    "POW": 9,
+    "CHA": 9,
+    "HP": 11,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 40,
+    "skill_athletics": 45,
+    "skill_orient": 50,
+    "skill_persuade": 30
+  },
+  "scene_sprite": "assets/img/npc/olita_sprite.png",
+  "breathe": true,
+  "dialogue": "dialogues/olita.ink",
+  "equipment": {}
+}

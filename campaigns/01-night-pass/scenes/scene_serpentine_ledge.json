@@ -1,0 +1,153 @@
+{
+  "id": "scene_serpentine_ledge",
+  "label": "Снежный карниз",
+  "location": "loc_serpentine",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Карниз над оврагом",
+      "condition": null,
+      "image": "assets/img/bg/serpentine.jpg",
+      "art": {
+        "background": "#0e1822",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 300,
+            "y": 520,
+            "w": 980,
+            "h": 200,
+            "fill": "#0a121a"
+          },
+          {
+            "type": "rect",
+            "x": 180,
+            "y": 470,
+            "w": 520,
+            "h": 70,
+            "fill": "#2b3d4c",
+            "rotate": -4
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_crossed",
+      "label": "Карниз пройден",
+      "condition": {
+        "type": "flag_set",
+        "flag": "cornice_crossed"
+      },
+      "image": "assets/img/bg/serpentine.jpg",
+      "art": {
+        "background": "#13202c",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_cornice",
+      "label": "Кромка карниза",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 420,
+      "y": 430,
+      "w": 420,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_ledge_anchor",
+      "label": "Камень для верёвки",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 440,
+      "w": 190,
+      "h": 150,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Назад на серпантин",
+      "area": {
+        "type": "rect",
+        "x": 60,
+        "y": 520,
+        "w": 280,
+        "h": 160
+      },
+      "go_to_scene": "scene_serpentine_upper"
+    },
+    {
+      "label": "Спуститься в балку",
+      "area": {
+        "type": "rect",
+        "x": 900,
+        "y": 520,
+        "w": 320,
+        "h": 160
+      },
+      "open_map": true,
+      "cost_ticks": 1,
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "cornice_crossed"
+        }
+      ],
+      "blocked_message": "Только назад, через серпантин: карниз под весом двух человек не держит."
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 1000,
+        "y": 300,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "high",
+    "speed": "fast",
+    "wind": "left"
+  }
+}

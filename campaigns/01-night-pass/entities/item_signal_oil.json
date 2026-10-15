@@ -1,0 +1,11 @@
+{
+  "id": "item_signal_oil",
+  "type": "item",
+  "category": "fuel",
+  "label": "Жировой заряд сигнала",
+  "description": "Бочонок смолы и ворвани для сигнального очага. Протухнуть бы не успел, если б его не спрятали.",
+  "weight": 3.2,
+  "stackable": false,
+  "image": "assets/img/item/oil.png",
+  "interact_hint": "Отнести на башню"
+}

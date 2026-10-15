@@ -1,0 +1,126 @@
+{
+  "id": "scene_gully_creek",
+  "label": "Русло под балкой",
+  "location": "loc_gully",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Лёд поверх воды",
+      "condition": null,
+      "image": "assets/img/bg/gully.jpg",
+      "art": {
+        "background": "#0f1b26",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 140,
+            "fill": "#24405a",
+            "opacity": 0.8
+          },
+          {
+            "type": "rect",
+            "x": 240,
+            "y": 470,
+            "w": 300,
+            "h": 40,
+            "fill": "#8fb4c9",
+            "opacity": 0.35
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_ice",
+      "label": "Полынья у берега",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 420,
+      "y": 470,
+      "w": 260,
+      "h": 120,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_fish",
+      "label": "Поймать рыбу подо льдом",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 820,
+      "y": 430,
+      "w": 220,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_hollow",
+      "label": "Пустоты во льду",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 520,
+      "w": 240,
+      "h": 120,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Подняться в балку",
+      "area": {
+        "type": "rect",
+        "x": 560,
+        "y": 200,
+        "w": 300,
+        "h": 140
+      },
+      "go_to_scene": "scene_gully"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 1000,
+        "y": 520,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  }
+}

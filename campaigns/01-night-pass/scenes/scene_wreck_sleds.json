@@ -1,0 +1,154 @@
+{
+  "id": "scene_wreck_sleds",
+  "label": "Перевёрнутые сани",
+  "location": "loc_wreck",
+  "chapter": "ch_crash",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Ночь над снежным мешком",
+      "condition": null,
+      "image": "assets/img/bg/wreck.jpg",
+      "art": {
+        "background": "#101a26",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 430,
+            "y": 360,
+            "w": 360,
+            "h": 140,
+            "fill": "#2c3b49",
+            "rotate": -14
+          },
+          {
+            "type": "rect",
+            "x": 500,
+            "y": 330,
+            "w": 60,
+            "h": 120,
+            "fill": "#3d4f5e",
+            "rotate": -8
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_sled",
+      "label": "Перевёрнутые сани",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 420,
+      "y": 360,
+      "w": 320,
+      "h": 160,
+      "condition": null,
+      "default_entity": "item_sled_crate"
+    },
+    {
+      "id": "slot_order",
+      "label": "Почтовая сумка в сугробе",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 790,
+      "y": 470,
+      "w": 120,
+      "h": 110,
+      "condition": null,
+      "default_entity": "item_satchel"
+    },
+    {
+      "id": "slot_horse",
+      "label": "Упряжь и конь на ветру",
+      "type": [
+        "animal"
+      ],
+      "shape": "rect",
+      "x": 980,
+      "y": 300,
+      "w": 190,
+      "h": 300,
+      "condition": null,
+      "default_entity": "npc_vyaz",
+      "sprite_scale": 0.9
+    },
+    {
+      "id": "slot_slope",
+      "label": "Край снежного мешка",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 60,
+      "y": 430,
+      "w": 180,
+      "h": 240,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Спуститься к склону",
+      "area": {
+        "type": "rect",
+        "x": 80,
+        "y": 520,
+        "w": 300,
+        "h": 160
+      },
+      "go_to_scene": "scene_wreck_slope"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 1000,
+        "y": 520,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  },
+  "narrative_intro": [
+    {
+      "text": "В 23:00 почтовые сани срываются в снежный мешок на высоком перевале. Ты — почтальон; при тебе запечатанный приказ закрыть перевал из-за трещин на верхнем склоне.",
+      "voice": "assets/voice/prologue_1.ogg",
+      "duration": 16
+    },
+    {
+      "text": "Спасательный дозор с южной стороны придёт к 06:00. В метель он не найдёт людей без сигнала со старой башни — и ты это знаешь первым.",
+      "voice": "assets/voice/prologue_2.ogg",
+      "duration": 15
+    }
+  ],
+  "narrative_intro_once": true
+}

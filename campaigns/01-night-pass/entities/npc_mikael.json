@@ -1,0 +1,30 @@
+{
+  "id": "npc_mikael",
+  "type": "npc",
+  "label": "Микель, потерявшийся путник",
+  "description": "Сошёл с тракта «срезать полчасика» и три часа кружит у дорожного знака. Язык уже плохо слушается.",
+  "portrait": {
+    "neutral": "assets/img/npc/mikael.jpg",
+    "afraid": "assets/img/npc/mikael_afraid.jpg"
+  },
+  "stats": {
+    "STR": 10,
+    "CON": 9,
+    "SIZ": 10,
+    "DEX": 9,
+    "INT": 10,
+    "POW": 8,
+    "CHA": 9,
+    "HP": 9,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 25,
+    "skill_athletics": 30,
+    "skill_orient": 15
+  },
+  "scene_sprite": "assets/img/npc/mikael_sprite.png",
+  "breathe": true,
+  "dialogue": "dialogues/mikael.ink",
+  "equipment": {}
+}

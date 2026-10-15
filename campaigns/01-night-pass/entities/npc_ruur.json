@@ -1,0 +1,33 @@
+{
+  "id": "npc_ruur",
+  "type": "npc",
+  "label": "Рур, дозорный-разведчик",
+  "description": "Один ушёл на перевал раньше срока и теперь должен двум людям и одному приказу. Говорит коротко, идёт быстро.",
+  "portrait": {
+    "neutral": "assets/img/npc/ruur.jpg"
+  },
+  "stats": {
+    "STR": 13,
+    "CON": 13,
+    "SIZ": 12,
+    "DEX": 13,
+    "INT": 10,
+    "POW": 10,
+    "CHA": 9,
+    "HP": 14,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 60,
+    "skill_silent": 55,
+    "skill_track": 50,
+    "skill_athletics": 55,
+    "skill_survival": 50
+  },
+  "scene_sprite": "assets/img/npc/ruur_sprite.png",
+  "breathe": true,
+  "combat_figure": "assets/img/npc/ruur_figure.png",
+  "figure_mode": "topdown",
+  "dialogue": "dialogues/ruur.ink",
+  "equipment": {}
+}

@@ -1,0 +1,26 @@
+{
+  "id": "npc_vyaz",
+  "type": "npc",
+  "label": "Вяз, почтовый конь",
+  "description": "Тяжёлый мерин с перевёрнутых саней. Ударился грудью о камень, стоит, раздувая ноздри, и не слушает повод.",
+  "portrait": {
+    "neutral": "assets/img/npc/vyaz.jpg"
+  },
+  "stats": {
+    "STR": 16,
+    "CON": 14,
+    "SIZ": 14,
+    "DEX": 9,
+    "INT": 3,
+    "POW": 4,
+    "CHA": 3,
+    "HP": 16,
+    "MP": 0
+  },
+  "skills": {
+    "skill_athletics": 30
+  },
+  "scene_sprite": "assets/img/npc/vyaz_sprite.png",
+  "breathe": true,
+  "equipment": {}
+}

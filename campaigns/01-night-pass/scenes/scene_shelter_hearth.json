@@ -1,0 +1,168 @@
+{
+  "id": "scene_shelter_hearth",
+  "label": "Очаг сторожки",
+  "location": "loc_shelter",
+  "chapter": "ch_shelter",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_dark",
+      "label": "Очаг не горит",
+      "condition": null,
+      "image": "assets/img/bg/shelter.jpg",
+      "art": {
+        "background": "#141d27",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 860,
+            "y": 340,
+            "w": 200,
+            "h": 160,
+            "fill": "#241a14"
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_fire",
+      "label": "Огонь в очаге",
+      "condition": {
+        "type": "flag_set",
+        "flag": "fire_lit"
+      },
+      "image": "assets/img/bg/shelter.jpg",
+      "art": {
+        "background": "#2a1d13",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 880,
+            "y": 360,
+            "w": 160,
+            "h": 120,
+            "fill": "#e08b2a",
+            "opacity": 0.75
+          }
+        ]
+      },
+      "sound": "sfx_fire"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_hearth",
+      "label": "Очаг",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 840,
+      "y": 340,
+      "w": 240,
+      "h": 180,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_pot",
+      "label": "Котелок над огнём",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 1100,
+      "y": 400,
+      "w": 140,
+      "h": 110,
+      "condition": null,
+      "default_entity": "item_soup"
+    },
+    {
+      "id": "slot_senni_hearth",
+      "label": "Сенни у огня",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 180,
+      "y": 300,
+      "w": 180,
+      "h": 340,
+      "condition": null,
+      "default_entity": "npc_senni"
+    },
+    {
+      "id": "slot_cot",
+      "label": "Лавка с одеялом",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 480,
+      "y": 470,
+      "w": 280,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "На чердак",
+      "area": {
+        "type": "rect",
+        "x": 600,
+        "y": 180,
+        "w": 240,
+        "h": 140
+      },
+      "go_to_scene": "scene_shelter_loft"
+    },
+    {
+      "label": "К двери",
+      "area": {
+        "type": "rect",
+        "x": 60,
+        "y": 520,
+        "w": 260,
+        "h": 150
+      },
+      "go_to_scene": "scene_shelter_door"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 960,
+        "y": 520,
+        "w": 280,
+        "h": 150
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "indoor",
+  "ambient": []
+}

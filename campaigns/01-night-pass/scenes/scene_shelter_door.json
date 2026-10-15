@@ -1,0 +1,132 @@
+{
+  "id": "scene_shelter_door",
+  "label": "Порог сторожки",
+  "location": "loc_shelter",
+  "chapter": "ch_shelter",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Дверь, освещённая изнутри",
+      "condition": null,
+      "image": "assets/img/bg/shelter.jpg",
+      "art": {
+        "background": "#131e2a",
+        "layers": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 470,
+            "w": 1280,
+            "h": 250,
+            "fill": "#1b2632",
+            "opacity": 0.9
+          },
+          {
+            "type": "rect",
+            "x": 520,
+            "y": 260,
+            "w": 240,
+            "h": 320,
+            "fill": "#2f2415"
+          },
+          {
+            "type": "rect",
+            "x": 560,
+            "y": 300,
+            "w": 160,
+            "h": 220,
+            "fill": "#c99a4b",
+            "opacity": 0.5
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_door",
+      "label": "Дверь",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 520,
+      "y": 280,
+      "w": 240,
+      "h": 260,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_senni_door",
+      "label": "Сенни на пороге",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 860,
+      "y": 320,
+      "w": 170,
+      "h": 330,
+      "condition": null,
+      "default_entity": "npc_senni"
+    },
+    {
+      "id": "slot_window",
+      "label": "Окно, закрытое雪 доской",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 240,
+      "y": 300,
+      "w": 200,
+      "h": 150,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Войти в сторожку",
+      "area": {
+        "type": "rect",
+        "x": 420,
+        "y": 520,
+        "w": 320,
+        "h": 150
+      },
+      "go_to_scene": "scene_shelter_hearth",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "shelter_welcomed"
+        }
+      ],
+      "blocked_message": "Не открывают: сначала разговор с Сенни."
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "type": "rect",
+        "x": 900,
+        "y": 520,
+        "w": 320,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  }
+}

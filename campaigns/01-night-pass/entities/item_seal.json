@@ -1,0 +1,11 @@
+{
+  "id": "item_seal",
+  "type": "item",
+  "category": "quest",
+  "label": "Печать почтового дома",
+  "description": "Медная матрица Тильдыного мужа. Не доказательство для дозора, а вежливость: бумага с ней читается иначе.",
+  "weight": 0.3,
+  "stackable": false,
+  "image": "assets/img/item/seal.png",
+  "quest_item": true
+}

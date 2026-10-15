@@ -1,0 +1,26 @@
+{
+  "id": "item_melted_water",
+  "type": "item",
+  "category": "food",
+  "label": "Тёплая вода во фляге",
+  "description": "Растопленный снег, доведённый до тепла. Возвращает и жажду, и немного жара.",
+  "weight": 0.9,
+  "stackable": false,
+  "image": "assets/img/item/flask.png",
+  "on_use": {
+    "effects": [
+      {
+        "type": "change_need",
+        "need": "need_thirst",
+        "delta": 30
+      },
+      {
+        "type": "change_need",
+        "need": "need_heat",
+        "delta": 6
+      }
+    ],
+    "consume": true,
+    "message": "Выпил тёплой воды. Гораздо лучше, чем снег."
+  }
+}

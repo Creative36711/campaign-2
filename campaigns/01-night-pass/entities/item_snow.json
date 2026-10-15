@@ -1,0 +1,25 @@
+{
+  "id": "item_snow",
+  "type": "item",
+  "category": "food",
+  "label": "Пригоршня снега",
+  "description": "Съедобно, но забирает тепло: на морозе это плохая замена воде.",
+  "weight": 0.1,
+  "stackable": true,
+  "on_use": {
+    "effects": [
+      {
+        "type": "change_need",
+        "need": "need_thirst",
+        "delta": 12
+      },
+      {
+        "type": "change_need",
+        "need": "need_heat",
+        "delta": -6
+      }
+    ],
+    "consume": true,
+    "message": "Снег обжёг рот. Жажды почти нет, тепла стало меньше."
+  }
+}

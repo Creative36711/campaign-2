@@ -1,0 +1,33 @@
+{
+  "id": "npc_senni",
+  "type": "npc",
+  "label": "Сенни, сторож перевала",
+  "description": "Шесть зим у огня на краю подъёма. Впускает не всех и не всегда, но ни одного человека ещё не выставил на карниз ночью.",
+  "portrait": {
+    "neutral": "assets/img/npc/senni.jpg",
+    "kind": "assets/img/npc/senni_kind.jpg",
+    "wary": "assets/img/npc/senni_wary.jpg"
+  },
+  "stats": {
+    "STR": 12,
+    "CON": 13,
+    "SIZ": 12,
+    "DEX": 9,
+    "INT": 11,
+    "POW": 10,
+    "CHA": 9,
+    "HP": 13,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 55,
+    "skill_survival": 65,
+    "skill_medicine": 35,
+    "skill_persuade": 40,
+    "skill_orient": 50
+  },
+  "scene_sprite": "assets/img/npc/senni_sprite.png",
+  "breathe": true,
+  "dialogue": "dialogues/senni.ink",
+  "equipment": {}
+}

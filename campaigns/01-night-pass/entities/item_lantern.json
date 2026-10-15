@@ -1,0 +1,33 @@
+{
+  "id": "item_lantern",
+  "type": "item",
+  "category": "gear",
+  "label": "Фонарь Сенни",
+  "description": "Жесть, слюда и фитиль, промасленный дважды. Светит ровно настолько, чтобы видеть край тропы.",
+  "weight": 1.2,
+  "stackable": false,
+  "image": "assets/img/item/lantern.png",
+  "equip_slot": "hand",
+  "interact_options": [
+    {
+      "label": "Зажечь фонарь",
+      "effects": [
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": 5
+        },
+        {
+          "type": "set_flag",
+          "flag": "sennys_lantern_taken"
+        },
+        {
+          "type": "unlock_codex",
+          "entry": "codex_lantern"
+        }
+      ],
+      "once": true,
+      "message": "Фонарь занят. Свет против метели — это не комфорт, а лишний час."
+    }
+  ]
+}
