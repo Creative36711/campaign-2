@@ -4,8 +4,7 @@
   "label": "Олита, возница",
   "description": "Гонщик почтовой службы с раскроенным виском и обмороженной щёкой. Кричала, пока не села голос; теперь говорит коротко и зло.",
   "portrait": {
-    "neutral": "assets/img/npc/olita.jpg",
-    "afraid": "assets/img/npc/olita_afraid.jpg"
+    "neutral": "assets/img/npc/olita.jpg"
   },
   "stats": {
     "STR": 11,
