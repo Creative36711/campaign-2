@@ -16,5 +16,6 @@
     ],
     "consume": true,
     "message": "Перебрал ломти. Голод отступил."
-  }
+  },
+  "image": "assets/img/item/ration.png"
 }

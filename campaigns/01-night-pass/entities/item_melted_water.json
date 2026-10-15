@@ -21,5 +21,6 @@
     ],
     "consume": true,
     "message": "Выпил тёплой воды. Гораздо лучше, чем снег."
-  }
+  },
+  "image": "assets/img/item/melted_water.png"
 }

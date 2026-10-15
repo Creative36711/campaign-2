@@ -21,5 +21,6 @@
     ],
     "consume": true,
     "message": "Снег обжёг рот. Жажды почти нет, тепла стало меньше."
-  }
+  },
+  "image": "assets/img/item/snow.png"
 }

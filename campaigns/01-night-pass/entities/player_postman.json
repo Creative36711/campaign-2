@@ -46,7 +46,6 @@
   "equipment": {},
   "combat_figure": "assets/img/figure/fig_player_postman.png",
   "combat_figure_states": {
-    "down": "assets/img/figure/fig_player_postman_down.png",
     "dead": "assets/img/figure/fig_player_postman_dead.png"
   },
   "figure_mode": "topdown",

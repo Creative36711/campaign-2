@@ -7,5 +7,6 @@
   "weight": 4.5,
   "stackable": false,
   "equip_slot": "body",
-  "carry_mult": 1.0
+  "carry_mult": 1.0,
+  "image": "assets/img/item/cloak.png"
 }

@@ -66,7 +66,8 @@
       "w": 320,
       "h": 160,
       "condition": null,
-      "default_entity": "item_sled_crate"
+      "default_entity": "item_sled_crate",
+      "environmental": true
     },
     {
       "id": "slot_order",
