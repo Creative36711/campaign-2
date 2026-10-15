@@ -94,6 +94,23 @@
       "h": 150,
       "condition": null,
       "environmental": true
+    },
+    {
+      "id": "slot_snow",
+      "label": "Сугроб у порога",
+      "type": [
+        "item",
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 250,
+      "y": 600,
+      "w": 190,
+      "h": 96,
+      "default_entity": "item_snow",
+      "environmental": true,
+      "condition": null,
+      "sprite_scale": 0.6
     }
   ],
   "navigation": [
