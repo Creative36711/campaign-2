@@ -4,7 +4,8 @@
   "label": "Калев, проводник",
   "description": "Знает склон лучше, чем людей. Ведёт длинным путём, потому что короткий в этом году уже забрал двоих.",
   "portrait": {
-    "neutral": "assets/img/npc/kalev.jpg"
+    "neutral": "assets/img/npc/kalev.jpg",
+    "wary": "assets/img/npc/kalev_wary.jpg"
   },
   "stats": {
     "STR": 12,

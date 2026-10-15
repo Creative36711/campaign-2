@@ -4,7 +4,8 @@
   "label": "Микель, потерявшийся путник",
   "description": "Сошёл с тракта «срезать полчасика» и три часа кружит у дорожного знака. Язык уже плохо слушается.",
   "portrait": {
-    "neutral": "assets/img/npc/mikael.jpg"
+    "neutral": "assets/img/npc/mikael.jpg",
+    "wary": "assets/img/npc/mikael_wary.jpg"
   },
   "stats": {
     "STR": 10,

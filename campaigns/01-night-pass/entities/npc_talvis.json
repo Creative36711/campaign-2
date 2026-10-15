@@ -4,7 +4,8 @@
   "label": "Талвис, потерявшийся путник",
   "description": "Сидит на камне в балке и говорит, что только передохнёт. Движений почти не делает — это сон на морозе.",
   "portrait": {
-    "neutral": "assets/img/npc/talvis.jpg"
+    "neutral": "assets/img/npc/talvis.jpg",
+    "kind": "assets/img/npc/talvis_kind.jpg"
   },
   "stats": {
     "STR": 11,
