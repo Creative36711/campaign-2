@@ -26,5 +26,6 @@
   },
   "breathe": true,
   "dialogue": "dialogues/saara.ink",
-  "equipment": {}
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_saara.png"
 }

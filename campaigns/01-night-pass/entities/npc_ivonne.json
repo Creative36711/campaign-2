@@ -26,5 +26,6 @@
   },
   "breathe": true,
   "dialogue": "dialogues/ivonne.ink",
-  "equipment": {}
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_ivonne.png"
 }

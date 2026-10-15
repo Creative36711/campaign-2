@@ -24,5 +24,6 @@
   },
   "breathe": true,
   "dialogue": "dialogues/mikael.ink",
-  "equipment": {}
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_mikael.png"
 }
