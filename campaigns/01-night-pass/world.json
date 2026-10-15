@@ -1,0 +1,580 @@
+{
+  "regions": [
+    {
+      "id": "region_pass",
+      "label": "Перевал Ламмер",
+      "map_image": "",
+      "map_size": {
+        "w": 1280,
+        "h": 720
+      },
+      "parent_region": null,
+      "locations": [
+        {
+          "id": "loc_wreck",
+          "label": "Перевёрнутые сани",
+          "position": {
+            "x": 190,
+            "y": 560
+          },
+          "travel_connections": [
+            {
+              "to": "loc_serpentine",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_signpost",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_wreck_sleds",
+            "scene_wreck_slope"
+          ],
+          "arrival_scene": "scene_wreck_sleds",
+          "ambient_audio": "snd_gust",
+          "camp": false,
+          "music": [
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_serpentine",
+          "label": "Нижний серпантин",
+          "position": {
+            "x": 330,
+            "y": 470
+          },
+          "travel_connections": [
+            {
+              "to": "loc_wreck",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_signpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_serpentine_upper",
+            "scene_serpentine_ledge"
+          ],
+          "arrival_scene": "scene_serpentine_upper",
+          "ambient_audio": "snd_wind",
+          "camp": false,
+          "music": [
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_signpost",
+          "label": "Развилка у дорожного знака",
+          "position": {
+            "x": 470,
+            "y": 400
+          },
+          "travel_connections": [
+            {
+              "to": "loc_wreck",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_serpentine",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_gully",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_bridge",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_signpost"
+          ],
+          "arrival_scene": "scene_signpost",
+          "ambient_audio": "snd_wind",
+          "camp": false,
+          "music": [
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_gully",
+          "label": "Снежная балка",
+          "position": {
+            "x": 560,
+            "y": 530
+          },
+          "travel_connections": [
+            {
+              "to": "loc_signpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_outpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_shelter",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_gully",
+            "scene_gully_creek",
+            "scene_pass_cairn"
+          ],
+          "arrival_scene": "scene_gully",
+          "ambient_audio": "snd_wind",
+          "camp": true,
+          "music": [
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_outpost",
+          "label": "Перевальная застава",
+          "position": {
+            "x": 700,
+            "y": 300
+          },
+          "travel_connections": [
+            {
+              "to": "loc_gully",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_shelter",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_bridge",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_outpost_yard",
+            "scene_outpost_room"
+          ],
+          "arrival_scene": "scene_outpost_yard",
+          "ambient_audio": "snd_wind",
+          "camp": true,
+          "music": [
+            {
+              "tracks": [
+                "music_shelter"
+              ],
+              "conditions": [
+                {
+                  "type": "flag_set",
+                  "flag": "fire_lit"
+                }
+              ]
+            },
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_bridge",
+          "label": "Ледяной мост",
+          "position": {
+            "x": 760,
+            "y": 470
+          },
+          "travel_connections": [
+            {
+              "to": "loc_signpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_outpost",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_tower",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_oldpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_bridge_west",
+            "scene_bridge_middle",
+            "scene_bridge_east"
+          ],
+          "arrival_scene": "scene_bridge_west",
+          "ambient_audio": "snd_wind",
+          "camp": false,
+          "music": [
+            {
+              "tracks": [
+                "music_pursuit"
+              ],
+              "conditions": [
+                {
+                  "type": "flag_set",
+                  "flag": "hound_close"
+                }
+              ]
+            },
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_shelter",
+          "label": "Сторожка для лагеря",
+          "position": {
+            "x": 880,
+            "y": 360
+          },
+          "travel_connections": [
+            {
+              "to": "loc_gully",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_outpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_oldpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_tower",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_southpost",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_shelter_door",
+            "scene_shelter_hearth",
+            "scene_shelter_loft"
+          ],
+          "arrival_scene": "scene_shelter_door",
+          "ambient_audio": "snd_wind",
+          "camp": true,
+          "music": [
+            {
+              "tracks": [
+                "music_shelter"
+              ],
+              "conditions": [
+                {
+                  "type": "flag_set",
+                  "flag": "shelter_welcomed"
+                }
+              ]
+            },
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_oldpost",
+          "label": "Заброшенный почтовый дом",
+          "position": {
+            "x": 940,
+            "y": 520
+          },
+          "travel_connections": [
+            {
+              "to": "loc_shelter",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_bridge",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_tower",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_southpost",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_oldpost_yard",
+            "scene_oldpost_room",
+            "scene_oldpost_barn"
+          ],
+          "arrival_scene": "scene_oldpost_yard",
+          "ambient_audio": "snd_wind",
+          "camp": true,
+          "music": [
+            {
+              "tracks": [
+                "music_shelter"
+              ],
+              "conditions": [
+                {
+                  "type": "flag_set",
+                  "flag": "fire_lit"
+                }
+              ]
+            },
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_tower",
+          "label": "Сигнальная башня",
+          "position": {
+            "x": 1080,
+            "y": 240
+          },
+          "travel_connections": [
+            {
+              "to": "loc_shelter",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_bridge",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_oldpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_southpost",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_tower_base",
+            "scene_tower_stairs",
+            "scene_tower_lamp"
+          ],
+          "arrival_scene": "scene_tower_base",
+          "ambient_audio": "snd_wind",
+          "camp": false,
+          "music": [
+            {
+              "tracks": [
+                "music_dawn"
+              ],
+              "conditions": [
+                {
+                  "type": "flag_set",
+                  "flag": "signal_lit"
+                }
+              ]
+            },
+            {
+              "tracks": [
+                "music_night"
+              ],
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "id": "loc_southpost",
+          "label": "Южная сторожка с дозором",
+          "position": {
+            "x": 1120,
+            "y": 580
+          },
+          "travel_connections": [
+            {
+              "to": "loc_oldpost",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_tower",
+              "cost_ticks": 1,
+              "sound": "sfx_steps"
+            },
+            {
+              "to": "loc_shelter",
+              "cost_ticks": 2,
+              "sound": "sfx_steps"
+            }
+          ],
+          "scenes": [
+            "scene_south_gate",
+            "scene_south_hall"
+          ],
+          "arrival_scene": "scene_south_gate",
+          "ambient_audio": "snd_wind",
+          "camp": true,
+          "music": [
+            {
+              "tracks": [
+                "music_dawn"
+              ],
+              "conditions": []
+            }
+          ]
+        }
+      ],
+      "map_art": {
+        "background": "#0e151d",
+        "layers": [
+          {
+            "label": "долина",
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 480,
+              "w": 1280,
+              "h": 240,
+              "fill": "#16212c"
+            }
+          },
+          {
+            "label": "хребет",
+            "shape": {
+              "type": "polygon",
+              "points": [
+                [
+                  80,
+                  470
+                ],
+                [
+                  420,
+                  150
+                ],
+                [
+                  640,
+                  330
+                ],
+                [
+                  880,
+                  120
+                ],
+                [
+                  1210,
+                  460
+                ],
+                [
+                  640,
+                  520
+                ]
+              ],
+              "fill": "#1d2b39"
+            }
+          },
+          {
+            "label": "тропа короткая",
+            "shape": {
+              "type": "line",
+              "x1": 190,
+              "y1": 560,
+              "x2": 700,
+              "y2": 300,
+              "stroke": "#4c6b82",
+              "stroke_width": 4
+            }
+          },
+          {
+            "label": "тропа длинная",
+            "shape": {
+              "type": "line",
+              "x1": 190,
+              "y1": 560,
+              "x2": 430,
+              "y2": 430,
+              "stroke": "#3d586b",
+              "stroke_width": 3
+            }
+          },
+          {
+            "label": "гребень",
+            "shape": {
+              "type": "line",
+              "x1": 700,
+              "y1": 300,
+              "x2": 1080,
+              "y2": 580,
+              "stroke": "#4c6b82",
+              "stroke_width": 4
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
