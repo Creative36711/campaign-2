@@ -46,7 +46,8 @@
             }
           ]
         }
-      ]
+      ],
+      "on_enter_effects": []
     },
     {
       "id": "stage_done",

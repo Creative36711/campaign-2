@@ -23,7 +23,8 @@
             }
           ]
         }
-      ]
+      ],
+      "on_enter_effects": []
     },
     {
       "id": "stage_repair",
@@ -51,13 +52,15 @@
       "id": "stage_lit",
       "label": "Свет горит",
       "final": true,
-      "outcome": "success"
+      "outcome": "success",
+      "on_enter_effects": []
     },
     {
       "id": "stage_failed",
       "label": "Поздно",
       "final": true,
-      "outcome": "failure"
+      "outcome": "failure",
+      "on_enter_effects": []
     }
   ]
 }

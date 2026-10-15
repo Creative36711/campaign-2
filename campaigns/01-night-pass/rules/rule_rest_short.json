@@ -11,7 +11,7 @@
   ],
   "effects": [
     {
-      "type": "sleep",
+      "type": "advance_time",
       "ticks": 1
     }
   ]

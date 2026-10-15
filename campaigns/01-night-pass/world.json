@@ -21,12 +21,14 @@
             {
               "to": "loc_serpentine",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_signpost",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -56,12 +58,14 @@
             {
               "to": "loc_wreck",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_signpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -91,22 +95,26 @@
             {
               "to": "loc_wreck",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_serpentine",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_gully",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_bridge",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -135,17 +143,20 @@
             {
               "to": "loc_signpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_outpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_shelter",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -176,17 +187,20 @@
             {
               "to": "loc_gully",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_shelter",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_bridge",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -227,22 +241,26 @@
             {
               "to": "loc_signpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_outpost",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_tower",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_oldpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -284,27 +302,32 @@
             {
               "to": "loc_gully",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_outpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_oldpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_tower",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_southpost",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -346,22 +369,26 @@
             {
               "to": "loc_shelter",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_bridge",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_tower",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_southpost",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -403,22 +430,26 @@
             {
               "to": "loc_shelter",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_bridge",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_oldpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_southpost",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -460,17 +491,20 @@
             {
               "to": "loc_oldpost",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_tower",
               "cost_ticks": 1,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             },
             {
               "to": "loc_shelter",
               "cost_ticks": 2,
-              "sound": "sfx_steps"
+              "sound": "sfx_steps",
+              "requirements": []
             }
           ],
           "scenes": [
@@ -494,7 +528,6 @@
         "background": "#0e151d",
         "layers": [
           {
-            "label": "долина",
             "shape": {
               "type": "rect",
               "x": 0,
@@ -502,76 +535,62 @@
               "w": 1280,
               "h": 240,
               "fill": "#16212c"
-            }
+            },
+            "label": "долина"
           },
           {
-            "label": "хребет",
             "shape": {
               "type": "polygon",
               "points": [
-                [
-                  80,
-                  470
-                ],
-                [
-                  420,
-                  150
-                ],
-                [
-                  640,
-                  330
-                ],
-                [
-                  880,
-                  120
-                ],
-                [
-                  1210,
-                  460
-                ],
-                [
-                  640,
-                  520
-                ]
+                80.0,
+                470.0,
+                420.0,
+                150.0,
+                640.0,
+                330.0,
+                880.0,
+                120.0,
+                1210.0,
+                460.0,
+                640.0,
+                520.0
               ],
               "fill": "#1d2b39"
-            }
+            },
+            "label": "хребет"
           },
           {
-            "label": "тропа короткая",
             "shape": {
               "type": "line",
               "x1": 190,
               "y1": 560,
               "x2": 700,
               "y2": 300,
-              "stroke": "#4c6b82",
-              "stroke_width": 4
-            }
+              "width": 2
+            },
+            "label": "тропа короткая"
           },
           {
-            "label": "тропа длинная",
             "shape": {
               "type": "line",
               "x1": 190,
               "y1": 560,
               "x2": 430,
               "y2": 430,
-              "stroke": "#3d586b",
-              "stroke_width": 3
-            }
+              "width": 2
+            },
+            "label": "тропа длинная"
           },
           {
-            "label": "гребень",
             "shape": {
               "type": "line",
               "x1": 700,
               "y1": 300,
               "x2": 1080,
               "y2": 580,
-              "stroke": "#4c6b82",
-              "stroke_width": 4
-            }
+              "width": 2
+            },
+            "label": "гребень"
           }
         ]
       }
