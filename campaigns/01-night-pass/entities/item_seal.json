@@ -7,5 +7,6 @@
   "weight": 0.3,
   "stackable": false,
   "image": "assets/img/item/seal.png",
-  "quest_item": true
+  "quest_item": true,
+  "scene_sprite": "assets/img/item/seal.png"
 }

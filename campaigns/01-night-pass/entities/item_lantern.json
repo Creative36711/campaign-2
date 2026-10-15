@@ -29,5 +29,6 @@
       "once": true,
       "message": "Фонарь занят. Свет против метели — это не комфорт, а лишний час."
     }
-  ]
+  ],
+  "scene_sprite": "assets/img/item/lantern.png"
 }

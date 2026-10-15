@@ -7,5 +7,6 @@
   "weight": 1.2,
   "stackable": false,
   "image": "assets/img/item/satchel.png",
-  "carry_bonus": 4
+  "carry_bonus": 4,
+  "scene_sprite": "assets/img/item/satchel.png"
 }
