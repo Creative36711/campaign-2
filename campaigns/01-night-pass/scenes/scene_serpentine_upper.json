@@ -69,7 +69,8 @@
       "w": 240,
       "h": 140,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "default_entity": "item_hound_trail"
     },
     {
       "id": "slot_cairn",

@@ -2,6 +2,7 @@
   "id": "rule_signal_fire",
   "label": "Зажечь сигнальный очаг",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "flag_set",

@@ -17,23 +17,5 @@
     "consume": true,
     "message": "Перебрал ломти. Голод отступил."
   },
-  "interact_options": [
-    {
-      "label": "Бросить паёк на след",
-      "conditions": [
-        {
-          "type": "flag_set",
-          "flag": "hound_close"
-        }
-      ],
-      "effects": [
-        {
-          "type": "fire_rule",
-          "rule": "rule_hound_meat"
-        }
-      ],
-      "once": false
-    }
-  ],
   "image": "assets/img/item/ration.png"
 }

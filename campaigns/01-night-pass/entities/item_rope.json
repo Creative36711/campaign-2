@@ -6,31 +6,5 @@
   "description": "Пеньковая, пропитанная салом. Единственный способ перейти карниз не в одиночку с ветром.",
   "weight": 1.5,
   "stackable": false,
-  "image": "assets/img/item/rope.png",
-  "interact_hint": "Обвязаться и закрепить",
-  "interact_options": [
-    {
-      "label": "Закрепить верёвку и обвязаться",
-      "conditions": [
-        {
-          "type": "flag_not_set",
-          "flag": "rope_tied"
-        }
-      ],
-      "effects": [
-        {
-          "type": "set_flag",
-          "flag": "rope_tied",
-          "value": 1
-        },
-        {
-          "type": "show_message",
-          "text": "Узел держит. Карниз теперь пройден не ценой жизни, а ценой времени."
-        }
-      ],
-      "once": true,
-      "sound": "sfx_item",
-      "message": "Верёвка закреплена за камень, узел проверен дважды."
-    }
-  ]
+  "image": "assets/img/item/rope.png"
 }

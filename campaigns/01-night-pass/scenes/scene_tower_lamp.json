@@ -131,30 +131,7 @@
       "h": 180,
       "condition": null,
       "environmental": true,
-      "use_with": [
-        {
-          "item": "item_tinder",
-          "consume": false,
-          "message": "Пробуешь зажечь чашу на ветру.",
-          "effects": [
-            {
-              "type": "start_duration_action",
-              "action": "act_fix_signal"
-            }
-          ]
-        },
-        {
-          "item": "item_lantern",
-          "consume": false,
-          "message": "Светишь в чашу, собирая осколки и фитиль.",
-          "effects": [
-            {
-              "type": "start_duration_action",
-              "action": "act_fix_signal"
-            }
-          ]
-        }
-      ]
+      "default_entity": "item_signal_bowl"
     },
     {
       "id": "slot_oil_tower",
