@@ -2,6 +2,7 @@
   "id": "rule_hound_meat",
   "label": "Гончая отвлеклась на еду",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "has_item",
