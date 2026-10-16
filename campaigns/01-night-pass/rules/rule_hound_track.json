@@ -2,6 +2,7 @@
   "id": "rule_hound_track",
   "label": "След сбит в метель",
   "once": false,
+  "manual": true,
   "conditions": [
     {
       "type": "weather_is",

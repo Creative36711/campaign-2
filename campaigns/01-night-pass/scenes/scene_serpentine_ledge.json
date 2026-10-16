@@ -89,7 +89,8 @@
       "w": 420,
       "h": 140,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "default_entity": "item_cornice_edge"
     },
     {
       "id": "slot_ledge_anchor",
@@ -103,7 +104,25 @@
       "w": 190,
       "h": 150,
       "condition": null,
-      "environmental": true
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_rope",
+          "consume": false,
+          "message": "Крепишь верёвку за камень на кромке и проверяешь узел дважды.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "rope_tied",
+              "value": true
+            },
+            {
+              "type": "show_message",
+              "text": "Верёвка держит. Карниз перестаёт быть задачей одного человека и становится задачей времени."
+            }
+          ]
+        }
+      ]
     }
   ],
   "navigation": [

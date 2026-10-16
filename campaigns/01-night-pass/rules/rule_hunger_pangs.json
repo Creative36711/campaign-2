@@ -12,8 +12,9 @@
   ],
   "effects": [
     {
-      "type": "change_fatigue",
-      "delta": 6
+      "type": "change_need",
+      "need": "need_energy",
+      "delta": -6
     },
     {
       "type": "show_message",

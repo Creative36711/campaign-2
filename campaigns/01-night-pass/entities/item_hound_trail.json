@@ -27,6 +27,27 @@
       ],
       "once": false,
       "message": "Паёк уходит в снег в трёх десятках шагов от тебя."
+    },
+    {
+      "label": "Сбить след в буране",
+      "conditions": [
+        {
+          "type": "weather_is",
+          "weather": "weather_blizzard"
+        },
+        {
+          "type": "flag_set",
+          "flag": "hound_close"
+        }
+      ],
+      "effects": [
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_track"
+        }
+      ],
+      "once": false,
+      "message": "Идёшь низом, где ветер режет снег поперёк: след уходит в белый шум."
     }
   ]
 }

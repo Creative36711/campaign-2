@@ -1,0 +1,28 @@
+{
+  "id": "item_cornice_edge",
+  "type": "item",
+  "category": "misc",
+  "label": "Кромка карниза",
+  "description": "Узкая полка снега над оврагом. Без верёвки каждый шаг здесь — на удачу.",
+  "weight": 0,
+  "stackable": false,
+  "interact_options": [
+    {
+      "label": "Перебраться через карниз",
+      "conditions": [
+        {
+          "type": "flag_not_set",
+          "flag": "cornice_crossed"
+        }
+      ],
+      "effects": [
+        {
+          "type": "start_duration_action",
+          "action": "act_cross_cornice"
+        }
+      ],
+      "once": false,
+      "message": "Шаг, второй — снег под сапогом держится на честном слове."
+    }
+  ]
+}

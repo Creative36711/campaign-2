@@ -290,10 +290,6 @@
         "type": "change_need",
         "need": "need_energy",
         "delta": 14
-      },
-      {
-        "type": "change_fatigue",
-        "delta": -6
       }
     ],
     "restore": {
@@ -338,8 +334,9 @@
       "step": 1,
       "per_tick": [
         {
-          "type": "change_fatigue",
-          "delta": 3
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -3
         }
       ],
       "on_finish": [
@@ -387,8 +384,9 @@
       "step": 1,
       "per_tick": [
         {
-          "type": "change_fatigue",
-          "delta": 5
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -5
         }
       ],
       "on_finish": [
@@ -411,12 +409,6 @@
           "type": "set_flag",
           "flag": "cornice_crossed"
         }
-      ],
-      "available_when": [
-        {
-          "type": "flag_set",
-          "flag": "rope_tied"
-        }
       ]
     },
     {
@@ -427,8 +419,9 @@
       "step": 1,
       "per_tick": [
         {
-          "type": "change_fatigue",
-          "delta": 4
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -4
         }
       ],
       "on_finish": [

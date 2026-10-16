@@ -27,6 +27,7 @@
   ],
   "entities": [
     "item_cloak.json",
+    "item_cornice_edge.json",
     "item_fuel_bundle.json",
     "item_grosch.json",
     "item_hound_trail.json",
