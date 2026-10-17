@@ -1,0 +1,49 @@
+{
+  "id": "rule_camp_hound",
+  "label": "Гончая у укрытия",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "flag_not_set",
+      "flag": "hound_shaken"
+    }
+  ],
+  "effects": [
+    {
+      "type": "show_message",
+      "text": "Под стеной кто-то наступил на наст. Привал кончается раньше, чем ты его начал."
+    },
+    {
+      "type": "set_flag",
+      "flag": "hound_close",
+      "value": 1
+    },
+    {
+      "type": "change_need",
+      "need": "need_energy",
+      "delta": -12
+    },
+    {
+      "type": "start_pursuit",
+      "label": "Отход от укрытия",
+      "skill": "skill_silent",
+      "every_ticks": 1,
+      "fails_to_catch": 1,
+      "on_fail": [
+        {
+          "type": "change_hp",
+          "delta": -4
+        },
+        {
+          "type": "show_message",
+          "text": "Зверь успел схватить раньше, чем ты закрыл проход."
+        },
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_fight"
+        }
+      ]
+    }
+  ]
+}

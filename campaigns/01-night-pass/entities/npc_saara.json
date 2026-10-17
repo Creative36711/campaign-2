@@ -1,0 +1,31 @@
+{
+  "id": "npc_saara",
+  "type": "npc",
+  "label": "Саара, старшая из потерявшихся",
+  "description": "Держит сестру за руку и не верит ни одному обещанию, которое звучит как «иди со мной». Знает, что мост держит только на верёвке.",
+  "portrait": {
+    "neutral": "assets/img/npc/saara.jpg",
+    "angry": "assets/img/npc/saara_angry.jpg"
+  },
+  "stats": {
+    "STR": 9,
+    "CON": 10,
+    "SIZ": 8,
+    "DEX": 11,
+    "INT": 10,
+    "POW": 9,
+    "CHA": 8,
+    "HP": 10,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 45,
+    "skill_athletics": 40,
+    "skill_silent": 35,
+    "skill_persuade": 30
+  },
+  "breathe": true,
+  "dialogue": "dialogues/saara.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_saara.png"
+}

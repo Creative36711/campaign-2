@@ -1,0 +1,22 @@
+{
+  "id": "rule_save_mikael",
+  "label": "Микель в тепле",
+  "once": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "mikael_brought_in"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_variable",
+      "var": "var_travelers_saved",
+      "delta": 1
+    },
+    {
+      "type": "show_message",
+      "text": "Микель доведён до тепла. Он будет должен тебе три ночи и ни одной монеты."
+    }
+  ]
+}

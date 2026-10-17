@@ -1,0 +1,29 @@
+{
+  "id": "rule_hypothermia",
+  "label": "Обморожение от холода",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "need_le",
+      "need": "need_heat",
+      "threshold": 0
+    }
+  ],
+  "effects": [
+    {
+      "type": "apply_status",
+      "target": "player",
+      "status": "status_frostbite",
+      "duration": 12
+    },
+    {
+      "type": "change_hp",
+      "delta": -2
+    },
+    {
+      "type": "show_message",
+      "text": "Мороз добрался до пальцев: обморожение. Движение и лазание стали заметно хуже; тепло, лечение и отдых это вернут."
+    }
+  ]
+}

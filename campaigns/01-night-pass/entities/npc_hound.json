@@ -1,0 +1,44 @@
+{
+  "id": "npc_hound",
+  "type": "npc",
+  "label": "Гончая",
+  "description": "Тощая чёрная сука с обломанным ухом. Не злится и не воет — просто идёт по следу крови, еды и шума и считает, сколько ты прошёл до неё.",
+  "portrait": {
+    "neutral": "assets/img/npc/hound.jpg"
+  },
+  "stats": {
+    "STR": 12,
+    "CON": 13,
+    "SIZ": 10,
+    "DEX": 15,
+    "INT": 6,
+    "POW": 8,
+    "CHA": 4,
+    "HP": 12,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 70,
+    "skill_track": 75,
+    "skill_athletics": 65,
+    "skill_silent": 50
+  },
+  "breathe": true,
+  "natural_weapon": {
+    "skill": "skill_athletics",
+    "damage": "1d8",
+    "damage_bonus": true,
+    "range": 1,
+    "attacks_per_round": 2,
+    "parry_capable": false,
+    "label": "Зубы"
+  },
+  "equipment": {},
+  "shadow": true,
+  "combat_figure": "assets/img/figure/fig_npc_hound.png",
+  "combat_figure_states": {
+    "dead": "assets/img/figure/fig_npc_hound_dead.png"
+  },
+  "figure_mode": "topdown",
+  "facing_offset": 0
+}

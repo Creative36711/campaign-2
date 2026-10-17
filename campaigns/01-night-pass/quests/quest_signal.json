@@ -1,0 +1,66 @@
+{
+  "id": "quest_signal",
+  "label": "Сигнал до рассвета",
+  "chapter": "ch_trace",
+  "description": "Добраться до старой сигнальной башни и восстановить световой сигнал, чтобы дозор в метель нашёл путь на перевал.",
+  "journal_entries": {
+    "j_start": "Сани разбиты. Дозор выйдет к 06:00 и в метель не найдёт людей без огня на башне. Найти башню, починить чашу, зажечь сигнал.",
+    "j_repaired": "Чаша собрана и заправлена ворванью. Осталось высечь огонь наверху: на ветру это не одно движение.",
+    "j_lit": "Сигнал горит. Дозор увидит перевал — теперь важно, что именно он увидит.",
+    "j_late": "До 06:00 свет так и не зажёгся. Дозор шёл вслепую и людей в метель не вывел."
+  },
+  "stages": [
+    {
+      "id": "stage_tower",
+      "label": "Найти башню",
+      "transitions": [
+        {
+          "to": "stage_repair",
+          "conditions": [
+            {
+              "type": "player_enters_scene",
+              "scene": "scene_tower_lamp"
+            }
+          ]
+        }
+      ],
+      "on_enter_effects": []
+    },
+    {
+      "id": "stage_repair",
+      "label": "Починить чашу",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_signal",
+          "text_key": "j_repaired"
+        }
+      ],
+      "transitions": [
+        {
+          "to": "stage_lit",
+          "conditions": [
+            {
+              "type": "flag_set",
+              "flag": "signal_lit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage_lit",
+      "label": "Свет горит",
+      "final": true,
+      "outcome": "success",
+      "on_enter_effects": []
+    },
+    {
+      "id": "stage_failed",
+      "label": "Поздно",
+      "final": true,
+      "outcome": "failure",
+      "on_enter_effects": []
+    }
+  ]
+}

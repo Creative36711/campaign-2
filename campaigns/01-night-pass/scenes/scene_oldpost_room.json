@@ -1,0 +1,161 @@
+{
+  "id": "scene_oldpost_room",
+  "label": "Комната почтового дома",
+  "location": "loc_oldpost",
+  "chapter": "ch_shelter",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Комната с погасшей печью",
+      "condition": null,
+      "image": "assets/img/bg/oldpost.jpg",
+      "art": {
+        "background": "#151e28",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 1280,
+              "h": 400,
+              "fill": "#1a2530"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 120,
+              "y": 300,
+              "w": 260,
+              "h": 160,
+              "fill": "#0f1922"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_fire",
+      "label": "Печь снова тянет",
+      "condition": {
+        "flag": "fire_lit"
+      },
+      "image": "assets/img/bg/oldpost.jpg",
+      "art": {
+        "background": "#251a12",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          }
+        ]
+      },
+      "sound": "sfx_fire"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_tylda",
+      "label": "Тильда у стола",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 240,
+      "y": 300,
+      "w": 180,
+      "h": 340,
+      "condition": null,
+      "default_entity": "npc_tylda"
+    },
+    {
+      "id": "slot_journal",
+      "label": "Журнал почтового дома на столе",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 640,
+      "y": 420,
+      "w": 240,
+      "h": 130,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_seal",
+      "label": "Ящик с печатью",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 980,
+      "y": 420,
+      "w": 180,
+      "h": 120,
+      "condition": null,
+      "default_entity": "item_seal"
+    },
+    {
+      "id": "slot_stove_old",
+      "label": "Печь",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 100,
+      "y": 300,
+      "w": 240,
+      "h": 170,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Во двор",
+      "area": {
+        "x": 560,
+        "y": 540,
+        "w": 280,
+        "h": 140
+      },
+      "go_to_scene": "scene_oldpost_yard"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 940,
+        "y": 520,
+        "w": 300,
+        "h": 150
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "indoor",
+  "ambient": []
+}

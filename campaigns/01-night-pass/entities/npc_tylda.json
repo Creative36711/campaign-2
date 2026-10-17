@@ -1,0 +1,31 @@
+{
+  "id": "npc_tylda",
+  "type": "npc",
+  "label": "Тильда, вдова почтового дома",
+  "description": "Дом её, печка её и всё, что в сарае, тоже её. Пустит к огню, но спросит, за кем ты пришёл.",
+  "portrait": {
+    "neutral": "assets/img/npc/tylda.jpg",
+    "kind": "assets/img/npc/tylda_kind.jpg"
+  },
+  "stats": {
+    "STR": 10,
+    "CON": 11,
+    "SIZ": 10,
+    "DEX": 9,
+    "INT": 11,
+    "POW": 10,
+    "CHA": 10,
+    "HP": 11,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 50,
+    "skill_persuade": 40,
+    "skill_survival": 45,
+    "skill_medicine": 30
+  },
+  "breathe": true,
+  "dialogue": "dialogues/tylda.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_tylda.png"
+}

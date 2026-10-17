@@ -1,0 +1,18 @@
+{
+  "id": "rule_act_melt",
+  "label": "Начать топить снег",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "fire_lit"
+    }
+  ],
+  "effects": [
+    {
+      "type": "start_duration_action",
+      "action": "act_melt_snow"
+    }
+  ]
+}

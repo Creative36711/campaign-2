@@ -1,0 +1,138 @@
+{
+  "id": "scene_signpost",
+  "label": "Развилка у дорожного знака",
+  "location": "loc_signpost",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Знак, заваленный до половины",
+      "condition": null,
+      "image": "assets/img/bg/signpost.jpg",
+      "art": {
+        "background": "#121e2a",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 600,
+              "y": 240,
+              "w": 40,
+              "h": 300,
+              "fill": "#3a4a58"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 470,
+              "y": 240,
+              "w": 300,
+              "h": 80,
+              "fill": "#42566a"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_sign",
+      "label": "Дорожный знак",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 470,
+      "y": 240,
+      "w": 300,
+      "h": 90,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_mikael",
+      "label": "Человек у знака",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 860,
+      "y": 320,
+      "w": 170,
+      "h": 330,
+      "condition": null,
+      "default_entity": "npc_mikael"
+    },
+    {
+      "id": "slot_town",
+      "label": "Лаз в каменной ограде",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 400,
+      "w": 200,
+      "h": 200,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Короче: к ледяному мосту",
+      "area": {
+        "x": 760,
+        "y": 520,
+        "w": 320,
+        "h": 150
+      },
+      "open_map": true
+    },
+    {
+      "label": "Дольше, но с укрытиями: в балку",
+      "area": {
+        "x": 160,
+        "y": 520,
+        "w": 340,
+        "h": 150
+      },
+      "open_map": true
+    },
+    {
+      "label": "Вверх, к серпантину",
+      "area": {
+        "x": 560,
+        "y": 180,
+        "w": 220,
+        "h": 120
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "fog",
+    "density": "medium",
+    "speed": "slow",
+    "wind": "none"
+  }
+}

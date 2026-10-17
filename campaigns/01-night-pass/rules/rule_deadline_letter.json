@@ -1,0 +1,26 @@
+{
+  "id": "rule_deadline_letter",
+  "label": "Дедлайн: приказ не дошёл",
+  "once": true,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 7
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "order_delivered"
+    }
+  ],
+  "effects": [
+    {
+      "type": "fail_quest",
+      "quest": "quest_order"
+    },
+    {
+      "type": "journal_update",
+      "quest": "quest_order",
+      "text_key": "j_late"
+    }
+  ]
+}

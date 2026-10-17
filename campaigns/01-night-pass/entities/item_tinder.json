@@ -1,0 +1,58 @@
+{
+  "id": "item_tinder",
+  "type": "item",
+  "category": "fuel",
+  "label": "Огниво и трут",
+  "description": "Сталь, кремень и сухая береста в рожке. Одна удача из трёх, если руки одеревенели.",
+  "weight": 0.4,
+  "stackable": false,
+  "interact_options": [
+    {
+      "label": "Развести огонь",
+      "conditions": [
+        {
+          "type": "flag_not_set",
+          "flag": "fire_lit"
+        }
+      ],
+      "effects": [
+        {
+          "type": "skill_check_gate",
+          "skill": "skill_survival",
+          "difficulty": "normal",
+          "success_effects": [
+            {
+              "type": "set_flag",
+              "flag": "fire_lit",
+              "value": 1
+            },
+            {
+              "type": "change_scene_state",
+              "scene": "scene_shelter_hearth",
+              "state": "state_fire"
+            },
+            {
+              "type": "show_message",
+              "text": "Огонь занялся. Теперь можно топить снег и сушить рукавицы."
+            }
+          ],
+          "fail_effects": [
+            {
+              "type": "change_need",
+              "need": "need_energy",
+              "delta": -6
+            },
+            {
+              "type": "show_message",
+              "text": "Искры гаснут о сырость. Нужны сухие береста и хворост."
+            }
+          ]
+        }
+      ],
+      "once": false,
+      "message": "Пробуешь высечь огонь: сырые руки и семь попыток."
+    }
+  ],
+  "image": "assets/img/item/tinder.png",
+  "scene_sprite": "assets/img/item/tinder.png"
+}

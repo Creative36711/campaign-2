@@ -1,0 +1,21 @@
+{
+  "id": "rule_hound_bridge",
+  "label": "На мосту: распоряжение под давлением",
+  "once": true,
+  "conditions": [
+    {
+      "type": "player_enters_scene",
+      "scene": "scene_bridge_middle"
+    },
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
+    }
+  ],
+  "effects": [
+    {
+      "type": "start_dialogue",
+      "entity": "npc_ruur"
+    }
+  ]
+}

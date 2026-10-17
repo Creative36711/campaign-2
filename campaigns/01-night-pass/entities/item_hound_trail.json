@@ -1,0 +1,53 @@
+{
+  "id": "item_hound_trail",
+  "type": "item",
+  "category": "misc",
+  "label": "Свежий след гончей",
+  "description": "Отпечатки крупной лапы; снег по краям ещё не смёрзся.",
+  "weight": 0,
+  "stackable": false,
+  "interact_options": [
+    {
+      "label": "Бросить паёк на след",
+      "conditions": [
+        {
+          "type": "has_item",
+          "item": "item_ration"
+        },
+        {
+          "type": "flag_set",
+          "flag": "hound_close"
+        }
+      ],
+      "effects": [
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_meat"
+        }
+      ],
+      "once": false,
+      "message": "Паёк уходит в снег в трёх десятках шагов от тебя."
+    },
+    {
+      "label": "Сбить след в буране",
+      "conditions": [
+        {
+          "type": "weather_is",
+          "weather": "weather_blizzard"
+        },
+        {
+          "type": "flag_set",
+          "flag": "hound_close"
+        }
+      ],
+      "effects": [
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_track"
+        }
+      ],
+      "once": false,
+      "message": "Идёшь низом, где ветер режет снег поперёк: след уходит в белый шум."
+    }
+  ]
+}

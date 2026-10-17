@@ -1,0 +1,197 @@
+{
+  "id": "scene_outpost_room",
+  "label": "Комната заставы",
+  "location": "loc_outpost",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Комната без огня",
+      "condition": null,
+      "image": "assets/img/bg/outpost.jpg",
+      "art": {
+        "background": "#151f2b",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 0,
+              "w": 1280,
+              "h": 420,
+              "fill": "#1a2532"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 120,
+              "y": 300,
+              "w": 240,
+              "h": 140,
+              "fill": "#0e161f"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_fire",
+      "label": "Печка растоплена",
+      "condition": {
+        "flag": "fire_lit"
+      },
+      "image": "assets/img/bg/outpost.jpg",
+      "art": {
+        "background": "#241a14",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          }
+        ]
+      },
+      "sound": "sfx_fire"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_brann_room",
+      "label": "Бранн у лавки",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 240,
+      "y": 300,
+      "w": 170,
+      "h": 330,
+      "condition": null,
+      "default_entity": "npc_brann"
+    },
+    {
+      "id": "slot_stove",
+      "label": "Печка",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 900,
+      "y": 320,
+      "w": 200,
+      "h": 160,
+      "condition": null,
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_tinder",
+          "consume": false,
+          "message": "Печка заставы сложена так, что разжигают её дважды в год.",
+          "effects": [
+            {
+              "type": "skill_check_gate",
+              "skill": "skill_survival",
+              "difficulty": "normal",
+              "success_effects": [
+                {
+                  "type": "set_flag",
+                  "flag": "fire_lit",
+                  "value": true
+                },
+                {
+                  "type": "change_scene_state",
+                  "scene": "scene_outpost_room",
+                  "state": "state_fire"
+                },
+                {
+                  "type": "show_message",
+                  "text": "Печка взяла тягу. Бранн перестал считать вслух и начал работать."
+                }
+              ],
+              "fail_effects": [
+                {
+                  "type": "show_message",
+                  "text": "Тяги нет: трубуело закрыто чужим снегом. Огонь здесь не бесплатен."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slot_bench",
+      "label": "Лавка с раненым",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 560,
+      "y": 400,
+      "w": 280,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_shelf",
+      "label": "Полка с берестой",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 1060,
+      "y": 240,
+      "w": 150,
+      "h": 110,
+      "condition": null,
+      "default_entity": "item_tinder"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Во двор",
+      "area": {
+        "x": 60,
+        "y": 520,
+        "w": 260,
+        "h": 160
+      },
+      "go_to_scene": "scene_outpost_yard"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 960,
+        "y": 520,
+        "w": 280,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "indoor",
+  "ambient": []
+}

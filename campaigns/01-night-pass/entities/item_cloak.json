@@ -1,0 +1,12 @@
+{
+  "id": "item_cloak",
+  "type": "item",
+  "category": "gear",
+  "label": "Бурка",
+  "description": "Валеная овчина, тяжёлая и честная: без неё на склоне часа три, с ней — все шесть.",
+  "weight": 4.5,
+  "stackable": false,
+  "equip_slot": "body",
+  "carry_mult": 1.0,
+  "image": "assets/img/item/cloak.png"
+}

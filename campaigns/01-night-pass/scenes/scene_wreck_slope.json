@@ -1,0 +1,128 @@
+{
+  "id": "scene_wreck_slope",
+  "label": "Склон под санями",
+  "location": "loc_wreck",
+  "chapter": "ch_crash",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Обрыв в темноте",
+      "condition": null,
+      "image": "assets/img/bg/wreck.jpg",
+      "art": {
+        "background": "#0d151f",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 560,
+              "w": 1280,
+              "h": 160,
+              "fill": "#0a1119"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 620,
+              "y": 470,
+              "w": 660,
+              "h": 110,
+              "fill": "#243444"
+            },
+            "rotate": 6
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_uzda",
+      "label": "Узда в снегу у обрыва",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 560,
+      "y": 520,
+      "w": 150,
+      "h": 110,
+      "condition": null
+    },
+    {
+      "id": "slot_shout",
+      "label": "Ветер над обрывом",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 120,
+      "y": 300,
+      "w": 200,
+      "h": 160,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_mud",
+      "label": "Место, где конь бился о камень",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 880,
+      "y": 430,
+      "w": 220,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Назад к саням",
+      "area": {
+        "x": 60,
+        "y": 520,
+        "w": 280,
+        "h": 160
+      },
+      "go_to_scene": "scene_wreck_sleds"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 1000,
+        "y": 520,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "high",
+    "speed": "fast",
+    "wind": "left"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "quest_order",
+  "label": "Письмо через перевал",
+  "chapter": "ch_crash",
+  "description": "Сохранить и доставить запечатанный приказ о закрытии перевала. Отказ от груза или задержка ради людей меняют финал.",
+  "journal_entries": {
+    "j_start": "Приказ при почтальоне: закрыть перевал из-за трещин на верхнем склоне. Бумага должна попасть в руки капитана южного дозора до 06:00.",
+    "j_heavy": "Приказ тяжелее, чем кажется: без груза быстрее, с грузом — надёжнее. Оставить письмо на склоне значит выбрать чужую ночь вместо своей.",
+    "j_lost": "Приказ утрачен: ни печати, ни строк. Перевал никто не закрывает, и дозору нечего отдавать.",
+    "j_done": "Печать в руках Ивонн. Приказ прочитан вслух, и дозор действует по бумаге, а не по догадкам.",
+    "j_late": "До 06:00 приказ не дошёл. Дозор вышел на перевал, не зная, что его вызвали закрывать склон."
+  },
+  "stages": [
+    {
+      "id": "stage_carry",
+      "label": "Нести приказ",
+      "transitions": [
+        {
+          "to": "stage_done",
+          "conditions": [
+            {
+              "type": "flag_set",
+              "flag": "order_delivered"
+            }
+          ]
+        },
+        {
+          "to": "stage_lost",
+          "conditions": [
+            {
+              "type": "flag_set",
+              "flag": "order_lost"
+            }
+          ]
+        },
+        {
+          "to": "stage_late",
+          "conditions": [
+            {
+              "type": "elapsed_ge",
+              "min": 7
+            },
+            {
+              "type": "flag_not_set",
+              "flag": "order_delivered"
+            }
+          ]
+        }
+      ],
+      "on_enter_effects": []
+    },
+    {
+      "id": "stage_done",
+      "label": "Приказ отдан",
+      "final": true,
+      "outcome": "success",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_order",
+          "text_key": "j_done"
+        }
+      ]
+    },
+    {
+      "id": "stage_lost",
+      "label": "Утрачен",
+      "final": true,
+      "outcome": "failure",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_order",
+          "text_key": "j_lost"
+        }
+      ]
+    },
+    {
+      "id": "stage_late",
+      "label": "Не дошёл вовремя",
+      "final": true,
+      "outcome": "failure",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_order",
+          "text_key": "j_late"
+        }
+      ]
+    }
+  ]
+}

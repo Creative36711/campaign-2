@@ -1,0 +1,42 @@
+{
+  "id": "item_fuel_bundle",
+  "type": "item",
+  "category": "fuel",
+  "label": "Вязанка хвороста",
+  "description": "Сухие прутья под вощёной оболочкой. Хватает на час огня.",
+  "weight": 2.5,
+  "stackable": true,
+  "interact_hint": "Положить в очаг",
+  "interact_options": [
+    {
+      "label": "Поддержать огонь вязанкой",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "fire_lit"
+        }
+      ],
+      "effects": [
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": 20
+        },
+        {
+          "type": "set_variable",
+          "var": "var_fuel_left",
+          "value": 0
+        },
+        {
+          "type": "remove_item",
+          "item": "item_fuel_bundle",
+          "quantity": 1
+        }
+      ],
+      "consume": true,
+      "message": "Огонь поднялся. Тепло возвращается, но не надолго."
+    }
+  ],
+  "image": "assets/img/item/fuel_bundle.png",
+  "scene_sprite": "assets/img/item/fuel_bundle.png"
+}

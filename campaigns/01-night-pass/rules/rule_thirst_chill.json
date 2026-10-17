@@ -1,0 +1,24 @@
+{
+  "id": "rule_thirst_chill",
+  "label": "Жажда на морозе",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "need_le",
+      "need": "need_thirst",
+      "threshold": 0
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -4
+    },
+    {
+      "type": "show_message",
+      "text": "Сухость холодит изнутри. Снег на морозе — не вода: снег нужно растопить."
+    }
+  ]
+}

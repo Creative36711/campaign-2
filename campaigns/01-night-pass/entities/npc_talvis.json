@@ -1,0 +1,29 @@
+{
+  "id": "npc_talvis",
+  "type": "npc",
+  "label": "Талвис, потерявшийся путник",
+  "description": "Сидит на камне в балке и говорит, что только передохнёт. Движений почти не делает — это сон на морозе.",
+  "portrait": {
+    "neutral": "assets/img/npc/talvis.jpg",
+    "kind": "assets/img/npc/talvis_kind.jpg"
+  },
+  "stats": {
+    "STR": 11,
+    "CON": 10,
+    "SIZ": 11,
+    "DEX": 8,
+    "INT": 9,
+    "POW": 8,
+    "CHA": 8,
+    "HP": 10,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 20,
+    "skill_athletics": 25
+  },
+  "breathe": true,
+  "dialogue": "dialogues/talvis.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_talvis.png"
+}

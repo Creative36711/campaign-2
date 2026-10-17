@@ -1,0 +1,127 @@
+{
+  "id": "scene_serpentine_upper",
+  "label": "Верхний серпантин",
+  "location": "loc_serpentine",
+  "chapter": "ch_crash",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Серпантин под ветром",
+      "condition": null,
+      "image": "assets/img/bg/serpentine.jpg",
+      "art": {
+        "background": "#111c28",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 430,
+              "w": 1280,
+              "h": 60,
+              "fill": "#233240"
+            },
+            "rotate": -3
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_olita",
+      "label": "Фигура в снегу у откоса",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 820,
+      "y": 300,
+      "w": 170,
+      "h": 340,
+      "condition": null,
+      "default_entity": "npc_olita"
+    },
+    {
+      "id": "slot_track",
+      "label": "Следы, уходящие вниз",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 260,
+      "y": 470,
+      "w": 240,
+      "h": 140,
+      "condition": null,
+      "environmental": true,
+      "default_entity": "item_hound_trail"
+    },
+    {
+      "id": "slot_cairn",
+      "label": "Куча камней у поворота",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 1100,
+      "y": 430,
+      "w": 150,
+      "h": 120,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "К обрыву и карнизу",
+      "area": {
+        "x": 560,
+        "y": 540,
+        "w": 300,
+        "h": 140
+      },
+      "go_to_scene": "scene_serpentine_ledge"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 1000,
+        "y": 520,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [
+    {
+      "sounds": [
+        "snd_wind"
+      ],
+      "sound": "snd_wind"
+    }
+  ],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  }
+}

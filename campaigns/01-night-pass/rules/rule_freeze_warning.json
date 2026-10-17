@@ -1,0 +1,34 @@
+{
+  "id": "rule_freeze_warning",
+  "label": "Предупреждение о холоде",
+  "once": true,
+  "conditions": [
+    {
+      "type": "need_le",
+      "need": "need_heat",
+      "threshold": 30
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "freeze_warned"
+    }
+  ],
+  "effects": [
+    {
+      "type": "banner",
+      "text": "Тепло на исходе: пальцы немеют. Нужны огонь, бурка или привал.",
+      "preset": "шёпот",
+      "seconds": 6,
+      "position": "центр"
+    },
+    {
+      "type": "show_message",
+      "text": "Тепло критически низкое. Ещё немного на ветру — и начнётся обморожение; это видно по шкале, а не по удаче."
+    },
+    {
+      "type": "set_flag",
+      "flag": "freeze_warned",
+      "value": 1
+    }
+  ]
+}

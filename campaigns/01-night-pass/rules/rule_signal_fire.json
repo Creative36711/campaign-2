@@ -1,0 +1,76 @@
+{
+  "id": "rule_signal_fire",
+  "label": "Зажечь сигнальный очаг",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "signal_repaired"
+    },
+    {
+      "type": "flag_set",
+      "flag": "signal_oil_ready"
+    },
+    {
+      "type": "variable_compare",
+      "var": "var_signal_attempts",
+      "operator": "<",
+      "value": 2
+    }
+  ],
+  "effects": [
+    {
+      "type": "skill_check_gate",
+      "skill": "skill_survival",
+      "difficulty": "difficult",
+      "success_effects": [
+        {
+          "type": "change_variable",
+          "var": "var_signal_attempts",
+          "delta": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "signal_lit",
+          "value": true
+        },
+        {
+          "type": "change_scene_state",
+          "scene": "scene_tower_lamp",
+          "state": "state_lit"
+        },
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": 8
+        },
+        {
+          "type": "show_message",
+          "text": "Чаша занялась: жир горит ровно, гранит держит свет на юг. Ты сделал то, ради чего шёл шесть часов."
+        }
+      ],
+      "fail_effects": [
+        {
+          "type": "change_variable",
+          "var": "var_signal_attempts",
+          "delta": 1
+        },
+        {
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -8
+        },
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": -6
+        },
+        {
+          "type": "show_message",
+          "text": "Пламя срывает первым же порывом. Нужен ветер за спиной, сухие руки и ещё одна попытка: время у тебя ещё есть, тепло — уже нет."
+        }
+      ]
+    }
+  ]
+}

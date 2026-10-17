@@ -1,0 +1,118 @@
+{
+  "id": "scene_bridge_east",
+  "label": "Восточная опора моста",
+  "location": "loc_bridge",
+  "chapter": "ch_shelter",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Пологая лестница вниз по льду",
+      "condition": null,
+      "image": "assets/img/bg/bridge.jpg",
+      "art": {
+        "background": "#111c28",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 300,
+              "w": 520,
+              "h": 420,
+              "fill": "#1b2a38"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_letdown",
+      "label": "Верёвка для спуска",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 820,
+      "y": 400,
+      "w": 220,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_ruur_east",
+      "label": "Рур считает секунды",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 200,
+      "y": 320,
+      "w": 170,
+      "h": 320,
+      "condition": null,
+      "default_entity": "npc_ruur"
+    },
+    {
+      "id": "slot_bench_east",
+      "label": "Камень, где можно передохнуть",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 480,
+      "y": 480,
+      "w": 260,
+      "h": 130,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Спуститься к почтовому дому",
+      "area": {
+        "x": 560,
+        "y": 540,
+        "w": 320,
+        "h": 150
+      },
+      "open_map": true
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 60,
+        "y": 520,
+        "w": 280,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "medium",
+    "speed": "normal",
+    "wind": "left"
+  }
+}

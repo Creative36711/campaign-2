@@ -1,0 +1,12 @@
+{
+  "id": "item_satchel",
+  "type": "item",
+  "category": "gear",
+  "label": "Почтовая сумка",
+  "description": "Вощёное сукно, два ремня, один заклёпан наспех. Всё, что уцелело от саней.",
+  "weight": 1.2,
+  "stackable": false,
+  "image": "assets/img/item/satchel.png",
+  "carry_bonus": 4,
+  "scene_sprite": "assets/img/item/satchel.png"
+}

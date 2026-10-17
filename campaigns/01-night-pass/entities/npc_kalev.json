@@ -1,0 +1,32 @@
+{
+  "id": "npc_kalev",
+  "type": "npc",
+  "label": "Калев, проводник",
+  "description": "Знает склон лучше, чем людей. Ведёт длинным путём, потому что короткий в этом году уже забрал двоих.",
+  "portrait": {
+    "neutral": "assets/img/npc/kalev.jpg",
+    "wary": "assets/img/npc/kalev_wary.jpg"
+  },
+  "stats": {
+    "STR": 12,
+    "CON": 13,
+    "SIZ": 12,
+    "DEX": 12,
+    "INT": 10,
+    "POW": 9,
+    "CHA": 8,
+    "HP": 13,
+    "MP": 0
+  },
+  "skills": {
+    "skill_orient": 70,
+    "skill_survival": 60,
+    "skill_climb": 55,
+    "skill_silent": 45,
+    "skill_notice": 50
+  },
+  "breathe": true,
+  "dialogue": "dialogues/kalev.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_kalev.png"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "rule_cornice_break",
+  "label": "Карниз под весом",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "flag_not_set",
+      "flag": "rope_tied"
+    }
+  ],
+  "effects": [
+    {
+      "type": "hazard_fall",
+      "meters": 6,
+      "skill": "skill_climb"
+    },
+    {
+      "type": "change_hp",
+      "delta": -6
+    },
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -8
+    },
+    {
+      "type": "show_message",
+      "text": "Карниз пошёл вместе с тобой. Верёвка удержала бы падение; без неё шесть метров решают руками."
+    }
+  ]
+}

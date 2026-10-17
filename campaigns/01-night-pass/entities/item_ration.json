@@ -1,0 +1,21 @@
+{
+  "id": "item_ration",
+  "type": "item",
+  "category": "food",
+  "label": "Вяленое мясо",
+  "description": "Тонкие ломти, которые надо долго жевать. Спасает от голода и не спасает от холода.",
+  "weight": 0.4,
+  "stackable": true,
+  "on_use": {
+    "effects": [
+      {
+        "type": "change_need",
+        "need": "need_hunger",
+        "delta": 25
+      }
+    ],
+    "consume": true,
+    "message": "Перебрал ломти. Голод отступил."
+  },
+  "image": "assets/img/item/ration.png"
+}

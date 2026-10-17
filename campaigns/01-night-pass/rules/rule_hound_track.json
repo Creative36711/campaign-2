@@ -1,0 +1,44 @@
+{
+  "id": "rule_hound_track",
+  "label": "След сбит в метель",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "weather_is",
+      "weather": "weather_blizzard"
+    },
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_flag",
+      "flag": "hound_shaken",
+      "value": true
+    },
+    {
+      "type": "clear_flag",
+      "flag": "hound_close"
+    },
+    {
+      "type": "stop_pursuit"
+    },
+    {
+      "type": "change_need",
+      "need": "need_energy",
+      "delta": -8
+    },
+    {
+      "type": "change_need",
+      "need": "need_heat",
+      "delta": -6
+    },
+    {
+      "type": "show_message",
+      "text": "Метель сравняла склон в белый шум: след на камнях стёрт, зверь потерял тебя на ветру. Погоня отстала; тепло и силы — нет, вьюга берёт своё."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "npc_halda",
+  "type": "npc",
+  "label": "Хальда, стряпуха дозора",
+  "description": "Варит на всю смену и знает, кто не вернулся. Ставит миску молча и требует то же молчание обратно.",
+  "portrait": {
+    "neutral": "assets/img/npc/halda.jpg",
+    "kind": "assets/img/npc/halda_kind.jpg"
+  },
+  "stats": {
+    "STR": 10,
+    "CON": 11,
+    "SIZ": 11,
+    "DEX": 9,
+    "INT": 10,
+    "POW": 9,
+    "CHA": 10,
+    "HP": 12,
+    "MP": 0
+  },
+  "skills": {
+    "skill_survival": 50,
+    "skill_medicine": 35,
+    "skill_notice": 40
+  },
+  "breathe": true,
+  "dialogue": "dialogues/halda.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_halda.png"
+}
