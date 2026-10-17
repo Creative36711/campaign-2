@@ -66,6 +66,17 @@
               "cost_ticks": 1,
               "sound": "sfx_steps",
               "requirements": []
+            },
+            {
+              "to": "loc_gully",
+              "cost_ticks": 1,
+              "sound": "sfx_steps",
+              "requirements": [
+                {
+                  "type": "flag_set",
+                  "flag": "cornice_crossed"
+                }
+              ]
             }
           ],
           "scenes": [
