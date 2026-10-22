@@ -1,0 +1,240 @@
+{
+  "id": "scene_shelter_hearth",
+  "label": "Очаг сторожки",
+  "location": "loc_shelter",
+  "chapter": "ch_shelter",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_dark",
+      "label": "Очаг не горит",
+      "condition": null,
+      "image": "assets/img/bg/shelter.jpg",
+      "art": {
+        "background": "#141d27",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 860,
+              "y": 340,
+              "w": 200,
+              "h": 160,
+              "fill": "#241a14"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_fire",
+      "label": "Огонь в очаге",
+      "condition": {
+        "flag": "fire_lit"
+      },
+      "image": "assets/img/bg/shelter.jpg",
+      "art": {
+        "background": "#2a1d13",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 880,
+              "y": 360,
+              "w": 160,
+              "h": 120,
+              "fill": "#e08b2a"
+            },
+            "opacity": 0.75
+          }
+        ]
+      },
+      "sound": "sfx_fire"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_hearth",
+      "label": "Очаг",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 840,
+      "y": 340,
+      "w": 240,
+      "h": 180,
+      "condition": null,
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_tinder",
+          "consume": false,
+          "message": "Пробуешь высечь огонь в очаге сторожки.",
+          "effects": [
+            {
+              "type": "skill_check_gate",
+              "skill": "skill_survival",
+              "difficulty": "easy",
+              "success_effects": [
+                {
+                  "type": "set_flag",
+                  "flag": "fire_lit",
+                  "value": true
+                },
+                {
+                  "type": "change_scene_state",
+                  "scene": "scene_shelter_hearth",
+                  "state": "state_fire"
+                },
+                {
+                  "type": "show_message",
+                  "text": "Огонь занялся. Стены сторожки начинают работать: теперь можно топить снег, сушить рукавицы и позвать Сенни к свету."
+                }
+              ],
+              "fail_effects": [
+                {
+                  "type": "change_need",
+                  "need": "need_energy",
+                  "delta": -5
+                },
+                {
+                  "type": "show_message",
+                  "text": "Кремень даёт искры в пустоту: трут отсырел. Нужна сухая наструга или чужой огонь."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": "item_fuel_bundle",
+          "consume": true,
+          "message": "Вязанка уходит в очаг.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "fire_lit",
+              "value": true
+            },
+            {
+              "type": "change_need",
+              "need": "need_heat",
+              "delta": 22
+            },
+            {
+              "type": "change_scene_state",
+              "scene": "scene_shelter_hearth",
+              "state": "state_fire"
+            },
+            {
+              "type": "show_message",
+              "text": "Хворост вспыхивает ровно, как ему и положено. Тепло возвращается; вязанка была последняя у тебя в руках."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slot_pot",
+      "label": "Котелок над огнём",
+      "type": [
+        "item"
+      ],
+      "shape": "rect",
+      "x": 1100,
+      "y": 400,
+      "w": 140,
+      "h": 110,
+      "condition": null,
+      "default_entity": "item_soup"
+    },
+    {
+      "id": "slot_senni_hearth",
+      "label": "Сенни у огня",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 180,
+      "y": 300,
+      "w": 180,
+      "h": 340,
+      "condition": null,
+      "default_entity": "npc_senni",
+      "sprite_state": "kind"
+    },
+    {
+      "id": "slot_cot",
+      "label": "Лавка с одеялом",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 480,
+      "y": 470,
+      "w": 280,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "На чердак",
+      "area": {
+        "x": 600,
+        "y": 180,
+        "w": 240,
+        "h": 140
+      },
+      "go_to_scene": "scene_shelter_loft"
+    },
+    {
+      "label": "К двери",
+      "area": {
+        "x": 60,
+        "y": 520,
+        "w": 260,
+        "h": 150
+      },
+      "go_to_scene": "scene_shelter_door"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 960,
+        "y": 520,
+        "w": 280,
+        "h": 150
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "indoor",
+  "ambient": []
+}

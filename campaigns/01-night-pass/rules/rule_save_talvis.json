@@ -1,0 +1,22 @@
+{
+  "id": "rule_save_talvis",
+  "label": "Талвис выведен из балки",
+  "once": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "talvis_brought_in"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_variable",
+      "var": "var_travelers_saved",
+      "delta": 1
+    },
+    {
+      "type": "show_message",
+      "text": "Талвиса увели с камня. Он не благодарит: он просто идёт, и это лучше любого спасибо."
+    }
+  ]
+}

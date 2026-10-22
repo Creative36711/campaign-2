@@ -1,0 +1,83 @@
+{
+  "id": "quest_people",
+  "label": "Люди под снегом",
+  "chapter": "ch_crash",
+  "description": "Найти и провести к укрытию потерявшихся в метель: Олиту, Микеля, Талвиса, Саару и Марит. Успех зависит от времени, тепла и выбранного маршрута.",
+  "journal_entries": {
+    "j_start": "На склоне минимум пятеро, кто не дошёл сам: возница с перевёрнутых саней, четверо потерявшихся. У каждого — свой шанс только до тепла, не до рассвета.",
+    "j_some": "Кого-то удалось довести до укрытия. Остальные всё ещё на склоне: время и тепло решают, кого хватит дотащить.",
+    "j_patrol": "Приказ дошёл, и капитан поднял дозор на перевал: спасателей стало больше, чем одного почтальона.",
+    "j_done": "Не меньше трёх путников в безопасности. Никто не назвал бы это победой вслух, но список потерь короче, чем мог быть.",
+    "j_failed": "Люди остались в горах до следующего дня. Кто-то потому, что ты не нашёл, кто-то потому, что ты выбрал другое."
+  },
+  "stages": [
+    {
+      "id": "stage_search",
+      "label": "Искать на склоне",
+      "transitions": [
+        {
+          "to": "stage_helping",
+          "conditions": [
+            {
+              "type": "variable_compare",
+              "var": "var_travelers_saved",
+              "operator": ">=",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "on_enter_effects": []
+    },
+    {
+      "id": "stage_helping",
+      "label": "Вести к укрытиям",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_people",
+          "text_key": "j_some"
+        }
+      ],
+      "transitions": [
+        {
+          "to": "stage_done",
+          "conditions": [
+            {
+              "type": "variable_compare",
+              "var": "var_travelers_saved",
+              "operator": ">=",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage_done",
+      "label": "Трое и больше в тепле",
+      "final": true,
+      "outcome": "success",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_people",
+          "text_key": "j_done"
+        }
+      ]
+    },
+    {
+      "id": "stage_failed",
+      "label": "Не вывели",
+      "final": true,
+      "outcome": "failure",
+      "on_enter_effects": [
+        {
+          "type": "journal_update",
+          "quest": "quest_people",
+          "text_key": "j_failed"
+        }
+      ]
+    }
+  ]
+}

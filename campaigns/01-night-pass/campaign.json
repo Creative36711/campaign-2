@@ -1,0 +1,1052 @@
+{
+  "id": "115be504-a966-4da8-a834-2836a0e8d665",
+  "title": "Ночной перевал",
+  "version": "0.1.0",
+  "engine_version": "0.8.0",
+  "min_engine": "0.8.0",
+  "package_format": 1,
+  "author": "TGD-1",
+  "description": "Одна ночь на перевале Ламмер: почтальон без саней, запечатанный приказ, пятеро потерявшихся в метель и голодная гончая по следу. До рассвета шесть часов, и на всех их не хватит.",
+  "design_doc": "# Гейм-дизайнерский документ кампании «Ночной перевал»\n\n## 1. Паспорт\n\n- **Название:** Ночной перевал (кампания №1 линейки Chronicle Forge).\n- **Жанр и тон:** выживание в дикой местности; тихо, холодно, тревожно. Без шуток,\n  героического пафоса и натуралистичной жестокости.\n- **Объём:** локаций — 10, сцен — 24, НПС — 14, квестов — 3, концовок — 3.\n- **Ключевая идея:** вся игра укладывается в одну ночь между 23:00 и 06:00. Игрок не\n  спасёт всех: каждая потраченная четверть часа и каждый час отнятого у себя сна\n  меняют финал. Подвиг здесь — не победить, а вовремя решить, кого и от чего спасать.\n\n## 2. Завязка и мир\n\nВ 23:00 почтовые сани срываются в снежном мешке на высоком перевале. Игрок — почтальон;\nпри нём запечатанный приказ закрыть перевал из-за трещин на верхнем склоне. Спасательный\nдозор с южной стороны придёт к 06:00, но в метель не найдёт людей без сигнала со старой\nбашни. Голодная чёрная гончая идёт по следу крови и еды.\n\nМесто действия — перевал Ламмер на северной почтовой трактовой дороге; дата — 1 Лютень,\n1291-й год Трещины (зимний календарь задан в кампании). Мир закрыт снежной ночью:\nни торговли, ни магии, ни отступлений назад — только подъём, спуск и шесть часов до рассвета.\n\nГерой — почтальон Кассиан Вэйр (или игрок выбирает имя при создании персонажа). Он хочет\nдоставить приказ и остаться живым. Ему мешают погода, собственная усталость, чужие\nнесчастья на склоне и гончая, которая идёт по следу крови и еды.\n\n## 3. Главы\n\n| Глава | Что происходит | Сцены |\n| --- | --- | --- |\n| Крушение | Сани переворачиваются, конь ранен, почтальон выбирается из снежного мешка, собирает что может и решает, куда идти | scene_wreck_sleds, scene_wreck_slope, scene_serpentine_upper |\n| Поиск людей и след гончей | Развилка, снежная балка, застава: потерявшиеся путники, следы гончей, первый риск обрыва | scene_serpentine_ledge, scene_signpost, scene_gully, scene_gully_creek, scene_outpost_yard, scene_outpost_room, scene_bridge_west, scene_bridge_middle |\n| Укрытие и привал | Сторожка и старый почтовый дом: огонь, вода, перевязки, сон ценой времени, ледяной мост и его цена | scene_bridge_east, scene_shelter_door, scene_shelter_hearth, scene_shelter_loft, scene_oldpost_yard, scene_oldpost_room, scene_oldpost_barn, scene_pass_cairn |\n| Башня и рассвет | Подъём к сигнальному очагу, починка сигнала, южная сторожка и 06:00 | scene_tower_base, scene_tower_stairs, scene_tower_lamp, scene_south_gate, scene_south_hall |\n\n## 4. Сцены\n\n| Название | Место | Роль в истории | Что можно сделать |\n| --- | --- | --- | --- |\n| Перевёрнутые сани | loc_wreck | старт, завязка | осмотреть сани, собрать санный ящик и письмо, осмотреть раненого коня, бросить или забрать груз |\n| Склон под санями | loc_wreck | первая цена риска | спуститься за уздой (обрыв 6 м), подавить крик |\n| Верхний серпантин | loc_serpentine | дорога вниз | примять след, обойти карниз, встретить Олиту |\n| Снежный карниз | loc_serpentine | опасность среды | проверить карниз, обвязаться верёвкой, перебраться (длительное действие), вернуться |\n| Развилка у знака | loc_signpost | выбор маршрута | прочитать знак, подобрать Микеля, выбрать путь (короткий через мост / длинный через укрытия) |\n| Снежная балка | loc_gully | укрытие и ветер | спрятаться от ветра, растопить снег, найти Талвиса |\n| Русло под балкой | loc_gully | лёд и вода | набрать воды, перейти по льду, отвлечь гончую едой |\n| Двор перевальной заставы | loc_outpost | первая передышка | встретить Бранна, занести раненого, сложить топливо |\n| Комната заставы | loc_outpost | лечение | перевязать раненого, оставить записку, взять огниво |\n| Западный сход на мост | loc_bridge | порог страха | оценить мост, закрепить верёвку, крикнуть, предупредить |\n| Середина ледяного моста | loc_bridge | таймер выбора (14 с) | отдать распоряжение под давлением гончей или ветра; автовыбор — безопасный, но долгий |\n| Восточная опора моста | loc_bridge | цена перехода | поднять путника, перевязать, отдохнуть |\n| Порог сторожки | loc_shelter | безопасное, но не бесплатное место | постучать, войти, договориться с Сенни |\n| Очаг сторожки | loc_shelter | огонь и вода | поддержать огонь, приготовить воду, сварить похлёбку, короткий привал |\n| Чердак сторожки | loc_shelter | тепло ценой времени | длинный привал, согреть Сенни, оставить записку |\n| Двор почтового дома | loc_oldpost | забытый кров | найти Саару, осмотреть сарай, набрать наструги |\n| Комната почтового дома | loc_oldpost | письмо и журнал | прочесть журнал, взять печать, передать письмо |\n| Сарай почтового дома | loc_oldpost | топливо и укрывшиеся | собрать топливо, уговорить Саару и Марит идти, накормить |\n| Каменный лагерь под перевалом | loc_gully | укрытие длинного пути | пересидеть порыв ветра, оставить записку, поставить метку |\n| Подножие башни | loc_tower | вход к цели | осмотреть дверь, найти ключ-верёвку, оставить груз |\n| Лестница башни | loc_tower | подъём | подняться с грузом, отдохнуть, сбросить лишнее |\n| Сигнальный очаг | loc_tower | кульминация | починить сигнал (длительное действие), зажечь, крикнуть в рожок |\n| Ворота южной сторожки | loc_southpost | дедлайн | отдать приказ, доложить о путниках, войти |\n| Зал дозора | loc_southpost | развязка | передать приказ капитану, получить дозор на перевал, назвать имена |\n\n## 5. Персонажи\n\n| Имя и кто | Чего хочет | Что знает | Где стоит | В каком настроении бывает |\n| --- | --- | --- | --- | --- |\n| Кассиан Вэйр — почтальон (игрок) | доставить приказ и выжить | текст приказа, тропу, цены времени | начинается у саней | — |\n| Вяз — почтовый конь | встать и идти | — | склон под санями | — |\n| Сенни — сторож перевала | не выпустить людей на карниз до рассвета | состояние склона, где огонь, что сенни знает про башню | очаг сторожки | настороженно, устало, тепло |\n| Олита — возница с перевёрнутых саней | выбраться и не замёрзнуть | где упал санный ящик, что конь хромает | верхний серпантин | испуганно, зло |\n| Бранн — лекарь заставы | вывезти раненого до утра | как перевязать, что значит обморожение | комната заставы | деловито, упрямо |\n| Калев — проводник | провести длинным путём и не потерять людей | где укрытия, где карниз обходит метель | снежная балка | тихо, настороженно |\n| Микель — потерявшийся путник | дойти до тепла | где срезал путь и провалился | развилка у знака | растерянно |\n| Талвис — потерявшийся путник | не уснуть | что в балке есть камни и вода | снежная балка | вяло, покорно |\n| Марит — потерявшаяся девочка | найти старшую сестру | где видела огонь башни | двор почтового дома | молчит, дрожит |\n| Саара — старшая из потерявшихся | вывести Марит и не идти к башне | что мост держит только на верёвке | сарай почтового дома | подозрительно, отчаянно |\n| Рур — дозорный-разведчик | вернуться к своим живым | где видел гончую и следы крови | восточная опора моста | коротко, по делу |\n| Ивонн — капитан южного дозора | получить приказ и не раздробить дозор | когда дозор выйдет и сколько людей есть | зал дозора | ровно, требовательно |\n| Хальда — стряпуха дозора | накормить тех, кто ещё может есть | кто не вернулся с перевала зимой | зал дозора | молчаливо, ровно |\n| Гончая | есть | идёт по следу крови, еды и шума | преследует через сцены | — |\n| Тильда — вдова почтового дома | сохранить дом | кто ночевал в сарае, где печать | комната почтового дома | настороженно, гостеприимно |\n\n## 6. Квесты и концовки\n\n| Квест | Как проходит | Как завершается успехом | Как завершается провалом | Что даёт |\n| --- | --- | --- | --- | --- |\n| Сигнал до рассвета | добраться до башни, найти очаг, починить сигнал | сигнальный очаг горит до 06:00 | 06:00 без света; дозор не выходит на перевал | меняет условия финалов 1 и 3 |\n| Люди под снегом | найти Микеля, Олиту, Талвиса, Марит и Саару, провести к укрытиям | трое и больше доведены до укрытия или дозора | часть людей остаётся в горах до следующего дня | счётчик спасённых, условия финала 1 |\n| Письмо через перевал | сберечь запечатанный приказ и отдать его дозору | приказ в руках капитана до 06:00 | приказ утрачен, потерян или не дошёл | финал 2 при живом почтаре |\n\n- **Концовки:** «Огонь над перевалом» — сигнал горит, приказ отдан, не менее трёх путников\n  в безопасности; «Письмо дошло» — приказ отдан до 06:00, но первого исхода нет;\n  «Немой перевал» — ни сигнала, ни приказа к 06:00, игрок переживает ночь. Гибель\n  почтальона — отдельное состояние permadeath, не четвёртая концовка; в манифесте это объявлено по-настоящему —\n  `roguelike.permadeath: true` и `save_slots: 0` (ручных слотов сохранения нет, остаётся только автосейв,\n  который пермадет стирает).\n  «Нового круга» и переноса состояния нет: `meta_progress` и `randomize_on_restart` оставлены пустыми.\n- **Новая игра+ / хроника:** отсутствует по требованию задания. Каждый забег начинается\n  заново, переноса состояния нет.\n\n## 7. Какие механики задействованы\n\n- проверки удачи, навыков и характеристик (проверка слуха на карнизе, атлетика на мосту,\n  медицина при перевязке, убеждение Саары);\n- преследование (гончая идёт по следу, реагирует на шум, кровь, еду и следы);\n- смена облика и состояний персонажей (состояния сцены: огонь разведён, сигнал починен,\n  мост переходаем; смена описаний людей);\n- статусы и модули (обморожение, изнеможение);\n- потребности (голод, жажда, силы, тепло) и их цена;\n- погода (ясно, снег, метель, порыв ветра) и снеговой эффект, не перекрывающий сцену;\n- лагерь и длительные действия (растопить снег, собрать топливо, перевязать, расчистить\n  путь, перебраться через карниз, починить сигнал);\n- перегруз (вес письма, ящика и топлива меняет скорость и побег);\n- дедлайн в интерфейсе (обратный отсчёт до 06:00);\n- катсцены (пролог и три финальных слайда), открытки финала;\n- диалоговый таймер выбора в сцене ледяного моста;\n- кодекс (справка о перевале, о гончей и о сигнальной башне).\n\n## 8. Рамки баланса\n\n- Бой: 6–10 раундов, у героя 1 действие + движение; бой с гончей не обязателен и\n  проигран влезть в «убей или умри» не должен.\n- Время: 7 тиков = 7 часов (23:00 → 06:00). Переход между соседними местами — 1 тик,\n  короткая работа — 1 тик, перевязка — 1, длинный привал — 2, починка сигнала — 1.\n  Минимальный путь от саней до башни — 3 тика, до южной сторожки — 4–5 тиков.\n- Потребности за ночь без тепла: тепло −8/тик (56 за ночь), силы −7/тик, жажда −6/тик,\n  голод −5/тик. Огонь даёт +6 тепла за тик привала, похлёбка +25 голода, растопленный\n  снег +30 жажды, короткий сон +25 сил.\n- Цена: патрон еды один, фляга одна, топливо ограничено (3 вязанки), верёвка одна.\n- Проверяется: успех полон, но не бесплатен; один провал проверки не закрывает исходы.\n\n## 9. Что пока нельзя сделать в движке\n\n- Реального «таймера на 12–15 секунд», который бы тратил часы дедлайна, нет и не нужно:\n  использован диалоговый таймер узла (`set_dialogue_timer`), автопереход в безопасный, но\n  более долгий вариант; игровое время тикает только от явных эффектов. Запись об этом\n  противоречии документации уже заведена в реестре пробелов («бланк design-template.md\n  называет таймеры диалогов невозможными, хотя механика реализована») — дубликат не создан.\n- Нет условия/эффекта «погода меняется по часам»: метель и порывы ветра включают правила\n  по порогам elapsed, это зафиксировано как штатное решение, а не как обход.\n- Нет способа показать вес груза в числах прямо в строке диалога; вес описан в\n  подсказках действий и в записях кодекса.\n- Иных пробелов не обнаружено; если они появятся — точный запрос уйдёт TD в «Запросы».\n\n## 10. Журнал решений\n\n| Итерация | Что решили | Почему |\n| --- | --- | --- |\n| 1 | Источник задания — файл `TASK.md` в репозитории, а не страница Notion; посимвольные сверки и пересчёт сумм убраны из работы | так постановщик задачи закрыл вопрос с дроблением текста |\n| 1 | Тик = 1 час, сутки = 24 тика, ночь от 23-го до 30-го тика (06:00), дедлайн 7 тиков | 7-часовое окно требует грубой, читаемой шкалы: «час» понятен игроку и HUD-таймеру |\n| 1 | Погода меняется правилами по `elapsed_ge`, а не календарным условием | в движке нет условия по дате; пороги прошедшего времени — штатный способ |\n| 1 | Гончая — преследование с альтернативами (сбить след, отвлечь едой, укрыться, закрыть проход) вместо обязательного боя | прямое требование задания; у игрока должен быть выбор |\n| 1 | Финалы — ровно три, гибель обрабатывается как permadeath без четвёртой концовки | требование задания «все выжившие варианты попадают ровно в один из трёх исходов» |\n| 1 | Сигнал без приказа не выводит дозор: «Немой перевал» покрывает и такой исход | иначе три условия финалов пересекались бы; зафиксировано в тексте финала |\n| 1 | Медиа — только реально сгенерированные в песочнице файлы с честной атрибуцией; музыка и звуки синтезируются движком из JSON | скачивать чужие файлы нечем (исходящая сеть закрыта), выдумывать лицензии нельзя |\n| 1 | 24-я сцена — каменный лагерь под перевалом вместо «ещё одной дороги» | даёт укрытие длинному маршруту без пустых вариаций объёма |\n\n## 11. Приложение «Соответствие разделам JSON»\n\n| Раздел документа | Имена в кампании |\n| --- | --- |\n| Паспорт, описание | `campaign.title`, `campaign.description`, `campaign.design_doc` |\n| Главы | `campaign.chapters`, поле сцены `chapter` |\n| Сцены | `scenes/scene_*.json`, `location`, слоты `slots` |\n| Персонажи | `entities/npc_*.json` |\n| Предметы | `entities/item_*.json` |\n| Квесты и стадии | `quests/quest_*.json`, `stage_*` |\n| Концовки | `campaign.endings` |\n| Рецепты | нет: крафт заменён длительными действиями (`campaign.duration_actions`) |\n| Флаги памяти | `campaign.flags` |\n| Проверки и запоминание | `skill_check_gate`, `set_flag`, `variable_compare` |\n| Потребности и статусы | `campaign.needs`, `campaign.statuses` |\n| Погода и оверлей снега | `campaign.weathers`, `campaign.overlay_layers`, поле сцены `particles` |\n| Лагерь и длительные действия | `campaign.camping`, `campaign.duration_actions` |\n| Преследование и опасности | `effect.start_pursuit`, `effect.hazard_fall`, `campaign.hazards` |\n| Диалог с таймером | `dialogues/bridge.ink` (узел `node_timer`, `set_dialogue_timer`) |\n12. Ограничения движка, выявленные при сборке пакета (в обратную связь TD):\n   • «Создание героя»: stat_limits задаёт один общий коридор min/max для всех характеристик — индивидуальные диапазоны (STR 8–15, POW 6–12) движок не хранит, поэтому в кампании задан единый коридор 6–15 и распределение очков 280.\n   • «Отдых»: у meta.rest поле hp — строка-формула, документированного семантического описания в гайде нет; восстановление на ночлеге описано через meta.camping.per_tick, поле rest из пакета снято.\n   • «Сцены»: состояние сцены (SceneStateDef) не хранит ни particles, ни lighting, ни fog_opacity — только image/art/camera/sound; осадки и тип освещения вынесены на уровень сцены, «туман» задан пресетом частиц fog.\n   • «Навигация сцены»: переход внутри сцены не может вести в сцену другой локации (аудит ERROR), поэтому короткие связки между локациями открывают карту, а стоимость пути задаётся travel_connections.\n   • «Ресурсы медиа»: спрайты сцены (1:2, хромакей) и боевые фигурки не собирались — фон рисуется плоским артом, НПС показаны портретом; это уменьшает визуальную плотность, но не ломает механику.\n\n## 13. Медиа: аудио — реальные файлы (доработка после ревью этапа 4)\n\nСинтез (`SoundDoc`/`zzfx`, `MusicDoc`) из пакета убран полностью: 5 музыкальных лупа и 31 звук — реально\nскачанные CC0/PD-файлы в `assets/audio/music/` и `assets/audio/sfx/` (36 файлов, 5,9 МБ). Все четыре источника —\nпубличные репозитории GitHub, лицензия CC0 1.0 подтверждена по файлам лицензии в самих репозиториях\n(`CC0-Music/LICENCE`, `kenney/LICENSE.md`, `sfx-api/sounds/*/License.txt` + `CREDITS.md`, `Noisekun/README.md` —\nтаблица лицензий по каждой записи). Музыка обрезана до 63–93 с, сшита в бесшовный луп равномощным кроссфейдом 3 с\nи выровнена по EBU R128 (−17 LUFS); эмбиент-лупы — −21…−30 LUFS (огонь намеренно тихий, это подложка);\nкороткие сигналы Kenney скопированы без изменений. Файлы перечислены в таблице, `meta.attribution` содержит\nто же сводное описание.\n\n| файл | что | источник | автор | лицензия | обработка |\n|---|---|---|---|---|---|\n| `assets/audio/music/music_menu.ogg` | музыка | CC0-Music/Komiku_-_13_-_The_Wind(chosic.com).opus | Komiku | CC0 1.0 (LICENCE репозитория) | фрагмент 96 с с 10 с; луп-сшивка 3 с, loudnorm −17 LUFS; Ogg Vorbis q2 |\n| `assets/audio/music/music_night.ogg` | музыка | CC0-Music/TRG_Banks_-_03_-_Snowfall(chosic.com).opus | TRG Banks (оцифровка патефонных записей US Marine Band) | CC0 1.0 (LICENCE репозитория) | фрагмент 96 с с 8 с; луп-сшивка 3 с, loudnorm −17 LUFS; Ogg Vorbis q2 |\n| `assets/audio/music/music_shelter.ogg` | музыка | CC0-Music/Komiku_-_02_-_Home(chosic.com).opus | Komiku | CC0 1.0 (LICENCE репозитория) | фрагмент весь трек с с 0 с; луп-сшивка 3 с (весь трек), loudnorm −17 LUFS; Ogg Vorbis q2 |\n| `assets/audio/music/music_pursuit.ogg` | музыка | CC0-Music/Komiku_-_12_-_Tension(chosic.com).opus | Komiku | CC0 1.0 (LICENCE репозитория) | фрагмент 84 с с 24 с; луп-сшивка 3 с, loudnorm −17 LUFS; Ogg Vorbis q2 |\n| `assets/audio/music/music_dawn.ogg` | музыка | CC0-Music/Loyalty_Freak_Music_-_16_-_Hope_and_Love(chosic.com).opus | Loyalty Freak Music | CC0 1.0 (LICENCE репозитория) | фрагмент 96 с с 12 с; луп-сшивка 3 с, loudnorm −17 LUFS; Ogg Vorbis q2 |\n| `assets/audio/sfx/snd_wind.ogg` | эмбиент-луп | Noisekun/.github/assets/sounds/wind.ogg | Felix Blume | CC0 1.0 (freesound.org/s/217506; таблица лицензий README Noisekun) | фрагмент 46 с с 15 с, луп-сшивка 4 с, пик −1 dBFS, Ogg Vorbis q2 |\n| `assets/audio/sfx/snd_blizzard.ogg` | эмбиент-луп | Noisekun: wind.ogg + storm.ogg | Felix Blume + Borys Kozielski | CC0 1.0 (freesound 217506 / 316831) | фрагмент ветра 40 с + наложение фрагмента грозы (уровень −13 dB), луп-сшивка 4 с, пик −1 dBFS, Ogg Vorbis q2 |\n| `assets/audio/sfx/sfx_fire.ogg` | эмбиент-луп | Noisekun/.github/assets/sounds/fire.ogg | SFX Producer (Fire Wood) | CC0 1.0 (youtube aJ21cKAR7-M; таблица лицензий README Noisekun) | фрагмент 30 с с 18 с, луп-сшивка 3 с, пик −2 dBFS, Ogg Vorbis q2 |\n| `assets/audio/sfx/snd_gust.ogg` | звук | Noisekun: wind.ogg | Felix Blume | CC0 1.0 (freesound 217506) | фрагмент 6.5 с, фейд-ин 1.1 с / фейд-аут 1.7 с, пик −2 dBFS, Ogg Vorbis q3 |\n| `assets/audio/sfx/sfx_wind_fall.ogg` | звук | Noisekun: wind.ogg | Felix Blume | CC0 1.0 (freesound 217506) | фрагмент 10 с, длинное затухание 6 с, пик −3 dBFS, Ogg Vorbis q3 |\n| `assets/audio/sfx/snd_frost_bite.ogg` | звук | Noisekun: wind.ogg | Felix Blume | CC0 1.0 (freesound 217506) | резкий фрагмент 2.6 с (атака ветра), фейды 0.04/1.1 с, пик −1 dBFS, Ogg Vorbis q3 |\n| `assets/audio/sfx/snd_warmth_back.ogg` | звук | Noisekun: fire.ogg | SFX Producer (Fire Wood) | CC0 1.0 (youtube aJ21cKAR7-M) | фрагмент 5 с потрескивания, плавный вход 1.8 с, пик −3 dBFS, Ogg Vorbis q3 |\n| `assets/audio/sfx/sfx_click.ogg` | звук | sfx-api/sounds/interface-sounds/click-001.ogg | Kenney (Interface Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (UI-щелчок); Ogg Vorbis |\n| `assets/audio/sfx/sfx_click_b.ogg` | звук | sfx-api/sounds/interface-sounds/click-002.ogg | Kenney (Interface Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (UI-щелчок, вариант 2); Ogg Vorbis |\n| `assets/audio/sfx/sfx_click_c.ogg` | звук | sfx-api/sounds/interface-sounds/click-003.ogg | Kenney (Interface Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (UI-щелчок, вариант 3); Ogg Vorbis |\n| `assets/audio/sfx/sfx_step_snow_a.ogg` | звук | sfx-api/sounds/impact-sounds/footstep-snow-000.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шаг по снегу); Ogg Vorbis |\n| `assets/audio/sfx/sfx_step_snow_b.ogg` | звук | sfx-api/sounds/impact-sounds/footstep-snow-001.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шаг по снегу); Ogg Vorbis |\n| `assets/audio/sfx/sfx_step_snow_c.ogg` | звук | sfx-api/sounds/impact-sounds/footstep-snow-002.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шаг по снегу); Ogg Vorbis |\n| `assets/audio/sfx/sfx_axe.ogg` | звук | sfx-api/sounds/rpg-audio/chop.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (удар топора по дереву); Ogg Vorbis |\n| `assets/audio/sfx/sfx_bell.ogg` | звук | sfx-api/sounds/impact-sounds/impactbell-heavy-000.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (тяжёлый металлический звон); Ogg Vorbis |\n| `assets/audio/sfx/sfx_bell_b.ogg` | звук | sfx-api/sounds/impact-sounds/impactbell-heavy-001.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (звон, вариант 2); Ogg Vorbis |\n| `assets/audio/sfx/sfx_crack_a.ogg` | звук | sfx-api/sounds/impact-sounds/impactglass-medium-001.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (треск (нужен лёд/стекло)); Ogg Vorbis |\n| `assets/audio/sfx/sfx_crack_b.ogg` | звук | sfx-api/sounds/impact-sounds/impactmining-002.ogg | Kenney (Impact Sounds) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (треск льда киркой); Ogg Vorbis |\n| `assets/audio/sfx/sfx_cloth_a.ogg` | звук | sfx-api/sounds/rpg-audio/cloth1.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шелест ткани); Ogg Vorbis |\n| `assets/audio/sfx/sfx_cloth_b.ogg` | звук | sfx-api/sounds/rpg-audio/cloth2.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шелест ткани); Ogg Vorbis |\n| `assets/audio/sfx/sfx_cloth_c.ogg` | звук | sfx-api/sounds/rpg-audio/cloth3.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (шелест ткани); Ogg Vorbis |\n| `assets/audio/sfx/sfx_leather_drop.ogg` | звук | sfx-api/sounds/rpg-audio/dropleather.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (кожаная сумка на пол); Ogg Vorbis |\n| `assets/audio/sfx/sfx_leather_handle.ogg` | звук | sfx-api/sounds/rpg-audio/handlesmallleather.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (кожа в руках); Ogg Vorbis |\n| `assets/audio/sfx/sfx_page_a.ogg` | звук | sfx-api/sounds/rpg-audio/bookflip1.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (переворот страницы); Ogg Vorbis |\n| `assets/audio/sfx/sfx_page_b.ogg` | звук | sfx-api/sounds/rpg-audio/bookflip2.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (переворот страницы); Ogg Vorbis |\n| `assets/audio/sfx/sfx_page_c.ogg` | звук | sfx-api/sounds/rpg-audio/bookflip3.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (переворот страницы); Ogg Vorbis |\n| `assets/audio/sfx/sfx_paper_open.ogg` | звук | sfx-api/sounds/rpg-audio/bookopen.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (развернуть карту); Ogg Vorbis |\n| `assets/audio/sfx/sfx_paper_close.ogg` | звук | sfx-api/sounds/rpg-audio/bookclose.ogg | Kenney (RPG Audio) | CC0 1.0 (LICENSE.txt в папке пака + CREDITS.md репозитория) | без изменений (сложить карту); Ogg Vorbis |\n| `assets/audio/sfx/dog-snarl-1.ogg` | звук | arianne/stendhal, `data/sounds/dog-snarl-1.ogg` | Lisa Redfern (SoundBible, 2034-Growling-Snarling-Dogs) | public domain (строка файла в `doc/sources/audio-sfx.txt` репозитория) | без изменений; Ogg Vorbis, 3,54 с, средн. −17,7 dB |\n| `assets/audio/sfx/dog-angry-low-1.ogg` | звук | arianne/stendhal, `data/sounds/dog-angry-low-1.ogg` | Lisa Redfern (SoundBible, 2034-Growling-Snarling-Dogs) | public domain (строка файла в `doc/sources/audio-sfx.txt`) | без изменений; Ogg Vorbis, 3,07 с, средн. −19,8 dB |\n| `assets/audio/sfx/dog-small-bark-1.ogg` | звук | arianne/stendhal, `data/sounds/dog-small-bark-1.ogg` | nfrae (freesound.org/people/nfrae/sounds/100032) | CC0 1.0 (строка файла в `doc/sources/audio-sfx.txt`) | без изменений; Ogg Vorbis, 0,32 с, короткая атака лая |\n\n**Запрос на собачью фонотеку закрыт (доработка этапа 4).** Мастер уточнил правило линейки: приоритет CC0/PD, при отсутствии подходящего файла — любой источник с честной записью лицензии, подмена похожим звуком запрещена. Подошёл репозиторий `github.com/arianne/stendhal`, папка `data/sounds/`; лицензия каждой строки подтверждена файлом `doc/sources/audio-sfx.txt` того же репозитория (он же — образец аттрибуции). Взяты три записи: рычание `dog-snarl-1.ogg` и низкий рык `dog-angry-low-1.ogg` (Lisa Redfern, public domain, SoundBible 2034-Growling-Snarling-Dogs) и короткий лай `dog-small-bark-1.ogg` (nfrae, CC0 1.0, freesound 100032). Скачаны как есть, без перекодирования и без правки уровня (средняя громкость −17,7 / −19,8 / −20,0 dB — рядом с остальными сигналами). Временная подмена (два тяжёлых удара Kenney Impact) удалена из пакета, метка реестра вернулась к честной: «Гончая: лай и рычание». Ошибочной подмены похожим звуком в пакете не осталось.\n\n**Pet-звуки, которые не использовались:** ни один скачанный файл не лежит в пакете без ссылки — 36 файлов дают\n22 источника (5 треков + 17 звуков, из них 8 звуков — массивы «случайный вариант», движок выбирает вариант сам); всего файлов 36.\n",
+  "tick_label": "час",
+  "ticks_per_day": 24,
+  "time_of_day": {
+    "morning": 6,
+    "day": 10,
+    "evening": 18,
+    "night": 22
+  },
+  "starting_region": "region_pass",
+  "starting_location": "loc_wreck",
+  "starting_scene": "scene_wreck_sleds",
+  "starting_tick": 23,
+  "deadline_ticks": 7,
+  "deadline_label": "До рассвета (06:00)",
+  "calendar": {
+    "year_label": "год Трещины",
+    "start_year": 1291,
+    "days_per_month": 30,
+    "months": [
+      "Лютень",
+      "Снежень"
+    ],
+    "day_names": [
+      "Полночный",
+      "Первый",
+      "Кремень",
+      "Ветренный",
+      "Снежный",
+      "Долгий",
+      "Рассветный"
+    ]
+  },
+  "needs": [
+    {
+      "id": "need_heat",
+      "label": "Тепло",
+      "description": "Насколько согрет почтальон. Тает на ветру, в метель и на снегу; возвращают огонь, тёплая еда и привал.",
+      "max": 100,
+      "decay_per_tick": 8,
+      "critical_threshold": 30,
+      "on_zero_effect": "rule_hypothermia"
+    },
+    {
+      "id": "need_energy",
+      "label": "Силы",
+      "description": "Усталость ночного перехода. Отдых и сон возвращают силы, перегруз и ветер отнимают.",
+      "max": 100,
+      "decay_per_tick": 7,
+      "critical_threshold": 25,
+      "on_zero_effect": "rule_collapse"
+    },
+    {
+      "id": "need_hunger",
+      "label": "Голод",
+      "description": "Запас на шесть часов мороза. Еда ограничена: один паёк и похлёбка в сторожке.",
+      "max": 100,
+      "decay_per_tick": 5,
+      "critical_threshold": 20,
+      "on_zero_effect": "rule_hunger_pangs"
+    },
+    {
+      "id": "need_thirst",
+      "label": "Жажда",
+      "description": "Сухость от ветра и снега. Снег нужно растопить — жадный глоток не согреет.",
+      "max": 100,
+      "decay_per_tick": 6,
+      "critical_threshold": 20,
+      "on_zero_effect": "rule_thirst_chill"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "status_frostbite",
+      "label": "Обморожение",
+      "short_label": "Обморожен",
+      "description": "Пальцы и щеки одеревенели: движение и ловкость заметно хуже. Снимается теплом, лечением и отдыхом.",
+      "scope": "world",
+      "duration": 12,
+      "dot": {
+        "hp": 1
+      },
+      "skill_mods": [
+        {
+          "skill": "skill_athletics",
+          "delta": -20
+        },
+        {
+          "skill": "skill_silent",
+          "delta": -10
+        },
+        {
+          "skill": "skill_climb",
+          "delta": -20
+        }
+      ],
+      "mov_mod": -2,
+      "apply_message": "Мороз добрался до пальцев: обморожение.",
+      "expire_message": "Тепло вернуло чувствительность: обморожение отступает.",
+      "apply_sound": "snd_frost_bite",
+      "remove_sound": "snd_warmth_back"
+    },
+    {
+      "id": "status_exhausted",
+      "label": "Изнеможение",
+      "short_label": "Изнурён",
+      "description": "Тело отказывается спешить. Пока почтальон изнурён, проверки силы и ловкости тяжелее, а побег от гончей почти невозможен.",
+      "scope": "both",
+      "duration": 8,
+      "skill_mods": [
+        {
+          "skill": "skill_athletics",
+          "delta": -15
+        },
+        {
+          "skill": "skill_notice",
+          "delta": -10
+        }
+      ],
+      "mov_mod": -1,
+      "apply_message": "Руки и ноги стали чужими: изнеможение.",
+      "expire_message": "Час передышки — и тело снова слушается."
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill_notice",
+      "label": "Бдительность"
+    },
+    {
+      "id": "skill_athletics",
+      "label": "Атлетика"
+    },
+    {
+      "id": "skill_climb",
+      "label": "Лазание"
+    },
+    {
+      "id": "skill_silent",
+      "label": "Скрытность"
+    },
+    {
+      "id": "skill_orient",
+      "label": "Ориентирование"
+    },
+    {
+      "id": "skill_medicine",
+      "label": "Медицина"
+    },
+    {
+      "id": "skill_persuade",
+      "label": "Убеждение"
+    },
+    {
+      "id": "skill_intimidate",
+      "label": "Запугивание"
+    },
+    {
+      "id": "skill_survival",
+      "label": "Выживание"
+    },
+    {
+      "id": "skill_track",
+      "label": "Слеопыт"
+    }
+  ],
+  "item_categories": [
+    {
+      "id": "gear",
+      "label": "Снаряжение"
+    },
+    {
+      "id": "food",
+      "label": "Еда и вода",
+      "restores_needs": [
+        "need_hunger",
+        "need_thirst"
+      ]
+    },
+    {
+      "id": "fuel",
+      "label": "Топливо и огонь"
+    },
+    {
+      "id": "quest",
+      "label": "Важное"
+    }
+  ],
+  "codex_categories": [
+    {
+      "id": "creatures",
+      "label": "Существа"
+    },
+    {
+      "id": "places",
+      "label": "Места"
+    },
+    {
+      "id": "things",
+      "label": "Вещи"
+    },
+    {
+      "id": "papers",
+      "label": "Бумага"
+    }
+  ],
+  "slot_types": [
+    {
+      "id": "person",
+      "label": "Персонаж"
+    },
+    {
+      "id": "item",
+      "label": "Предмет"
+    },
+    {
+      "id": "animal",
+      "label": "Животное"
+    },
+    {
+      "id": "hotspot",
+      "label": "Место"
+    }
+  ],
+  "currencies": [
+    {
+      "id": "grosch",
+      "label": "Грош",
+      "symbol": "ГР",
+      "item_id": "item_grosch"
+    }
+  ],
+  "factions": [],
+  "default_player": "player_postman",
+  "dice_rules": {
+    "critical_divisor": 5,
+    "special_divisor": 2,
+    "fumble_from": 96
+  },
+  "max_companions": 2,
+  "features": {
+    "map": true,
+    "inventory": true,
+    "needs": true,
+    "skills": true,
+    "relationships": false,
+    "trade": false,
+    "combat": true,
+    "time": true
+  },
+  "encumbrance": {
+    "enabled": true,
+    "formula": "str_siz",
+    "travel_penalty": true,
+    "light_travel_multiplier": 1.5,
+    "heavy_travel_multiplier": 2.0,
+    "critical_threshold": 2.0,
+    "light_mov_penalty": 1,
+    "heavy_mov_penalty": 2,
+    "critical_mov_penalty": 3
+  },
+  "hazards": {
+    "fall_meters_per_die": 3,
+    "fall_damage": "1d6+2"
+  },
+  "stealth": {
+    "skill": "skill_silent",
+    "perception_skill": "skill_track"
+  },
+  "camping": {
+    "ticks": 1,
+    "min_ticks": 1,
+    "max_ticks": 4,
+    "per_tick": [
+      {
+        "type": "change_need",
+        "need": "need_heat",
+        "delta": 6
+      },
+      {
+        "type": "change_need",
+        "need": "need_energy",
+        "delta": 14
+      }
+    ],
+    "restore": {
+      "need_energy": 25
+    },
+    "ambush_chance": 0.15,
+    "ambush_rule": "rule_camp_hound"
+  },
+  "duration_actions": [
+    {
+      "id": "act_melt_snow",
+      "label": "Растопить снег на воду",
+      "min_ticks": 1,
+      "max_ticks": 2,
+      "step": 1,
+      "per_tick": [
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": 4
+        }
+      ],
+      "on_finish": [
+        {
+          "type": "change_need",
+          "need": "need_thirst",
+          "delta": 30
+        }
+      ],
+      "available_when": [
+        {
+          "type": "flag_set",
+          "flag": "fire_lit"
+        }
+      ]
+    },
+    {
+      "id": "act_gather_fuel",
+      "label": "Собрать топливо",
+      "min_ticks": 1,
+      "max_ticks": 2,
+      "step": 1,
+      "per_tick": [
+        {
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -3
+        }
+      ],
+      "on_finish": [
+        {
+          "type": "add_item",
+          "item": "item_fuel_bundle",
+          "quantity": 1
+        }
+      ],
+      "break_when": [
+        {
+          "type": "weather_is",
+          "weather": "weather_blizzard"
+        }
+      ]
+    },
+    {
+      "id": "act_bind_wound",
+      "label": "Перевязать раненого",
+      "min_ticks": 1,
+      "max_ticks": 1,
+      "step": 1,
+      "on_finish": [
+        {
+          "type": "change_hp",
+          "delta": 4
+        },
+        {
+          "type": "set_flag",
+          "flag": "wound_bound"
+        }
+      ],
+      "available_when": [
+        {
+          "type": "flag_set",
+          "flag": "olita_injured"
+        }
+      ]
+    },
+    {
+      "id": "act_clear_path",
+      "label": "Расчистить путь от снега",
+      "min_ticks": 1,
+      "max_ticks": 2,
+      "step": 1,
+      "per_tick": [
+        {
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -5
+        }
+      ],
+      "on_finish": [
+        {
+          "type": "set_flag",
+          "flag": "path_cleared"
+        }
+      ]
+    },
+    {
+      "id": "act_cross_cornice",
+      "label": "Перебраться через карниз",
+      "min_ticks": 1,
+      "max_ticks": 1,
+      "step": 1,
+      "interrupt_chance_per_tick": 0.25,
+      "interrupt_rule": "rule_cornice_break",
+      "on_finish": [
+        {
+          "type": "set_flag",
+          "flag": "cornice_crossed"
+        }
+      ]
+    },
+    {
+      "id": "act_fix_signal",
+      "label": "Починить сигнальный очаг",
+      "min_ticks": 1,
+      "max_ticks": 3,
+      "step": 1,
+      "per_tick": [
+        {
+          "type": "change_need",
+          "need": "need_energy",
+          "delta": -4
+        }
+      ],
+      "on_finish": [
+        {
+          "type": "set_flag",
+          "flag": "signal_repaired"
+        }
+      ]
+    }
+  ],
+  "weathers": [
+    {
+      "id": "weather_snowfall",
+      "label": "Снег",
+      "overlay": "snow",
+      "ambient": [
+        "snd_wind"
+      ]
+    },
+    {
+      "id": "weather_blizzard",
+      "label": "Метель",
+      "overlay": "snow",
+      "ambient": [
+        "snd_blizzard"
+      ]
+    },
+    {
+      "id": "weather_gust",
+      "label": "Порыв ветра",
+      "overlay": "snow",
+      "ambient": [
+        "snd_gust"
+      ]
+    }
+  ],
+  "overlay_layers": [
+    {
+      "id": "snow",
+      "label": "Снег"
+    }
+  ],
+  "endings": [
+    {
+      "id": "ending_fire_over_pass",
+      "label": "Огонь над перевалом",
+      "title": "Огонь над перевалом",
+      "text": "Сигнальный очаг горит, приказ в руках капитана, и дозор успевает вывести с перевала не меньше трёх путников. Утром почтальон стоит у погасшего огня без права называть это подвигом: часть склона всё равно осталась немой.",
+      "tone": "victory",
+      "on": "victory",
+      "image": "assets/img/endings/fire.jpg",
+      "conditions": [
+        {
+          "type": "and",
+          "conditions": [
+            {
+              "type": "flag_set",
+              "flag": "signal_lit"
+            },
+            {
+              "type": "flag_set",
+              "flag": "order_delivered"
+            },
+            {
+              "type": "variable_compare",
+              "var": "var_travelers_saved",
+              "operator": ">=",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ending_letter_arrived",
+      "label": "Письмо дошло",
+      "title": "Письмо дошло",
+      "text": "Почтальон добирается до южной сторожки живым и отдаёт приказ до 06:00. Перевал закрывают, но не всех: часть людей и снаряжения остаётся в горах, и капитан называет это своей ценой, а не чужой виной.",
+      "tone": "neutral",
+      "on": "victory",
+      "image": "assets/img/endings/letter.jpg",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "order_delivered"
+        }
+      ]
+    },
+    {
+      "id": "ending_silent_pass",
+      "label": "Немой перевал",
+      "title": "Немой перевал",
+      "text": "К 06:00 ни свет с башни, ни почтарь с приказом не доходят до южной сторожки. Почтальон переживает ночь в доступном укрытии, спасательная группа промахивается сквозь метель, и люди остаются в горах до следующего дня.",
+      "tone": "neutral",
+      "on": "victory",
+      "image": "assets/img/endings/silent.jpg"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch_crash",
+      "label": "Крушение",
+      "order": 1,
+      "description": "Сани переворачиваются, конь ранен, письмо при игроке. Нужно выбраться из снежного мешка и решить, куда идти."
+    },
+    {
+      "id": "ch_trace",
+      "label": "Поиск людей и след гончей",
+      "order": 2,
+      "description": "Развилка, балка, застава и мост: потерявшиеся путники, следы крови и голодная гончая."
+    },
+    {
+      "id": "ch_shelter",
+      "label": "Укрытие и привал",
+      "order": 3,
+      "description": "Сторожка и старый почтовый дом: огонь, вода, перевязки и сон, который стоит часов."
+    },
+    {
+      "id": "ch_tower",
+      "label": "Башня и рассвет",
+      "order": 4,
+      "description": "Подъём к сигнальному очагу, починка света, южная сторожка и 06:00."
+    }
+  ],
+  "flags": [
+    {
+      "id": "slede_looted",
+      "label": "Санный ящик собран",
+      "description": "Почтальон забрал из перевёрнутых саней санный ящик с припасами; влияет на доступное топливо и еду."
+    },
+    {
+      "id": "cargo_dropped",
+      "label": "Груз оставлен на склоне",
+      "description": "Почтальон выбросил или оставил лишний груз, чтобы идти быстрее; читается в весе и в побеге от гончей."
+    },
+    {
+      "id": "horse_freed",
+      "label": "Конь высвобождён",
+      "description": "Почтовый конь Вяз снят с упряжи и стоит на ветер; читается в сцене склона и в поведении гончей."
+    },
+    {
+      "id": "olita_injured",
+      "label": "Возчица ранена",
+      "description": "Олита из саней повредила ногу; нужно довести её до лекаря или перевязать самим."
+    },
+    {
+      "id": "olita_saved",
+      "label": "Олита спасена",
+      "description": "Олита доведена до укрытия или дозора; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "mikael_saved",
+      "label": "Микель спасён",
+      "description": "Заблудившийся Микель доведён до укрытия; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "talvis_saved",
+      "label": "Талвис спасён",
+      "description": "Талвис выведен из снежной балки; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "marit_saved",
+      "label": "Марит спасена",
+      "description": "Девочка Марит доведена до дозора или укрытия; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "saara_saved",
+      "label": "Саара спасена",
+      "description": "Саара согласилась идти и доведена до тепла; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "hound_shaken",
+      "label": "Гончая сброшена со следа",
+      "description": "След сбит, отвлечён едой или проход закрыт: погоня прекращена без боя."
+    },
+    {
+      "id": "hound_dead",
+      "label": "Гончая убита",
+      "description": "Почтальон убил гончую; один из возможных, но не обязательных исходов погони."
+    },
+    {
+      "id": "hound_close",
+      "label": "Гончая близко",
+      "description": "Ставится правилами преследования, когда зверь настигает; читается в сцене моста и в привале."
+    },
+    {
+      "id": "signal_repaired",
+      "label": "Сигнальный очаг починен",
+      "description": "Закрывало и жир на башне исправлены; необходимо, чтобы зажечь сигнал."
+    },
+    {
+      "id": "signal_lit",
+      "label": "Сигнал зажжён",
+      "description": "Огонь над перевалом виден с южной стороны; условие полной концовки."
+    },
+    {
+      "id": "order_delivered",
+      "label": "Приказ передан дозору",
+      "description": "Запечатанный приказ в руках капитана Ивонн до 06:00; условие концовок 1 и 2."
+    },
+    {
+      "id": "order_lost",
+      "label": "Приказ утрачен",
+      "description": "Письмо потеряно, сожжено или отдано не тому; закрывает концовки с письмом."
+    },
+    {
+      "id": "fire_lit",
+      "label": "Огонь разведён",
+      "description": "В выбранном укрытии горит огонь; открывает топление снега, готовку и согрев."
+    },
+    {
+      "id": "path_cleared",
+      "label": "Путь расчищен",
+      "description": "Снег убран с тропы: переходы по этому участку стали безопаснее."
+    },
+    {
+      "id": "rope_tied",
+      "label": "Карниз закреплён верёвкой",
+      "description": "Верёвка закреплена за камень на кромке карниза: прерывание «карниз под весом» не стреляет. Ставится только якорем на кромке — якорь на мосту и чужие руки этого состояния не дают."
+    },
+    {
+      "id": "rope_with_saara",
+      "label": "Верёвка у Саары и Марит",
+      "description": "Почтальон отдал единственную верёвку Сааре, и та привязала её к поясу Марит; с инвентаря снят ровно один предмет. Карниз это не закрепляет, а якоря на кромке и на мосту без верёвки недоступны."
+    },
+    {
+      "id": "bridge_rope_secured",
+      "label": "Мост закреплён верёвкой",
+      "description": "Верёвка закреплена за столб западного схода: отдельное состояние защиты переправы. Карниз оно не закрепляет."
+    },
+    {
+      "id": "cornice_crossed",
+      "label": "Карниз пройден",
+      "description": "Опасный участок за спиной; открывает короткую связь между серпантином и балкой."
+    },
+    {
+      "id": "shelter_welcomed",
+      "label": "Сенни впустил в сторожку",
+      "description": "Сторож согласился принять почтальона: доступны очаг, чердак и привал (Сенни впускает не всех)."
+    },
+    {
+      "id": "wound_bound",
+      "label": "Раненого перевязали",
+      "description": "Перевязка сделана: замедляет остывание и риск обморожения."
+    },
+    {
+      "id": "sennys_lantern_taken",
+      "label": "Взят фонарь Сенни",
+      "description": "Фонарь у почтальона: добавляет свет и вес, облегчает ночной переход и броски на мосту."
+    },
+    {
+      "id": "patrol_ready",
+      "label": "Дозор выведен на перевал",
+      "description": "Капитан поднял дозор; ставится, когда приказ дошёл, и влияет на спасение путников."
+    },
+    {
+      "id": "timer_bridge_slow",
+      "label": "Выбран долгий, но безопасный путь",
+      "description": "Автоматический ответ диалогового таймера на мосту: время потеряно, люди целы."
+    },
+    {
+      "id": "mikkels_note_left",
+      "label": "Записка оставлена у знака",
+      "description": "Почтальон оставил записку на развилке; меняет описания сцены и отношение Калева."
+    },
+    {
+      "id": "oldpost_barn_found",
+      "label": "Сарай найден",
+      "description": "Почтальон нашёл сарай с настругой и укрывшимися там Саарой и Марит."
+    },
+    {
+      "id": "print_taken",
+      "label": "Взята печать почтового дома",
+      "description": "Печать подтвердила подлинность приказа при сдаче дозору; влияет на реплики капитана."
+    },
+    {
+      "id": "horse_fed",
+      "label": "Конь накормлен",
+      "description": "Почтовый конь Вяз получил паёк и держится на ногах: влияет на то, уйдёт ли он со склона сам."
+    },
+    {
+      "id": "cloak_given",
+      "label": "Бурка отдана Олите",
+      "description": "Почтальон отдал свою бурку: тепло ему теперь дороже, а Олита держится на ногах."
+    },
+    {
+      "id": "kalev_told_short",
+      "label": "Проводник рассказал про короткий путь",
+      "description": "Калев объяснил, что короткий путь идёт через мост: диалог не повторяется."
+    },
+    {
+      "id": "kalev_told_long",
+      "label": "Проводник рассказал про путь через укрытия",
+      "description": "Калев описал длинный путь через балку, заставу и сторожку: читается в подсказках маршрута."
+    },
+    {
+      "id": "olita_warm",
+      "label": "Олите стало теплее",
+      "description": "Возчица получила бурку или доведена до огня: она в состоянии добраться до укрытия сама."
+    },
+    {
+      "id": "people_searched",
+      "label": "Имена переданы в дозор",
+      "description": "Ивонн записал имена оставшихся на склоне: дозор выходит искать людей и без сигнала."
+    },
+    {
+      "id": "signal_oil_ready",
+      "label": "Чаша заправлена",
+      "description": "Ворвань долита до башни: сигнал можно зажечь."
+    },
+    {
+      "id": "freeze_warned",
+      "label": "Предупреждён о холоде",
+      "description": "Одно предупреждение, когда тепло падает до критического: не даёт повторять тот же текст каждый час."
+    },
+    {
+      "id": "blizzard_on",
+      "label": "Началась метель",
+      "description": "Погодное состояние ночи: видимость упала, читается в условиях сцен, переходах и записях журнала."
+    },
+    {
+      "id": "gust_on",
+      "label": "Подул порыв ветра",
+      "description": "Час перед рассветом, когда ветер срывает наст: опасные участки помечены как рискованные."
+    },
+    {
+      "id": "bleeding_in_snow",
+      "label": "Кровь на снегу",
+      "description": "Гончая нагнала и оставила след крови: по нему зверь идёт точнее, а тепло уходит быстрее."
+    },
+    {
+      "id": "olita_brought_in",
+      "label": "Олиту довели до тепла",
+      "description": "Возчица из перевёрнутых саней в укрытии или у лекаря: один из засчитанных спасённых."
+    },
+    {
+      "id": "mikael_brought_in",
+      "label": "Микеля довели до тепла",
+      "description": "Заблудившийся у знака доведён до укрытия; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "talvis_brought_in",
+      "label": "Талвиса увели из балки",
+      "description": "Человек на камне не уснул: доведён до укрытия; увеличивает счётчик спасённых."
+    },
+    {
+      "id": "sisters_brought_in",
+      "label": "Сестёр увели из сарая",
+      "description": "Саара согласилась идти и повела Марит к теплу; засчитывается как два спасённых."
+    }
+  ],
+  "ui_sounds": {
+    "menu_music": "music_menu",
+    "click": "sfx_click",
+    "message": "sfx_page",
+    "panel:inventory": "sfx_satchel",
+    "panel:log": "sfx_page",
+    "panel:map": "sfx_map",
+    "panel:character": "sfx_satchel",
+    "panel:help": "sfx_page",
+    "travel_depart": "sfx_steps",
+    "travel_arrive": "sfx_steps",
+    "scene_transition": "sfx_steps",
+    "item_get": "sfx_item",
+    "item_lose": "sfx_item",
+    "quest_started": "sfx_bell",
+    "quest_completed": "sfx_bell",
+    "combat_start": "sfx_hound",
+    "death": "sfx_wind_fall",
+    "victory": "sfx_bell",
+    "heal": "snd_warmth_back",
+    "craft": "sfx_axe"
+  },
+  "music_tracks": [
+    {
+      "id": "music_menu",
+      "label": "Перевал ночью",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_menu.ogg"
+    },
+    {
+      "id": "music_night",
+      "label": "Снежная ночь",
+      "loop": true,
+      "volume": 0.6,
+      "src": "assets/audio/music/music_night.ogg"
+    },
+    {
+      "id": "music_shelter",
+      "label": "Тепло сторожки",
+      "loop": true,
+      "volume": 0.55,
+      "src": "assets/audio/music/music_shelter.ogg"
+    },
+    {
+      "id": "music_pursuit",
+      "label": "След гончей",
+      "loop": true,
+      "volume": 0.65,
+      "src": "assets/audio/music/music_pursuit.ogg"
+    },
+    {
+      "id": "music_dawn",
+      "label": "Рассвет над перевалом",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_dawn.ogg"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "sfx_click",
+      "label": "Щелчок",
+      "src": [
+        "assets/audio/sfx/sfx_click.ogg",
+        "assets/audio/sfx/sfx_click_b.ogg",
+        "assets/audio/sfx/sfx_click_c.ogg"
+      ]
+    },
+    {
+      "id": "snd_wind",
+      "label": "Ветер",
+      "loop": true,
+      "src": "assets/audio/sfx/snd_wind.ogg"
+    },
+    {
+      "id": "snd_blizzard",
+      "label": "Метель",
+      "loop": true,
+      "src": "assets/audio/sfx/snd_blizzard.ogg"
+    },
+    {
+      "id": "snd_gust",
+      "label": "Порыв ветра",
+      "src": "assets/audio/sfx/snd_gust.ogg"
+    },
+    {
+      "id": "sfx_steps",
+      "label": "Шаги по снегу",
+      "src": [
+        "assets/audio/sfx/sfx_step_snow_a.ogg",
+        "assets/audio/sfx/sfx_step_snow_b.ogg",
+        "assets/audio/sfx/sfx_step_snow_c.ogg"
+      ]
+    },
+    {
+      "id": "sfx_fire",
+      "label": "Огонь потрескивает",
+      "loop": true,
+      "src": "assets/audio/sfx/sfx_fire.ogg"
+    },
+    {
+      "id": "sfx_axe",
+      "label": "Удар топора",
+      "src": "assets/audio/sfx/sfx_axe.ogg"
+    },
+    {
+      "id": "sfx_bell",
+      "label": "Колокол дозора",
+      "src": [
+        "assets/audio/sfx/sfx_bell.ogg",
+        "assets/audio/sfx/sfx_bell_b.ogg"
+      ]
+    },
+    {
+      "id": "sfx_hound",
+      "label": "Гончая: лай и рычание",
+      "src": [
+        "assets/audio/sfx/dog-snarl-1.ogg",
+        "assets/audio/sfx/dog-angry-low-1.ogg",
+        "assets/audio/sfx/dog-small-bark-1.ogg"
+      ]
+    },
+    {
+      "id": "sfx_crack",
+      "label": "Лёд трещит",
+      "src": [
+        "assets/audio/sfx/sfx_crack_a.ogg",
+        "assets/audio/sfx/sfx_crack_b.ogg"
+      ]
+    },
+    {
+      "id": "sfx_item",
+      "label": "Вещи в сумке",
+      "src": [
+        "assets/audio/sfx/sfx_cloth_a.ogg",
+        "assets/audio/sfx/sfx_cloth_b.ogg",
+        "assets/audio/sfx/sfx_cloth_c.ogg"
+      ]
+    },
+    {
+      "id": "sfx_satchel",
+      "label": "Сумка",
+      "src": [
+        "assets/audio/sfx/sfx_leather_drop.ogg",
+        "assets/audio/sfx/sfx_leather_handle.ogg"
+      ]
+    },
+    {
+      "id": "sfx_page",
+      "label": "Бумага",
+      "src": [
+        "assets/audio/sfx/sfx_page_a.ogg",
+        "assets/audio/sfx/sfx_page_b.ogg",
+        "assets/audio/sfx/sfx_page_c.ogg"
+      ]
+    },
+    {
+      "id": "sfx_map",
+      "label": "Карта",
+      "src": [
+        "assets/audio/sfx/sfx_paper_open.ogg",
+        "assets/audio/sfx/sfx_paper_close.ogg"
+      ]
+    },
+    {
+      "id": "snd_frost_bite",
+      "label": "Мороз по коже",
+      "src": "assets/audio/sfx/snd_frost_bite.ogg"
+    },
+    {
+      "id": "snd_warmth_back",
+      "label": "Оттепель в пальцах",
+      "src": "assets/audio/sfx/snd_warmth_back.ogg"
+    },
+    {
+      "id": "sfx_wind_fall",
+      "label": "Ветер стихает",
+      "src": "assets/audio/sfx/sfx_wind_fall.ogg"
+    }
+  ],
+  "default_music": [
+    "music_night"
+  ],
+  "combat_music": [
+    "music_pursuit"
+  ],
+  "theme": {
+    "profile": "wilderness",
+    "atmosphere": true,
+    "accent": "#8fb4c9",
+    "font_scale": 1.0,
+    "line_height": 1.55,
+    "tokens": {
+      "panel": "#111a24",
+      "cards": "#16222e",
+      "inset": "#0d151d",
+      "log": "#0f1720"
+    },
+    "menu": {
+      "background": "assets/img/ui/menu_background.jpg",
+      "dim": 0.55,
+      "ken_burns": true,
+      "title_art": "assets/img/ui/title_art.png"
+    },
+    "end": {
+      "background": "assets/img/ui/end_background.jpg"
+    }
+  },
+  "char_creation": {
+    "total_points": 280,
+    "stat_limits": {
+      "min": 6,
+      "max": 15
+    },
+    "skill_points": 240,
+    "skill_cap": 65,
+    "skill_floor": 15,
+    "mandatory_skills": [
+      "skill_notice",
+      "skill_orient"
+    ],
+    "choose_name": true,
+    "choose_age": false,
+    "choose_bio": true,
+    "portraits": [
+      {
+        "id": "hero_postman",
+        "label": "Кассиан Вэйр",
+        "image": "assets/img/ui/hero_postman.png",
+        "combat_figure": "assets/img/figure/fig_player_postman.png",
+        "combat_figure_mode": "topdown",
+        "combat_facing_offset": 0
+      }
+    ]
+  },
+  "attribution": {
+    "note": "Графика: все изображения (фоны, портреты, иконки, спрайты сцен, боевые фигурки) сгенерированы автором кампании TGD-1 в песочнице Arena 15–16.10.2026, лицензия CC BY 4.0; вырезка хромакея — __chronicle_ai__/cutout-chromakey.py. Аудио: реально скачанные CC0-файлы, синтеза в пакете нет. Музыка (5 лупов) — github.com/meme2-cmd2/CC0-Music, LICENCE = CC0 1.0 Universal (Komiku «The Wind», «Home», «Tension»; TRG Banks «Snowfall» — оцифровка патефонных записей US Marine Band; Loyalty Freak Music «Hope and Love»). Обработка: фрагмент 63–93 с, бесшовная луп-сшивка кроссфейдом 3 с, выравнивание по EBU R128 (−17 LUFS), Ogg Vorbis q2. Эмбиент (ветер, метель, огонь) — github.com/mateusfg7/Noisekun, .github/assets/sounds; лицензия каждой записи подтверждена таблицей в README: wind — Felix Blume (freesound 217506, CC0), storm — Borys Kozielski (freesound 316831, CC0), fire — SFX Producer (CC0); метель = ветер + слой грозы (−13 дБ). Код Noisekun под MIT, к записям это не относится. Записи Train (CC Sampling+), White/Pink Noise (CC BY-SA), Waterfall (CC BY), Washing Machine (Standard License) в пакет НЕ брались. Короткие сигналы (19 файлов) — github.com/Cy4nWare/sfx-api (паки Kenney: Interface/Impact/RPG Audio), License.txt в каждом паке = CC0 1.0, взяты без изменений. Заметка по звукам: CC0-записи лая/рычания собаки ни в одном из одобренных источников не найдено, поэтому гончая озвучена тяжёлым ударом по снегу (Kenney Impact), запрос на фонотеку отправлен мастеру. Голос (9 реплик) — синтез речи, записанный автором для конкретных строк, CC BY 4.0. Гончая (3 файла) — github.com/arianne/stendhal, data/sounds/: dog-snarl-1.ogg и dog-angry-low-1.ogg (Lisa Redfern, public domain, soundbible.com/2034-Growling-Snarling-Dogs.html), dog-small-bark-1.ogg (nfrae, CC0 1.0, freesound.org/people/nfrae/sounds/100032); лицензия каждой строки подтверждена doc/sources/audio-sfx.txt того же репозитория; скачано без изменений (без перекодирования и нормализации). Временная подмена (два удара Kenney Impact) удалена из пакета после закрытия запроса на фонотеку.\n\nПострочная атрибуция всех 45 аудиофайлов пакета (файл -> источник -> лицензия -> автор -> что изменено) — в `assets/audio/LICENCE.txt`; там же зафиксировано единственное расхождение метаданных и таблицы происхождения.",
+    "author": "Звук и музыка: Kenney (паки Interface/Impact/RPG, CC0) — короткие сигналы; музыка — Komiku, TRG Banks, Loyalty Freak Music (сборник CC0-Music); эмбиент-записи — Felix Blume, Borys Kozielski, SFX Producer (репозиторий Noisekun, CC0). Подбор, обрезка, сведение и выравнивание громкости — TGD-1.; nfrae; Lisa Redfern",
+    "origin_url": "https://github.com/arianne/stendhal",
+    "published_at": "2026-10-15"
+  },
+  "equipment_slots": [
+    {
+      "id": "body",
+      "label": "Плечи"
+    },
+    {
+      "id": "hand",
+      "label": "В руке"
+    }
+  ],
+  "emotions": [
+    {
+      "id": "neutral",
+      "label": "Обычное"
+    },
+    {
+      "id": "wary",
+      "label": "Настороженное"
+    },
+    {
+      "id": "kind",
+      "label": "Расположенное"
+    },
+    {
+      "id": "angry",
+      "label": "Раздражённое"
+    }
+  ],
+  "save_slots": 0,
+  "roguelike": {
+    "permadeath": true,
+    "meta_progress": [],
+    "randomize_on_restart": []
+  }
+}

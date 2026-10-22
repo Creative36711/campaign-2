@@ -1,0 +1,20 @@
+{
+  "id": "rule_deadline",
+  "label": "06:00: дозор выходит",
+  "once": true,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 7
+    }
+  ],
+  "effects": [
+    {
+      "type": "show_message",
+      "text": "06:00. Дозор с южной стороны выходит на перевал. Что почтальон успел сделать — то и выйдет к людям."
+    },
+    {
+      "type": "game_over_victory"
+    }
+  ]
+}

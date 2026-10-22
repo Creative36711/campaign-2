@@ -1,0 +1,31 @@
+{
+  "id": "npc_brann",
+  "type": "npc",
+  "label": "Бранн, лекарь заставы",
+  "description": "Сушит рукавицы у чужого огня и считает вслух, кому сколько осталось до утра. Деловит, упрям, не утешает.",
+  "portrait": {
+    "neutral": "assets/img/npc/brann.jpg",
+    "angry": "assets/img/npc/brann_angry.jpg"
+  },
+  "stats": {
+    "STR": 10,
+    "CON": 11,
+    "SIZ": 11,
+    "DEX": 10,
+    "INT": 13,
+    "POW": 11,
+    "CHA": 10,
+    "HP": 11,
+    "MP": 0
+  },
+  "skills": {
+    "skill_medicine": 70,
+    "skill_notice": 45,
+    "skill_persuade": 35,
+    "skill_survival": 40
+  },
+  "breathe": true,
+  "dialogue": "dialogues/brann.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_brann.png"
+}

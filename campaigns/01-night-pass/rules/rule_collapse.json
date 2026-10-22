@@ -1,0 +1,25 @@
+{
+  "id": "rule_collapse",
+  "label": "Изнеможение",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "need_le",
+      "need": "need_energy",
+      "threshold": 0
+    }
+  ],
+  "effects": [
+    {
+      "type": "apply_status",
+      "target": "player",
+      "status": "status_exhausted",
+      "duration": 8
+    },
+    {
+      "type": "show_message",
+      "text": "Тело отказывается спешить: изнеможение. Поможет привал, хотя бы короткий."
+    }
+  ]
+}

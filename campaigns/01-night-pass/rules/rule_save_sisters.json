@@ -1,0 +1,22 @@
+{
+  "id": "rule_save_sisters",
+  "label": "Сёстры выведены из сарая",
+  "once": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "sisters_brought_in"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_variable",
+      "var": "var_travelers_saved",
+      "delta": 2
+    },
+    {
+      "type": "show_message",
+      "text": "Саара повела Марит за собой. Двое вместо нуля: счёт спасённых вырос на двоих."
+    }
+  ]
+}

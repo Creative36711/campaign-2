@@ -1,0 +1,68 @@
+{
+  "id": "item_signal_bowl",
+  "type": "item",
+  "category": "misc",
+  "label": "Чаша сигнального очага",
+  "description": "Чаша под зубцом: осколки гранита, сбитый фитиль, налёт на ворвани.",
+  "weight": 0,
+  "stackable": false,
+  "interact_options": [
+    {
+      "label": "Починить чашу",
+      "conditions": [
+        {
+          "type": "flag_not_set",
+          "flag": "signal_repaired"
+        }
+      ],
+      "effects": [
+        {
+          "type": "start_duration_action",
+          "action": "act_fix_signal"
+        }
+      ],
+      "once": false,
+      "message": "Осколки, фитиль, ветер в лицо."
+    },
+    {
+      "label": "Высечь огонь на ветру",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "signal_oil_ready"
+        },
+        {
+          "type": "or",
+          "conditions": [
+            {
+              "type": "has_item",
+              "item": "item_tinder"
+            },
+            {
+              "type": "has_item",
+              "item": "item_lantern"
+            }
+          ]
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "signal_lit"
+        },
+        {
+          "type": "variable_compare",
+          "var": "var_signal_attempts",
+          "operator": "<",
+          "value": 2
+        }
+      ],
+      "effects": [
+        {
+          "type": "fire_rule",
+          "rule": "rule_signal_fire"
+        }
+      ],
+      "once": false,
+      "message": "Искра уходит в ворвань."
+    }
+  ]
+}

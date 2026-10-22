@@ -1,0 +1,25 @@
+{
+  "id": "item_note",
+  "type": "item",
+  "category": "quest",
+  "label": "Записка у дорожного знака",
+  "description": "Три строки, написанные на коленке: откуда идёшь, кого ищешь, куда свернул.",
+  "weight": 0.05,
+  "stackable": true,
+  "on_use": {
+    "effects": [
+      {
+        "type": "unlock_codex",
+        "entry": "codex_note"
+      },
+      {
+        "type": "set_flag",
+        "flag": "mikkels_note_left"
+      }
+    ],
+    "consume": false,
+    "message": "Ты перечитываешь свою же записку."
+  },
+  "image": "assets/img/item/note.png",
+  "scene_sprite": "assets/img/item/note.png"
+}

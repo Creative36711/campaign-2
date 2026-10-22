@@ -1,0 +1,32 @@
+{
+  "id": "npc_ivonne",
+  "type": "npc",
+  "label": "Ивонн, капитан южного дозора",
+  "description": "Поднимет дозор только по бумаге с печатью и только так, чтобы не раздробить пост. Цифру потерь назовёт первой, а не последней.",
+  "portrait": {
+    "neutral": "assets/img/npc/ivonne.jpg",
+    "angry": "assets/img/npc/ivonne_angry.jpg"
+  },
+  "stats": {
+    "STR": 13,
+    "CON": 13,
+    "SIZ": 12,
+    "DEX": 11,
+    "INT": 12,
+    "POW": 11,
+    "CHA": 11,
+    "HP": 14,
+    "MP": 0
+  },
+  "skills": {
+    "skill_persuade": 45,
+    "skill_intimidate": 40,
+    "skill_notice": 40,
+    "skill_orient": 45,
+    "skill_athletics": 45
+  },
+  "breathe": true,
+  "dialogue": "dialogues/ivonne.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_ivonne.png"
+}

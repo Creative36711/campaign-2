@@ -1,0 +1,22 @@
+{
+  "id": "rule_save_olita",
+  "label": "Олита в тепле",
+  "once": true,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "olita_brought_in"
+    }
+  ],
+  "effects": [
+    {
+      "type": "change_variable",
+      "var": "var_travelers_saved",
+      "delta": 1
+    },
+    {
+      "type": "show_message",
+      "text": "Олита доведена до укрытия. Один человек со счёта «кто останется на склоне» снят."
+    }
+  ]
+}

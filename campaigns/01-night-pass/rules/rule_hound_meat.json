@@ -1,0 +1,44 @@
+{
+  "id": "rule_hound_meat",
+  "label": "Гончая отвлеклась на еду",
+  "once": false,
+  "manual": true,
+  "conditions": [
+    {
+      "type": "has_item",
+      "item": "item_ration"
+    },
+    {
+      "type": "flag_set",
+      "flag": "hound_close"
+    }
+  ],
+  "effects": [
+    {
+      "type": "remove_item",
+      "item": "item_ration",
+      "quantity": 1
+    },
+    {
+      "type": "set_flag",
+      "flag": "hound_shaken",
+      "value": true
+    },
+    {
+      "type": "clear_flag",
+      "flag": "hound_close"
+    },
+    {
+      "type": "stop_pursuit"
+    },
+    {
+      "type": "change_need",
+      "need": "need_energy",
+      "delta": -6
+    },
+    {
+      "type": "show_message",
+      "text": "Паёк ушёл в снег в трёх десятках шагов от тебя. Зверь выбрал еду, а не тебя: минус один час погони и минус один обед."
+    }
+  ]
+}

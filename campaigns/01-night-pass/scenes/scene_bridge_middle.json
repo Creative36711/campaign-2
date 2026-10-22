@@ -1,0 +1,153 @@
+{
+  "id": "scene_bridge_middle",
+  "label": "Середина ледяного моста",
+  "location": "loc_bridge",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Пролёт под ветром",
+      "condition": null,
+      "image": "assets/img/bg/bridge.jpg",
+      "art": {
+        "background": "#0c1520",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 500,
+              "w": 1280,
+              "h": 220,
+              "fill": "#060d14"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 40,
+              "fill": "#3d5b74"
+            },
+            "opacity": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "state_crossed",
+      "label": "Переправа пройдена",
+      "condition": {
+        "flag": "mikkels_note_left"
+      },
+      "image": "assets/img/bg/bridge.jpg",
+      "art": {
+        "background": "#14202c",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_hound_trace",
+      "label": "Следы зверя на насте",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 160,
+      "y": 420,
+      "w": 240,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_handrail",
+      "label": "Перила, обмотанные тканью",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 520,
+      "y": 400,
+      "w": 260,
+      "h": 120,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_crossing",
+      "label": "Пролёт до другого берега",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 860,
+      "y": 420,
+      "w": 320,
+      "h": 160,
+      "condition": null,
+      "environmental": true
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Назад, на западный сход",
+      "area": {
+        "x": 60,
+        "y": 540,
+        "w": 260,
+        "h": 140
+      },
+      "go_to_scene": "scene_bridge_west"
+    },
+    {
+      "label": "На восточную опору",
+      "area": {
+        "x": 960,
+        "y": 540,
+        "w": 280,
+        "h": 140
+      },
+      "go_to_scene": "scene_bridge_east"
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "high",
+    "speed": "fast",
+    "wind": "left"
+  }
+}

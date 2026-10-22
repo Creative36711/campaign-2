@@ -1,0 +1,31 @@
+{
+  "id": "rule_dawn",
+  "label": "Ветер падает, до рассвета час",
+  "once": true,
+  "conditions": [
+    {
+      "type": "elapsed_ge",
+      "min": 6
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_weather",
+      "weather": ""
+    },
+    {
+      "type": "banner",
+      "text": "Ветер упал. На востоке светлеет: до 06:00 час.",
+      "preset": "заголовок",
+      "seconds": 6,
+      "position": "верх"
+    },
+    {
+      "type": "override_music",
+      "tracks": [
+        "music_dawn"
+      ],
+      "fade": 2
+    }
+  ]
+}

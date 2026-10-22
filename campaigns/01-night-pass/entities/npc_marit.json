@@ -1,0 +1,29 @@
+{
+  "id": "npc_marit",
+  "type": "npc",
+  "label": "Марит, потерявшаяся девочка",
+  "description": "Восемь лет, платок не по размеру, ни слова о себе. Всё время спрашивает, где старшая сестра.",
+  "portrait": {
+    "neutral": "assets/img/npc/marit.jpg",
+    "wary": "assets/img/npc/marit_wary.jpg"
+  },
+  "stats": {
+    "STR": 6,
+    "CON": 7,
+    "SIZ": 6,
+    "DEX": 9,
+    "INT": 9,
+    "POW": 7,
+    "CHA": 8,
+    "HP": 7,
+    "MP": 0
+  },
+  "skills": {
+    "skill_notice": 35,
+    "skill_silent": 40
+  },
+  "breathe": true,
+  "dialogue": "dialogues/marit.ink",
+  "equipment": {},
+  "scene_sprite": "assets/img/sprite/npc_marit.png"
+}

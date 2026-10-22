@@ -1,0 +1,70 @@
+{
+  "id": "rule_hound_first",
+  "label": "Гончая взяла след",
+  "once": true,
+  "conditions": [
+    {
+      "type": "player_enters_scene",
+      "scene": "scene_serpentine_upper"
+    }
+  ],
+  "effects": [
+    {
+      "type": "set_flag",
+      "flag": "hound_close",
+      "value": 1
+    },
+    {
+      "type": "change_variable",
+      "var": "var_hound_pressure",
+      "delta": 1
+    },
+    {
+      "type": "play_sound",
+      "sound": "sfx_hound",
+      "volume": 0.9
+    },
+    {
+      "type": "start_pursuit",
+      "label": "Гончая идёт по следу",
+      "skill": "skill_athletics",
+      "every_ticks": 1,
+      "fails_to_catch": 2,
+      "on_fail": [
+        {
+          "type": "show_message",
+          "text": "Зверь нагнал на секунду: рукавица разошлась, на снегу кровь. Кровавый след читается легче, чем просто след."
+        },
+        {
+          "type": "change_hp",
+          "delta": -3
+        },
+        {
+          "type": "change_need",
+          "need": "need_heat",
+          "delta": -5
+        },
+        {
+          "type": "set_flag",
+          "flag": "bleeding_in_snow",
+          "value": 1
+        },
+        {
+          "type": "fire_rule",
+          "rule": "rule_hound_fight"
+        }
+      ]
+    },
+    {
+      "type": "banner",
+      "text": "Позади не волк: голодная гончая идёт по следу крови и еды.",
+      "preset": "шёпот",
+      "seconds": 5,
+      "position": "центр"
+    },
+    {
+      "type": "unlock_codex",
+      "entry": "codex_hound"
+    }
+  ]
+}

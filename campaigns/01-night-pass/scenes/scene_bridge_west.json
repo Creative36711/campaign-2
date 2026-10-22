@@ -1,0 +1,146 @@
+{
+  "id": "scene_bridge_west",
+  "label": "Западный сход на мост",
+  "location": "loc_bridge",
+  "chapter": "ch_trace",
+  "canvas": {
+    "w": 1280,
+    "h": 720
+  },
+  "states": [
+    {
+      "id": "state_night",
+      "label": "Опора и настил в наледи",
+      "condition": null,
+      "image": "assets/img/bg/bridge.jpg",
+      "art": {
+        "background": "#101b27",
+        "layers": [
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 470,
+              "w": 1280,
+              "h": 250,
+              "fill": "#1b2632"
+            },
+            "opacity": 0.9
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 0,
+              "y": 440,
+              "w": 700,
+              "h": 60,
+              "fill": "#2c4256"
+            }
+          },
+          {
+            "shape": {
+              "type": "rect",
+              "x": 700,
+              "y": 470,
+              "w": 580,
+              "h": 180,
+              "fill": "#0b141d"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot_planks",
+      "label": "Дощатый настил в наледи",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 300,
+      "y": 420,
+      "w": 320,
+      "h": 140,
+      "condition": null,
+      "environmental": true
+    },
+    {
+      "id": "slot_rope_anchor",
+      "label": "Столб для верёвки",
+      "type": [
+        "hotspot"
+      ],
+      "shape": "rect",
+      "x": 90,
+      "y": 380,
+      "w": 180,
+      "h": 160,
+      "condition": null,
+      "environmental": true,
+      "use_with": [
+        {
+          "item": "item_rope",
+          "consume": false,
+          "message": "Крепишь верёвку за столб схода и проверяешь узел дважды.",
+          "effects": [
+            {
+              "type": "set_flag",
+              "flag": "bridge_rope_secured",
+              "value": true
+            },
+            {
+              "type": "show_message",
+              "text": "Верёвка держит. Переправа перестаёт быть задачей одного человека и становится задачей времени."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slot_ruur",
+      "label": "Разведчик у перил",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 880,
+      "y": 300,
+      "w": 170,
+      "h": 330,
+      "condition": null,
+      "default_entity": "npc_ruur"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Выйти на мост",
+      "area": {
+        "x": 560,
+        "y": 520,
+        "w": 300,
+        "h": 150
+      },
+      "go_to_scene": "scene_bridge_middle"
+    },
+    {
+      "label": "Выйти на карту перевала",
+      "area": {
+        "x": 1000,
+        "y": 520,
+        "w": 240,
+        "h": 160
+      },
+      "open_map": true
+    }
+  ],
+  "lighting": "outdoor",
+  "ambient": [],
+  "particles": {
+    "type": "snow",
+    "density": "high",
+    "speed": "fast",
+    "wind": "left"
+  }
+}

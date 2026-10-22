@@ -1,0 +1,11 @@
+{
+  "id": "item_order",
+  "type": "item",
+  "category": "quest",
+  "label": "Запечатанный приказ",
+  "description": "Сургучная печать перевальной конторы. Строка о закрытии перевала написана так, что спорить не о чем. Печать цела: промокнет или сгорит — доказывать будет нечем.",
+  "weight": 0.2,
+  "stackable": false,
+  "quest_item": true,
+  "image": "assets/img/item/order.png"
+}

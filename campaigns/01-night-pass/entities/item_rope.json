@@ -1,0 +1,10 @@
+{
+  "id": "item_rope",
+  "type": "item",
+  "category": "gear",
+  "label": "Верёвка",
+  "description": "Пеньковая, пропитанная салом. Единственный способ перейти карниз не в одиночку с ветром.",
+  "weight": 1.5,
+  "stackable": false,
+  "image": "assets/img/item/rope.png"
+}

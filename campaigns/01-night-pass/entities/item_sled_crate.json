@@ -1,0 +1,73 @@
+{
+  "id": "item_sled_crate",
+  "type": "item",
+  "category": "gear",
+  "label": "Санный ящик",
+  "description": "Вёрнутый ящик с упряжью и запасом. Тяжёлый, но внутри — то, что держит человека на склоне.",
+  "weight": 8,
+  "stackable": false,
+  "interact_options": [
+    {
+      "label": "Вскрыть ящик",
+      "effects": [
+        {
+          "type": "add_item",
+          "item": "item_ration",
+          "quantity": 2
+        },
+        {
+          "type": "add_item",
+          "item": "item_fuel_bundle",
+          "quantity": 1
+        },
+        {
+          "type": "add_item",
+          "item": "item_rope",
+          "quantity": 1
+        },
+        {
+          "type": "add_item",
+          "item": "item_signal_oil",
+          "quantity": 1
+        },
+        {
+          "type": "add_item",
+          "item": "item_tinder",
+          "quantity": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "slede_looted"
+        },
+        {
+          "type": "remove_item",
+          "item": "item_sled_crate",
+          "quantity": 1
+        }
+      ],
+      "once": true,
+      "message": "В ящике: два пайка, вязанка хвороста, верёвка, кремень с трутом и запечатанный бочонок ворвани для сигнального очага — его везут на башню каждый сезон, и в этот раз не успели."
+    },
+    {
+      "label": "Бросить ящик здесь",
+      "effects": [
+        {
+          "type": "remove_item",
+          "item": "item_sled_crate",
+          "quantity": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "cargo_dropped"
+        },
+        {
+          "type": "show_message",
+          "text": "Ящик ушёл в снег. Быстрее, но без припасов."
+        }
+      ],
+      "once": true,
+      "message": "Ящик уйдёт в снег и не вернётся: внутри паёк, хворост и верёвка."
+    }
+  ],
+  "image": "assets/img/item/sled_crate.png"
+}

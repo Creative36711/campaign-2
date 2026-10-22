@@ -1,0 +1,44 @@
+{
+  "id": "item_soup",
+  "type": "item",
+  "category": "food",
+  "label": "Похлёбка из сторожки",
+  "description": "Густая, с салом и луком. Одна миска возвращает человеку решение.",
+  "weight": 0.7,
+  "stackable": false,
+  "on_use": {
+    "effects": [
+      {
+        "type": "change_need",
+        "need": "need_hunger",
+        "delta": 35
+      },
+      {
+        "type": "change_need",
+        "need": "need_thirst",
+        "delta": 15
+      },
+      {
+        "type": "change_need",
+        "need": "need_heat",
+        "delta": 15
+      },
+      {
+        "type": "change_need",
+        "need": "need_energy",
+        "delta": 10
+      }
+    ],
+    "consume": true,
+    "message": "Съел похлёбку. Тело снова требует идти."
+  },
+  "image": "assets/img/item/soup.png",
+  "scene_sprite": {
+    "frames": [
+      "assets/img/item/soup_a.png",
+      "assets/img/item/soup_b.png"
+    ],
+    "fps": 2,
+    "loop": true
+  }
+}
